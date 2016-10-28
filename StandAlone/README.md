@@ -4,7 +4,7 @@
 ===============
 
 The purpose of the project is a manufacturing solution template for predicting failures in manufacturing
-pipelines (assembly lines). See [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/CIS_QAinManufacturing_BDM.md) an extended description of the solution.
+pipelines (assembly lines). See [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/CIS_QAinManufacturing_BDM.md) an extended description of the solution. Besides this step by step deployment guide, we also provide a one-button [click](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/CIQSDeployment/caqs-patterns/manufacturing/ManufacturingTemplateInstructions.md)experience.
 
 
 2. Solution architecture description:
