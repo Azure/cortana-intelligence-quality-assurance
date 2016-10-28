@@ -7,7 +7,7 @@
 
 The purpose of the project is a manufacturing solution template for predicting failures in manufacturing pipelines (assembly lines). Besides this one-button click deployment experience, we also provide a [step by step] (https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/StandAlone/README.md) deployment guide. 
 
-See here an extended description of the solution.
+See [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/CIS_QAinManufacturing_BDM.md) an extended description of the solution.
 
 
 

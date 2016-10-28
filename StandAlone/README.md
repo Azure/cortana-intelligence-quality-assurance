@@ -4,29 +4,19 @@
 ===============
 
 The purpose of the project is a manufacturing solution template for predicting failures in manufacturing
-pipelines (assembly lines). The idea is to be able to publish and retrain a number of models for various pipelines 
-at various quality testing points in the manufacturing process.
+pipelines (assembly lines). See [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/CIS_QAinManufacturing_BDM.md) an extended description of the solution.
 
-2. Approach
-===============
-Manufacturing data is characterized by Assembly Line Steps (ALS):
 
--   Main target is the list of failures collected at a later or final ALS (e.g at 5-th ALS).
--   These can be subset using SME to extract the failures likely related to manufacturing processes performed at an earlier ALS (e.g. 3rd ALS), even if the product **passed the regular QA test** at that earlier stage.
--   Build a training dataset by pairing each ALS specific subset of failures with measures collected at it's corresponding step and earlier (e.g. ALS 1,2,and 3).
--   Use the above described datasets to train/build machine learning (**ML**) models that will predict early (i.e. **at step 3**) failures that would happen in step 5.
-
-Prediction is done before the failures happen, at an early ALS when correcting or even scrapping the product is much cheaper than dealing with a failure at a later or final stage.
-
-3. Examples:
-============
-
-**Assembly line scenario**: For a computer mother board assembly line, at ALS 3 (ALS\_03) the solder paste is applied on the empty board, and then a regular test is applied to check if the paste droplets are not too big or not too small and if they are at the center or each pad. Boards than pass the **existing, already in place test** move to next ALS-s, eventualy the electronic circuits are placed on the board and then connected to the board pads by melting the solder droplets in an oven, and in the end, at ALS 5 (ALS\_05), a final electronic functional check is done before the board is shipped to client PC manufacturer. Some of the failures discovered at ALS\_05 are due to defective solder application, even if the board **passed the regular ALS\_03 test**. We can use machine learning (**ML**) to predict **solder related** failures right after the solder paste is applied in ALS\_03, but **before the expensive electronic components** like microprocessors and other integrated circuits are added to the board in ALS\_05. Rewashing a board with solder paste application **that passed the regular QA test** at ALS\_01 may cost cents, while scrapping a defective board after the processor and all other components are applied may cost hundred of dollars.
-
-**OEMs who use use contract manufacturers (Apple-Foxconn, MSFT-Jabil), and want to minimise post sale service and warranty costs**: Use **ML** to build models that use test/shop floor data (that belongs to OEM and or CMs) to predict before shipping field return and repairs that may happen months or years after product is shipped. This enables predicting **future failures** while the product is still in the early manufacturing line stages or is already assembled but is **not yet shipped**, so that fixing or even discarding it may be cheaper than going through recall and warranty costs.
-
-4. Solution architecture description:
+2. Solution architecture description:
 =====================================
+ 
+ ![alt tag](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
+
+ <sub><sup>
+ Figure 3
+ Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing - (mithal@microsoft.com for details on solution architecture templates)
+</sup></sub>
+
 
  - Predictions are made for a individual products as they travel down a production line passing through 5 different waypoints. 
  - Event ingestion is performed using an [Azure Event Hub](https://azure.microsoft.com/en-us/documentation/articles/event-hubs-overview/) from which records are sent using an [Azure WebJob](https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/).
@@ -35,12 +25,7 @@ Prediction is done before the failures happen, at an early ALS when correcting o
  
 This tutorial will guide you through the process creating, from the ground up, a predictive manufacturing solution.
 
-5. Dataset:
-===========
-The dataset used is the freely available secom data from. This dataset consists of
-X rows and Y columns. 
-
-6. Main Steps:
+3. Main Steps:
 ==============
 
 ### Prerequisites
