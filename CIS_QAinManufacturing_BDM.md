@@ -1,4 +1,6 @@
-# cortana-intelligence-quality-assurance-manufacturing
+# Cortana Intelligence Suite Solution Template
+# Predictive Analytics for Quality Assurance Process in Manufacturing
+
 
 1. Introduction
 ===============
