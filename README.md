@@ -18,6 +18,7 @@ Manufacturing data is characterized (see Figure 1) by Assembly Line Steps (ALS):
 -   Use the above described datasets to train/build machine learning (**ML**) models that will predict early (i.e. **at step 3**) failures that would happen in step 5.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/16708375/19810774/6eeae1e4-9d37-11e6-8fed-13ba99f4846b.png)
+
 <sub><sup>
 Figure 1
 Design of the ML modules in the CIS solution template for Predictive Analytics for Manufacturing
@@ -26,4 +27,43 @@ OEM and CMs form a Hierarchy of pipelines, where ALS are separated in time and/o
 Post sale/delivery failures passed the integrated test system already in place. Yet they still happen months or years after delivery and incur repair/warranty costs (see brown module and associated results table, with true labels in black).
 By pairing such failures with test measurements from their likely ALS steps, we can use Machine Learning to build models (yellow) that will predict failures at early stages (e.g. ALS1 for the model with red contour).
 
+</sup></sub>
+
+Prediction is done before the failures happen, at an early ALS when correcting or even scrapping the device is much cheaper than dealing with a failure at a later or final stage.
+
+3. Examples:
+============
+
+**Assembly line scenario**: For a computer mother board assembly line (Figure 2), at ALS 3 (ALS_03) the solder paste is applied on the empty board, and then a regular test is applied to check if the paste droplets are not too big or not too small and if they are at the center or each pad. Boards than pass the **existing, already in place** regular test move to next ALS-s, eventually the electronic circuits are placed on the board and then connected to the board pads by melting the solder droplets in an oven, and in the end of ALS 5 (ALS_05), a final electronic functional check is done before the board is shipped to client OEM PC manufacturer. Some of the failures discovered at ALS_05 are due to defective solder paste application performed in ALS_03, even if the board **passed the regular ALS_03 test**. We can use *ML** to predict **solder related** failures right after the solder paste is applied in ALS_03, but **before the expensive electronic components** like microprocessors and other integrated circuits are added to the board in ALS_05. Rewashing a board with functional defect yielding solder paste application that **passed the regular QA test** at ALS_01 may cost cents, while scrapping a defective board at ALS_05 after the processor and all other components are applied may cost hundreds of dollars. 
+
+![alt tag](https://cloud.githubusercontent.com/assets/16708375/19811557/90a87280-9d3a-11e6-8f2b-f573c3b02eca.png)
+
+<sub><sup>
+Figure 2
+Jabil Showcase - (Indranil.Sircar@microsoft.com for details on Jabil showcase picture)
+</sup></sub>
+
+**OEMs who use contract manufacturers (Apple-Foxconn, MSFT-Jabil), and want to minimize post sale service and warranty costs**: Use **ML** to build models that use test/shop floor data (that belongs to OEM and or CMs) to predict, before shipping, field return and repairs that may happen months or years after device is shipped. This enables predicting **future failures** while the device is still in the **early manufacturing line stages** or is already assembled but is **not yet shipped**, so that fixing or even discarding it may be cheaper than going through recall and warranty costs.
+
+
+4. Data Sources:
+================
+Solution demo uses the [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) dataset ([UCI ML Data repository](http://archive.ics.uci.edu/ml/datasets.html)) as a starting point. Each ALS measurement set is simulated by random sampling original feature columns. Each ALS dataset also contains all features from previous ALS. Predictions are made for individual devices as they travel down a production line passing through 5 different ALS’s (waypoints).
+
+
+5. Solution architecture description:
+=====================================
+Solution architecture is shown in Figure 3. 
+
+ - Predictions are made for a individual products as they travel down a production line passing through 5 different waypoints. 
+ - Event ingestion is performed using an [Azure Event Hub](https://azure.microsoft.com/en-us/documentation/articles/event-hubs-overview/) which receives simulated records  of ALS test measurements sent using an [Azure WebJob](https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/).
+ - Event processing is performed using an [Azure Stream Analytics](https://azure.microsoft.com/en-us/services/stream-analytics/) job which passes events to the appropriate [Azure Machine Learning](https://azure.microsoft.com/en-us/services/machine-learning/) endpoint and 
+ pushes the results to [PowerBI](https://powerbi.microsoft.com/) datasets.  
+ 
+ 
+ ![alt tag](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
+
+ <sub><sup>
+ Figure 3
+ Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing - (mithal@microsoft.com for details on solution architecture templates)
 </sup></sub>
