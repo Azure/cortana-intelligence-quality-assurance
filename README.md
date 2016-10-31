@@ -34,7 +34,6 @@ We provide two deployment guidelines:
 ![Solution Diagram](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
 
  <sub><sup>
- Figure 3
  Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing
 </sup></sub>
 
