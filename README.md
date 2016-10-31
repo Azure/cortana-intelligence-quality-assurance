@@ -4,10 +4,15 @@
 George Iordanescu, Ph.D.<br/>
 *Data Scientist at Microsoft*
 
+
 ## Executive Summary
 
 
 The purpose of the project is a manufacturing solution template for predicting failures in manufacturing pipelines (assembly lines). The idea is to leverage test systems already in place and failures data, specifically looking at returns and functional failures at the end of assembly line. By combining these with domain knowledge and root cause analysis within a modular design that encapsulates main processing steps, we provide a generic advanced analytics solution that uses machine learning to predict failures before they happen. Early prediction of future failures allows for less expensive repairs or even discarding, which are usually more cost efficient than going through recall and warranty cost.
+
+![Quality Assurance Process in Manufacturing](https://cloud.githubusercontent.com/assets/16708375/19813606/35164740-9d43-11e6-88a9-607e7b9e3839.png)
+
+#### TAGS -  Azure Machine Learning, Azure Stream Analytics, PowerBI, Azure Event Hub, Azure WebJob, IoT, Predictive Maintenance, Predictive Analytics, QA
 
 ## Business Audiences
 
@@ -18,19 +23,19 @@ In this repository you will find a folder labeled [*Solution Overview for Busine
 
 For more information on how to tailor Cortana Intelligence to your needs [connect with one of our partners](http://aka.ms/CISFindPartner).
 
-![alt tag](https://cloud.githubusercontent.com/assets/16708375/19813606/35164740-9d43-11e6-88a9-607e7b9e3839.png)
+## Technical Audiences
 
-#### TAGS -  Azure Machine Learning, Azure Stream Analytics, PowerBI, Azure Event Hub, Azure WebJob, IoT, Predictive Maintenance, Predictive Analytics, QA
+### Automated Deployment
 
-
-## Automated Deployment
 We provide two deployment guidelines:
 
 -  [step by step] (https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/StandAlone/README.md) deployment
 -  one-button [click](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/CIQSDeployment/caqs-patterns/manufacturing/ManufacturingTemplateInstructions.md) experience. 
 
+For technical problems or questions about deploying this solution, please post in the issues tab of the repository.
 
-## Solution Architecture
+
+### Solution Architecture
 ![Solution Diagram](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
 
  <sub><sup>
