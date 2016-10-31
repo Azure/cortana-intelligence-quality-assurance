@@ -23,16 +23,11 @@ Manufacturing data is characterized (see Figure 1) by Assembly Line Steps (ALS):
 
 <sub><sup>
 Figure 1
-Design of the ML modules in the CIS solution template for Predictive Analytics for Manufacturing
-
+Design of the ML modules in the CIS solution template for Predictive Analytics for Manufacturing.
 CM blocks indicate assembly lines from contract manufacturers. Each device goes through and is tested at the exit of each individual Assembly Line Step (ALS). Some devices, even after passing individual ALS tests, still turn out to be failures (see green modules and associated results table, with true labels in black) at the final functional test, or after they are sent to OEM. 
-
 OEM and CMs form a Hierarchy of pipelines, where ALS are separated in time and/or space. 
-
 Post sale/delivery failures passed the integrated test system already in place. Yet they still happen months or years after delivery and incur repair/warranty costs (see brown module and associated results table, with true labels in black).
-
 By pairing such failures with test measurements from their likely ALS steps, we can use Machine Learning to build models (yellow) that will predict failures at early stages (e.g. ALS1 for the model with red contour).
-
 </sup></sub>
 
 Prediction is done before the failures happen, at an early ALS when correcting or even scrapping the device is much cheaper than dealing with a failure at a later or final stage.
