@@ -19,7 +19,7 @@ Manufacturing data is characterized (see Figure 1) by Assembly Line Steps (ALS):
 -   Build a training dataset by pairing each ALS specific subset of failures with measures collected at its corresponding step and earlier (e.g. ALS 1, 2, and 3).
 -   Use the above described datasets to train/build machine learning (**ML**) models that will predict early (i.e. **at step 3**) failures that would happen in step 5.
 
-![alt tag](https://cloud.githubusercontent.com/assets/16708375/19810774/6eeae1e4-9d37-11e6-8fed-13ba99f4846b.png)
+![Solution Concept](https://cloud.githubusercontent.com/assets/16708375/19810774/6eeae1e4-9d37-11e6-8fed-13ba99f4846b.png)
 
 Figure 1. Design of the ML modules in the CIS solution template for Predictive Analytics for Manufacturing.
 - [ ] CM blocks indicate assembly lines from contract manufacturers. Each device goes through and is tested at the exit of each individual Assembly Line Step (ALS). Some devices, even after passing individual ALS tests, still turn out to be failures (see green modules and associated results table, with true labels in black) at the final functional test, or after they are sent to OEM. 
@@ -36,7 +36,7 @@ Prediction is done before the failures happen, at an early ALS when correcting o
 
 **Assembly line scenario**: For a computer mother board assembly line (Figure 2), at ALS 3 (ALS_03) the solder paste is applied on the empty board, and then a regular test is applied to check if the paste droplets are not too big or not too small and if they are at the center or each pad. Boards than pass the **existing, already in place** regular test move to next ALS-s, eventually the electronic circuits are placed on the board and then connected to the board pads by melting the solder droplets in an oven, and in the end of ALS 5 (ALS_05), a final electronic functional check is done before the board is shipped to client OEM PC manufacturer. Some of the failures discovered at ALS_05 are due to defective solder paste application performed in ALS_03, even if the board **passed the regular ALS_03 test**. We can use *ML** to predict **solder related** failures right after the solder paste is applied in ALS_03, but **before the expensive electronic components** like microprocessors and other integrated circuits are added to the board in ALS_05. Rewashing a board with functional defect yielding solder paste application that **passed the regular QA test** at ALS_01 may cost cents, while scrapping a defective board at ALS_05 after the processor and all other components are applied may cost hundreds of dollars. 
 
-![alt tag](https://cloud.githubusercontent.com/assets/16708375/19811557/90a87280-9d3a-11e6-8f2b-f573c3b02eca.png)
+![Jabil Showcase Assembly Line](https://cloud.githubusercontent.com/assets/16708375/19811557/90a87280-9d3a-11e6-8f2b-f573c3b02eca.png)
 
 <sub><sup>
 Figure 2
@@ -59,11 +59,21 @@ Solution architecture is shown in Figure 3.
  - Event ingestion is performed using an [Azure Event Hub](https://azure.microsoft.com/en-us/documentation/articles/event-hubs-overview/) which receives simulated records  of ALS test measurements sent using an [Azure WebJob](https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/).
  - Event processing is performed using an [Azure Stream Analytics](https://azure.microsoft.com/en-us/services/stream-analytics/) job which passes events to the appropriate [Azure Machine Learning](https://azure.microsoft.com/en-us/services/machine-learning/) endpoint and 
  pushes the results to [PowerBI](https://powerbi.microsoft.com/) datasets.  
+ - (optional, data processsing "cold path") Azure [Blob Storage](https://azure.microsoft.com/en-gb/documentation/articles/storage-blob-storage-tiers/#quick-start) sinks are used for storage and for off-line post-processing.
  
- 
- ![alt tag](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
+ ![Solution Diagram](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
 
- <sub><sup>
+ <sub>
  Figure 3
  Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing - (mithal@microsoft.com for details on solution architecture templates)
-</sup></sub>
+</sub>
+
+6. Solution PBI dashboard (visualization):
+==========================================
+![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19861029/e5018304-9f82-11e6-8626-6a142d9eb80e.png)
+
+Figure 4. Dashboard for CIS solution template for Predictive Analytics for Manufacturing. 
+We show here the upper part of the solution dashboard, visualizing results from the first 3 waypoints (ALS 0, ALS 1, and ALS 3) of a simulated assembly line. We implemented 5 ALS in total in this solution, but the user can add as many ALS as needed, and show thier results in the dashboard accordingly. For each ALS (WPNT0 to WPnt2), we shouw a global device counter (the gauge on the left), and the number (upper) and ids (lower) of the failed (middle column) and passed (right column) devices in the last 30 seconds. Each report is updated dinamically. 
+
+Each report is defined using quasi natural language (NLP) query (e.g. **How many device_id with label=1 in waypoint 0 in the last 30 seconds?**), typed in the **Ask a question about your data** text box in PBI dashboard. 
+-

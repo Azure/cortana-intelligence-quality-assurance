@@ -162,7 +162,7 @@ This section will walk you through the steps to manually create the manufacturin
 		- Under __Visualizations__ select ***Gauge***
 		- In __Visualizations__ blade and click on format (shaped like a paint roller)
 			- Turn on __Title__
-			- Change title text to: *Count of device_id for waypoint N* (N is the value between 0 and 4 that corresponds to current dataset)
+			- Change title text to: WPnt*N* Count (N is the value between 0 and 4 that corresponds to current dataset)
 		- Under the __File__ menu select ***Save As*** and name it with the name of the dataset (i.e. waypoint0-waypoint4)
 		- Under __Reports__ click on the report created in the previous step
 		- On the report, click on the Gauge then click the pin shaped icon 
