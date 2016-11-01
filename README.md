@@ -36,7 +36,7 @@ For technical problems or questions about deploying this solution, please post i
 
 
 ### Solution Architecture
-![Solution Diagram](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
+![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
 
  <sub><sup>
  Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing
