@@ -50,6 +50,9 @@ For technical problems or questions about deploying this solution, please post i
  - (optional, data processsing "cold path") Azure [Blob Storage](https://azure.microsoft.com/en-gb/documentation/articles/storage-blob-storage-tiers/#quick-start) sinks are used for storage and for off-line post-processing.
  
  
+### Solution Data Flow report
+ 
+Solution data [flow](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Documentation/README.md) report demonstrates how post deployment monitoring can be used to visualize the timing and work-load of each key components of the solution.
 
 
 
