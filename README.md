@@ -10,7 +10,7 @@ George Iordanescu, Ph.D.<br/>
 
 The purpose of the project is a manufacturing solution template for predicting failures in manufacturing pipelines (assembly lines). The idea is to leverage test systems already in place and failures data, specifically looking at returns and functional failures at the end of assembly line. By combining these with domain knowledge and root cause analysis within a modular design that encapsulates main processing steps, we provide a generic advanced analytics solution that uses machine learning to predict failures before they happen. Early prediction of future failures allows for less expensive repairs or even discarding, which are usually more cost efficient than going through recall and warranty cost.
 
-![Quality Assurance Process in Manufacturing](https://cloud.githubusercontent.com/assets/16708375/19813606/35164740-9d43-11e6-88a9-607e7b9e3839.png)
+![Assembly Line](https://cloud.githubusercontent.com/assets/16708375/19886616/f5a621d0-a01b-11e6-84c1-39d10d5c8941.png)
 
 #### TAGS -  Azure Machine Learning, Azure Stream Analytics, PowerBI, Azure Event Hub, Azure WebJob, IoT, Predictive Maintenance, Predictive Analytics, QA
 
