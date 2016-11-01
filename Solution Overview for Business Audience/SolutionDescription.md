@@ -48,10 +48,19 @@ Figure 2
 
 4. Data Sources:
 ================
-Solution demo uses the [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) dataset ([UCI ML Data repository](http://archive.ics.uci.edu/ml/datasets.html)) as a starting point. Each ALS measurement set is simulated by random sampling original feature columns. Each ALS dataset also contains all features from previous ALS. Predictions are made for individual devices as they travel down a production line passing through 5 different ALS’s (waypoints).
+Solution demo uses [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) dataset ([UCI ML Data repository](http://archive.ics.uci.edu/ml/datasets.html)), upsampled using an algorithm similar to (SMOTE)[http://jair.org/media/953/live-953-2037-jair.pdf]. Each ALS measurement set is simulated by random sampling original feature columns. Each ALS dataset also contains all features from previous ALS. Predictions are made for individual devices as they travel down a production line passing through 5 different ALS’s (waypoints).
+
+5. Solution PBI dashboard (visualization):
+==========================================
+![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
+
+Figure 3. Dashboard for CIS solution template for Predictive Analytics for Manufacturing. 
+We show here the upper part of the solution dashboard, visualizing results from the first 3 waypoints (ALS 0, ALS 1, and ALS 3) of a simulated assembly line. We implemented 5 ALS in total in this solution, but the user can add as many ALS as needed, and show thier results in the dashboard accordingly. For each ALS (WPNT0 to WPnt2), we shouw a global device counter (the gauge on the left), and the number (upper) and ids (lower) of the failed (middle column) and passed (right column) devices in the last 30 seconds. Each report is updated dinamically. 
+
+Each report is defined using quasi natural language (NLP) query (e.g. **How many device_id with label=1 in waypoint 0 in the last 30 seconds?**), typed in the **Ask a question about your data** text box in PBI dashboard. 
 
 
-5. Solution architecture description:
+6. Solution architecture description:
 =====================================
 Solution architecture is shown in Figure 3. 
 
@@ -64,16 +73,6 @@ Solution architecture is shown in Figure 3.
  ![Solution Diagram](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
 
  <sub>
- Figure 3
+ Figure 4
  Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing - (mithal@microsoft.com for details on solution architecture templates)
 </sub>
-
-6. Solution PBI dashboard (visualization):
-==========================================
-![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19861029/e5018304-9f82-11e6-8626-6a142d9eb80e.png)
-
-Figure 4. Dashboard for CIS solution template for Predictive Analytics for Manufacturing. 
-We show here the upper part of the solution dashboard, visualizing results from the first 3 waypoints (ALS 0, ALS 1, and ALS 3) of a simulated assembly line. We implemented 5 ALS in total in this solution, but the user can add as many ALS as needed, and show thier results in the dashboard accordingly. For each ALS (WPNT0 to WPnt2), we shouw a global device counter (the gauge on the left), and the number (upper) and ids (lower) of the failed (middle column) and passed (right column) devices in the last 30 seconds. Each report is updated dinamically. 
-
-Each report is defined using quasi natural language (NLP) query (e.g. **How many device_id with label=1 in waypoint 0 in the last 30 seconds?**), typed in the **Ask a question about your data** text box in PBI dashboard. 
--
