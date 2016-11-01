@@ -162,7 +162,7 @@ This section will walk you through the steps to manually create the manufacturin
 		- Under __Visualizations__ select ***Gauge***
 		- In __Visualizations__ blade and click on format (shaped like a paint roller)
 			- Turn on __Title__
-			- Change title text to: WPnt*N* Count (N is the value between 0 and 4 that corresponds to current dataset)
+			- Change title text to: ALS*N* Count (N is the value between 0 and 4 that corresponds to current dataset)
 		- Under the __File__ menu select ***Save As*** and name it with the name of the dataset (i.e. waypoint0-waypoint4)
 		- Under __Reports__ click on the report created in the previous step
 		- On the report, click on the Gauge then click the pin shaped icon 
@@ -176,13 +176,13 @@ This section will walk you through the steps to manually create the manufacturin
 			- Click __Pin Visual__ in the upper right hand corner
 		- Queries (where *N* is the dataset you are working with)
 			- How many device_id with label=1 in waypoint *N* in the last 30 seconds 
-				- Description: No of WPNT*N* fails in last 30 Seconds   
+				- Description: No of ALS*N* fails in last 30 Seconds   
 			- How many device_id with label=-1 in waypoint *N* in the last 30 seconds 
-				- Description: No of WPNT*N* passes in last 30 Seconds 
+				- Description: No of ALS*N* passes in last 30 Seconds 
 			- device_id with label=-1 in waypoint *N* in the last 30 seconds
-				- Description: WPNT*N* passes in last 30 seconds
+				- Description: ALS*N* passes in last 30 seconds
 			- device_id with label=1 in waypoint *N* in the last 30 seconds
-				- Description: WPNT*N* fails in last 30 seconds
+				- Description: ALS*N* fails in last 30 seconds
 
 
 ## (optional) Set-up Azure Blob Storage sinks 				
