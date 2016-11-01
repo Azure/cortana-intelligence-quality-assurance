@@ -55,7 +55,7 @@ Solution demo uses [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) datase
 ![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
 
 Figure 3. Dashboard for CIS solution template for Predictive Analytics for Manufacturing. 
-We show here the upper part of the solution dashboard, visualizing results from the first 3 waypoints (ALS 0, ALS 1, and ALS 3) of a simulated assembly line. We implemented 5 ALS in total in this solution, but the user can add as many ALS as needed, and show thier results in the dashboard accordingly. For each ALS (WPNT0 to WPnt2), we shouw a global device counter (the gauge on the left), and the number (upper) and ids (lower) of the failed (middle column) and passed (right column) devices in the last 30 seconds. Each report is updated dinamically. 
+We show here the upper part of the solution dashboard, visualizing results from the first 3 waypoints (ALS 0, ALS 1, and ALS 2) of a simulated assembly line. We implemented 5 ALS in total in this solution, but the user can add as many ALS as needed, and show their results in the dashboard accordingly. For each ALS, we shouw a global device counter (the gauge on the left), and the number (upper) and ids (lower) of the failed (middle column) and passed (right column) devices in the last 30 seconds. Each report is updated dinamically every 5 second as new ALS measurements come in. 
 
 Each report is defined using quasi natural language (NLP) query (e.g. **How many device_id with label=1 in waypoint 0 in the last 30 seconds?**), typed in the **Ask a question about your data** text box in PBI dashboard. 
 
