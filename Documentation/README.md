@@ -26,12 +26,11 @@ Monitoring data flow.
 - [ ] Simulated Data Generator was started about 10 minutes before the ASA job 
 - [ ] When the ASA starts, it takes a snapshot of the device sequence, as it goes through different ALS. 
 - [ ] After Simulated Data Generator is stopped, no more data enters or leaves the event hub.
-- [ ] Content of blob sinks (shown below) capture the initial snapshot of the devices moving along the assembly line. As the ASA starts, we see an intitial spike corresponding to data being processed almost instantaneously from the Event Hub buffer (e.g. *device_119*). After the Hub buffer is emptied, the devices are processed every 5 seconds, as they enter the asembly line (e.g. *device_239*).
+- [ ] Content of blob sinks (shown below) capture the initial snapshot of the devices moving along the assembly line. As the ASA starts, we see an initial spike in outgoing messages, corresponding to data being processed almost instantaneously from the Event Hub buffer (e.g. *device_119*). After the Hub buffer is emptied, the devices are processed every 5 seconds, as they enter the asembly line (e.g. *device_239*).
 
-Blob storage siks content (.csv files):
+Blob storage sinks content (.csv files) has this header:
 
-
-   recNo, evttime,waypoint,device_id,label
+   recNo, evttime,ALS_ID,device_id,label
   
   
   __ALS0 sink (125 records)__:
