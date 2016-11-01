@@ -31,9 +31,10 @@ Monitoring data flow.
 Blob storage siks content (.csv files):
 
 
-recNo, evttime,waypoint,device_id,label
-
-  * __ALS0 sink (125 records)__:
+   recNo, evttime,waypoint,device_id,label
+  
+  
+  __ALS0 sink (125 records)__:
   * 001, 2016-11-01T**12:11:00.0281424Z**,1,**device_119**,1
   * 002, 2016-11-01T12:11:03.8574693Z,1,device_120,-1
   * ...
@@ -42,9 +43,9 @@ recNo, evttime,waypoint,device_id,label
   * 123, 2016-11-01T12:19:18.0717059Z,1,device_241,-1
   * 124, 2016-11-01T12:19:23.0858207Z,1,device_242,1
   * 125, 2016-11-01T12:19:28.0744674Z,1,device_243,-1
-
-
-  * __ALS1 sink (125 records)__:
+  
+  
+  __ALS1 sink (125 records)__:
   * 001, 2016-11-01T12:11:00.7468767Z,2,device_118,-1
   * 002, 2016-11-01T**12:11:03.8418308Z**,2,**device_119**,1
   * 003, 2016-11-01T12:11:03.3730783Z,2,device_120,-1
@@ -53,9 +54,9 @@ recNo, evttime,waypoint,device_id,label
   * 123, 2016-11-01T12:19:18.0858606Z,2,device_240,1
   * 124, 2016-11-01T12:19:23.0858207Z,2,device_241,-1
   * 125, 2016-11-01T12:19:28.0744674Z,2,device_242,1
-
- 
-  * __ALS2 sink (125 records)__:
+  
+  
+  __ALS2 sink (125 records)__:
   * 001, 2016-11-01T12:11:00.0437670Z,3,device_117,-1
   * 002, 2016-11-01T12:11:03.8574693Z,3,device_118,-1
   * 003, 2016-11-01T**12:11:03.3887035Z**,3,**device_119**,1
@@ -64,9 +65,9 @@ recNo, evttime,waypoint,device_id,label
   * 123, 2016-11-01T**12:19:18.0858606Z**,3,**device_239**,1
   * 124, 2016-11-01T12:19:23.0858207Z,3,device_240,1
   * 125, 2016-11-01T12:19:28.0744674Z,3,device_241,-1
-
-
-  * __ALS3 sink (125 records)__:
+  
+  
+  __ALS3 sink (125 records)__:
   * 001, 2016-11-01T12:11:00.0437670Z,4,device_116,1
   * ...
   * 004, 2016-11-01T**12:10:59.8718949Z**,4,**device_119**,1
@@ -75,9 +76,9 @@ recNo, evttime,waypoint,device_id,label
   * 123, 2016-11-01T12:19:18.0858606Z,4,device_238,1
   * 124, 2016-11-01T**12:19:23.1014391Z**,4,**device_239**,1
   * 125, 2016-11-01T12:19:28.0744674Z,4,device_240,1
-
- 
-  * __ALS4 sink (125 records)__:
+  
+  
+  __ALS4 sink (125 records)__:
   * 001, 2016-11-01T12:11:00.2312624Z,5,device_115,1
   * ...
   * 005, 2016-11-01T**12:11:00.5510285Z**,5,**device_119**,-1
