@@ -22,41 +22,11 @@ This solution package contains materials to help both technical and business aud
 
 In this repository you will find a folder labeled [*Solution Overview for Business Audiences*](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Solution%20Overview%20for%20Business%20Audiences) which contains:
 - Infographic: covers the benefits of using advanced analytics for Quality Assurance Process in Manufacturing
-- SolutionDescription: a detailed desxription of the [Cortana Intelligence Suite](https://www.microsoft.com/en-us/server-cloud/cortana-intelligence-suite/Overview.aspx) solution for Quality Assurance Process in Manufacturing
+- Solution At-a-glance: an introduction to Cortana Intelligence Suite solution for Quality Assurance Process in Manufacturing
 - Walking Deck: a  presentation covering this solution and benefits of using the Cortana Intelligence Suite
 
 For more information on how to tailor Cortana Intelligence to your needs [connect with one of our partners](http://aka.ms/CISFindPartner).
 
 ## Technical Audiences
 
-### Automated Deployment
-
-We provide two deployment guidelines:
-
--  [step by step] (https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/StandAlone/README.md) deployment
--  one-button [click](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/CIQSDeployment/caqs-patterns/manufacturing/ManufacturingTemplateInstructions.md) experience. 
-
-For technical problems or questions about deploying this solution, please post in the issues tab of the repository.
-
-
-### Solution Architecture
-![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/19811942/4375cbfa-9d3c-11e6-99b8-d953124d9361.png)
-
- <sub><sup>
- Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing
-</sup></sub>
-
-
- - Predictions are made for a individual products as they travel down a production line passing through 5 different waypoints. 
- - Event ingestion is performed using an [Azure Event Hub](https://azure.microsoft.com/en-us/documentation/articles/event-hubs-overview/) which receives simulated records  of ALS test measurements sent using an [Azure WebJob](https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/).
- - Event processing is performed using an [Azure Stream Analytics](https://azure.microsoft.com/en-us/services/stream-analytics/) job which passes events to the appropriate [Azure Machine Learning](https://azure.microsoft.com/en-us/services/machine-learning/) endpoint and 
- pushes the results to [PowerBI](https://powerbi.microsoft.com/) datasets.  
- - (optional, data processsing "cold path") Azure [Blob Storage](https://azure.microsoft.com/en-gb/documentation/articles/storage-blob-storage-tiers/#quick-start) sinks are used for storage and for off-line post-processing.
- 
- 
-### Solution Data Flow report
- 
-Solution data [flow](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Documentation/README.md) report demonstrates how post deployment monitoring can be used to visualize the timing and work-load of each key components of the solution.
-
-
-
+See the **Technical Deployment Guide** folder for a full set of instructions on how to put together and deploy a Quality Assurance solution using the Cortana Intelligence Suite. For technical problems or questions about deploying this solution, please post in the issues tab of the repository.
