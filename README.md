@@ -18,7 +18,7 @@ The purpose of the project is a manufacturing solution template for predicting f
 
 This solution package contains materials to help both technical and business audiences understand our Quality Assurance process solution for manufacturing built on the [Cortana Intelligence Suite](https://www.microsoft.com/en-us/server-cloud/cortana-intelligence-suite/Overview.aspx).
 
-# Business Audiences
+## Business Audiences
 
 In this repository you will find a folder labeled [*Solution Overview for Business Audiences*](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Solution%20Overview%20for%20Business%20Audiences) which contains:
 - Infographic: covers the benefits of using advanced analytics for Quality Assurance Process in Manufacturing
