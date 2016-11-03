@@ -14,7 +14,7 @@ Solution status can be monitored using the solution components in [Azure Managem
  </sup>
 
 
-We will focus on the solution end (Event Hub as the beginning and Blob Storage sinks at the end), and present 2 test scenarios explaining the solution data flow, and how the ASA job uses the buffering capabilities to process messages received in the past.
+We will focus on the solution end (Event Hub as the beginning and Blob Storage sinks at the end), and present 3 test scenarios explaining the solution data flow, and how the ASA job uses the buffering capabilities to process messages received in the past.
 
 ###Test Scenario 1 (process **only current messages**)
 
@@ -167,9 +167,9 @@ Blob storage sinks content (.csv files) has this header:
   * 002, 2016-11-03T13:12:49.4110249Z,2,device_1,1
   * 003, 2016-11-03T13:12:52.6927579Z,2,device_2,-1
   * ... 
-  * 331, 2016-11-03T13:25:41.7783959Z,2,device_329,1
-  * 332, 2016-11-03T**13:25:46.7736562Z**,2,**device_330**,1
-  * 333, 2016-11-03T13:25:51.8197512Z,2,device_331,1
+  * 330, 2016-11-03T13:25:41.7783959Z,2,device_329,1
+  * 331, 2016-11-03T**13:25:46.7736562Z**,2,**device_330**,1
+  * 332, 2016-11-03T13:25:51.8197512Z,2,device_331,1
   
   
   
@@ -178,9 +178,9 @@ Blob storage sinks content (.csv files) has this header:
   * 002, 2016-11-03T13:12:52.6927579Z,3,device_1,1
   * 003, 2016-11-03T13:12:54.3626147Z,3,device_2,-1
   * ... 
-  * 331, 2016-11-03T13:25:41.7416238Z,3,device_328,-1
-  * 332, 2016-11-03T13:25:46.7736562Z,3,device_329,1
-  * 333, 2016-11-03T**13:25:51.8367132Z**,3,**device_330**,1
+  * 329, 2016-11-03T13:25:41.7416238Z,3,device_328,-1
+  * 330, 2016-11-03T13:25:46.7736562Z,3,device_329,1
+  * 331, 2016-11-03T**13:25:51.8367132Z**,3,**device_330**,1
   
   
   
@@ -189,9 +189,9 @@ Blob storage sinks content (.csv files) has this header:
   * 002, 2016-11-03T13:12:54.4127584Z,4,device_1,1
   * 003, 2016-11-03T13:12:55.6750906Z,4,device_2,-1
   * ... 
-  * 331, 2016-11-03T13:25:41.7783959Z,4,device_327,-1
-  * 332, 2016-11-03T13:25:46.7572610Z,4,device_328,-1
-  * 333, 2016-11-03T13:25:51.8367132Z,4,device_329,1
+  * 328, 2016-11-03T13:25:41.7783959Z,4,device_327,-1
+  * 329, 2016-11-03T13:25:46.7572610Z,4,device_328,-1
+  * 330, 2016-11-03T13:25:51.8367132Z,4,device_329,1
   
   
   
@@ -201,11 +201,15 @@ Blob storage sinks content (.csv files) has this header:
   * 002, 2016-11-03T13:12:55.6438347Z,5,device_1,1
   * 003, 2016-11-03T13:12:49.6127917Z,5,device_2,-1
   * ... 
-  * 331, 2016-11-03T13:25:41.7783959Z,5,device_326,-1
-  * 332, 2016-11-03T13:25:46.7572610Z,5,device_327,-1
-  * 333, 2016-11-03T13:25:51.8197512Z,5,device_328,-1
+  * 327, 2016-11-03T13:25:41.7783959Z,5,device_326,-1
+  * 328, 2016-11-03T13:25:46.7572610Z,5,device_327,-1
+  * 329, 2016-11-03T13:25:51.8197512Z,5,device_328,-1
   
   
+
+###Test Scenario 3 (most common)
+
+ASA job runs continuously, storage containers have processed data from the past, separated in folders by date and hour, and simulated data is ingested  every time the simulator is started, one full set of ALS measures every 5 seconds, which are scored by calling the corresponding Azure ML model, as they come, and then stored in blob sinks. Records in different blob sinks, which correspond to different ALS are separated by about 5 seconds in time, similar to last recors in scenarios 1 and 2 presented above. 
   
    
   
