@@ -193,30 +193,33 @@ This section will walk you through the steps to manually create the manufacturin
     - Click on the storage account of the solution resource group, then click **Containers**, and then **+Container** to add containers named outputsink0[N] (e.g. from outputsink00 to outputsink04). Set **Access type** property to **private**.
 
  Then, go to the solution Azure Stream Analytics (ASA) Job created before and connect the AML outputs to blob storage sinks created above:
-    - Log into the [Azure Management Portal](https://ms.portal.azure.com) and select Stream Analytics Job was created for this solution (you have to stop the the ASA, if it is running, in order to add outputs as described below).
-    - Click *OUTPUTS*
-      - For each of the ml models, we will create a blob dataset output. In the following steps, complete one for each value of [N] where [N]= 0->4 
-        - On the ASA *OUTPUTS* page click ***+ADD***.
-          - OUTPUT ALIAS : w[N]blob (e.g. w0blob)
-          - Sink: Blob storage
-          - Subscription: Provide Storage account settings manually
-          - Storage Account: paste name of Storage Account assigned to this solution resource group (use portal, click storage account and then click Access keys, copy **Storage account name**)
-          - Storage Account Key: paste key info of Storage Account assigned to this solution resource group (use portal, click storage account and then click Access keys, copy **key1**)
-          - Container: use container name created above (e.g. outputsink01).
-          - Path Prefix Pattern: e.g. manufacturingtemplateoutput00/{date}/{time} to manufacturingtemplateoutput04/{date}/{time}
-          - Date format: your choice (e.g. MM-DD-YYYY)
-          - Time format: HH
-          - Event Serialization Format: csv
-          - Delimiter: comma 
-          - Encoding: UTF8
-          - Click **Create** button to complete	        
+  - Log into the [Azure Management Portal](https://ms.portal.azure.com) and select Stream Analytics Job was created for this solution (you have to stop the the ASA, if it is running, in order to add outputs as described below).
+  - Click *OUTPUTS*
+    - For each of the ml models, we will create a blob dataset output. In the following steps, complete one for each value of [N] where [N]= 0->4 
+      - On the ASA *OUTPUTS* page click ***+ADD***.
+        - OUTPUT ALIAS : w[N]blob (e.g. w0blob)
+        - Sink: Blob storage
+        - Subscription: Provide Storage account settings manually
+        - Storage Account: paste name of Storage Account assigned to this solution resource group (use portal, click storage account and then click Access keys, copy **Storage account name**)
+        - Storage Account Key: paste key info of Storage Account assigned to this solution resource group (use portal, click storage account and then click Access keys, copy **key1**)
+        - Container: use container name created above (e.g. outputsink01).
+        - Path Prefix Pattern: e.g. manufacturingtemplateoutput00/{date}/{time} to manufacturingtemplateoutput04/{date}/{time}
+        - Date format: your choice (e.g. MM-DD-YYYY)
+        - Time format: HH
+        - Event Serialization Format: csv
+        - Delimiter: comma 
+        - Encoding: UTF8
+        - Click **Create** button to complete	        
 	      
  Extend the query of ASA Job created before to sent data to the blob sinks:
-    - Log into the classic [Azure Managment Portal](https://manage.windowsazure.com) and select the ASA Job  created for this solution (you have to stop the ASA, if it is running, in order to add outputs as described below).
-    - Append at the end of the query lines like:
+  - Log into the classic [Azure Managment Portal](https://manage.windowsazure.com) and select the ASA Job  created for this solution (you have to stop the ASA, if it is running, in order to add outputs as described below).
+  - Append at the end of the query lines like:
+  
        **SELECT evttime, conveyor as waypoint, device_id, resultw0 as label INTO [w0blob] FROM subqueryw0 WHERE conveyor = '1'**
        
-       For example, to store all 5 datasets in blobs, we add 5 more lines, so that the last 10 lines of the query look like this:      
+       For example, to store all 5 datasets in blobs, we add 5 more lines, so that the last 10 lines of the query look like this: 
+       
+       
 	      SELECT evttime, conveyor as waypoint, device_id, resultw0 as label INTO [w0pbi] FROM subqueryw0 WHERE conveyor = '1'
 	      SELECT evttime, conveyor as waypoint, device_id, resultw1 as label INTO [w1pbi] FROM subqueryw1 WHERE conveyor = '2'
 	      SELECT evttime, conveyor as waypoint, device_id, resultw2 as label INTO [w2pbi] FROM subqueryw2 WHERE conveyor = '3'
