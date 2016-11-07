@@ -50,6 +50,21 @@ Figure 2
 ================
 Solution demo uses [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) dataset ([UCI ML Data repository](http://archive.ics.uci.edu/ml/datasets.html)), upsampled using an algorithm similar to [SMOTE](http://jair.org/media/953/live-953-2037-jair.pdf). Each ALS measurement set is simulated by random sampling original feature columns. Each ALS dataset also contains all features from previous ALS. Predictions are made for individual devices as they travel down a production line passing through 5 different ALS’s (waypoints).
 
+
+4. ML implementation:
+================
+The predictive analytics part of the solution is implemented using [Azure ML studio](https://studio.azureml.net/). The training experiments use a two class linear [SVM](https://msdn.microsoft.com/en-us/library/azure/dn905835.aspx) classifier, fine tuned by optimizing the AUC (area under the ROC curve) metric using the Azure ML Studio ["Tune Model Hyperparameters"](https://msdn.microsoft.com/en-us/library/azure/dn905810.aspx) module.
+
+
+![Azure ML studio Training Experiment for ALS/waypoint 0](https://cloud.githubusercontent.com/assets/16708375/20055465/198cec34-a4d9-11e6-95b0-93bee2269005.png)
+
+<sub>
+Figure 2
+Azure ML studio Training Experiment for ALS/waypoint 0
+</sup>
+
+The corresponding predictive experiments for all ALS are [published](http://gallery.cortanaintelligence.com/Experiment/Prediction-Model-Mk-IIII-w-p-0-Predictive-Exp-1) with this solution.
+
 5. Solution PBI dashboard (visualization):
 ==========================================
 ![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
