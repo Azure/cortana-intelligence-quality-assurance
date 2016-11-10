@@ -6,6 +6,8 @@
 This tutorial will guide you through the process creating, from the ground up, a predictive manufacturing solution. Other related resources provided here:
  -  an extensive [solution description](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Technical%20Deployment%20Guide/SolutionDescription.md).
  -  [data flow](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Technical%20Deployment%20Guide/DataFlowReport.md) report demonstrating how post deployment monitoring can be used to visualize the timing and work-load of each key components of the solution.
+ 
+**For technical problems or questions about deploying this solution, please post in the issues tab of the repository.**
 
 2. Solution architecture description:
 =====================================
@@ -174,13 +176,13 @@ This section will walk you through the steps to manually create the manufacturin
 			- Enter the description provided with the query
 			- Click __Pin Visual__ in the upper right hand corner
 		- Queries (where *N* is the dataset you are working with)
-			- How many device_id with label=1 in waypoint *N* in the last 30 seconds 
-				- Description: No of ALS*N* fails in last 30 Seconds   
-			- How many device_id with label=-1 in waypoint *N* in the last 30 seconds 
+			- How many device_id with label=1 in waypointÂ *N* inÂ theÂ lastÂ 30 seconds 
+				- Description: No of ALS*N* fails in last 30 Seconds Â  
+			- How many device_id with label=-1 in waypointÂ *N* in theÂ lastÂ 30 seconds 
 				- Description: No of ALS*N* passes in last 30 Seconds 
-			- device_id with label=-1 in waypoint *N* in the last 30 seconds
+			- device_id with label=-1 in waypointÂ *N* inÂ theÂ lastÂ 30 seconds
 				- Description: ALS*N* passes in last 30 seconds
-			- device_id with label=1 in waypoint *N* in the last 30 seconds
+			- device_id with label=1 in waypointÂ *N* inÂ theÂ lastÂ 30 seconds
 				- Description: ALS*N* fails in last 30 seconds
 
 
