@@ -9,6 +9,8 @@ In digital manufacturing, quality assurance across the assembly line is imperati
 The snapshot below shows the PowerBI dashboard that visualizes the manufacturing pipelines being monitored. 
 ![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
 
+## Solution Architecture
+![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/19936489/737d2cd0-a115-11e6-958c-faad17e4756a.png)
 
 ## Getting Started
 
