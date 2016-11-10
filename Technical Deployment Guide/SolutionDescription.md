@@ -1,13 +1,11 @@
-# Cortana Intelligence Suite Solution Template
-# Predictive Analytics for Quality Assurance Process in Manufacturing
-
+# Predictive Analytics for Quality Assurance Processes in Manufacturing
 
 1. Introduction
 ===============
 
-The purpose of the project is a manufacturing solution template for predicting failures in manufacturing pipelines (assembly lines). The idea is to leverage test systems already in place and failures data, specifically looking at returns and functional failures at the end of assembly line. By combining these with domain knowledge and root cause analysis within a modular design that encapsulates main processing steps, we provide a generic advanced analytics solution that uses machine learning to predict failures before they happen. Early prediction of future failures allows for less expensive repairs or even discarding, which are usually more cost efficient than going through recall and warranty cost.
+The goal of the solution guide presented here is to predict failures in manufacturing pipelines (assembly lines). The idea is to leverage test systems already in place and failures data, specifically looking at returns and functional failures at the end of assembly line. By combining these with domain knowledge and root cause analysis within a modular design that encapsulates main processing steps, we provide a generic advanced analytics solution that uses machine learning to predict failures before they happen. Early prediction of future failures allows for less expensive repairs or even discarding, which are usually more cost efficient than going through recall and warranty cost.
 
-The generic out of the box solution is implemented in the cloud, using the flexible on-line Microsoft Azure platform that decouples infrastructure components (data ingestion, storage, data movement, visualization) from analytics engine that supports modern DS languages like R and Python. The solution modeling component can thus be retrained as needed and be implemented using high performance Azure Machine Learning algorithms, or open source (R/Python) libraries, or from a third-party solution vendor.
+The solution is implemented in the cloud, using the flexible on-line Microsoft Azure platform that decouples infrastructure components (data ingestion, storage, data movement, visualization) from analytics engine that supports modern DS languages like R and Python. The solution modeling component can thus be retrained as needed and be implemented using high performance Azure Machine Learning algorithms, or open source (R/Python) libraries, or from a third-party solution vendor.
 
 
 2. Approach
@@ -48,7 +46,7 @@ Figure 2
 
 4. Data Sources:
 ================
-Solution demo uses [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) dataset ([UCI ML Data repository](http://archive.ics.uci.edu/ml/datasets.html)), upsampled using an algorithm similar to [SMOTE](http://jair.org/media/953/live-953-2037-jair.pdf). Each ALS measurement set is simulated by random sampling original feature columns. Each ALS dataset also contains all features from previous ALS. Predictions are made for individual devices as they travel down a production line passing through 5 different ALS’s (waypoints).
+Solution demo uses [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) dataset ([UCI ML Data repository](http://archive.ics.uci.edu/ml/datasets.html)), upsampled using an algorithm similar to [SMOTE](http://jair.org/media/953/live-953-2037-jair.pdf). Each ALS measurement set is simulated by random sampling original feature columns. Each ALS dataset also contains all features from previous ALS. Predictions are made for individual devices as they travel down a production line passing through 5 different ALSâ€™s (waypoints).
 
 
 5. ML implementation:
@@ -72,5 +70,5 @@ The corresponding predictive experiments for all ALS are [published](http://gall
 Figure 4. Dashboard for CIS solution template for Predictive Analytics for Manufacturing. 
 We show here the upper part of the solution dashboard, visualizing results from the first 3 waypoints (ALS 0, ALS 1, and ALS 2) of a simulated assembly line. We implemented 5 ALS in total in this solution, but the user can add as many ALS as needed, and show their results in the dashboard accordingly. For each ALS, we shouw a global device counter (the gauge on the left), and the number (upper) and ids (lower) of the failed (middle column) and passed (right column) devices in the last 30 seconds. Each report is updated dinamically every 5 second as new ALS measurements come in. 
 
-Each report is defined using quasi natural language (NLP) query (e.g. **How many device_id with label=1 in waypoint 0 in the last 30 seconds?**), typed in the **Ask a question about your data** text box in PBI dashboard. 
+Each report is defined using quasi natural language (NLP) query (e.g. **How many device_id with label=1 in waypointÂ 0 inÂ theÂ lastÂ 30Â seconds?**), typed in the **Ask a question about your data** text box in PBI dashboard. 
 
