@@ -22,4 +22,4 @@ For more information on how to tailor Cortana Intelligence to your needs [connec
 
 ## Technical Audiences
 
-See the **Technical Deployment Guide** folder for a full set of instructions on how to put together and deploy a Quality Assurance solution using the Cortana Intelligence Suite. For technical problems or questions about deploying this solution, please post in the issues tab of the repository.
+See the [*Technical Deployment Guide*](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Technical%20Deployment%20Guide) folder for a full set of instructions on how to put together and deploy a Quality Assurance solution using the Cortana Intelligence Suite. For technical problems or questions about deploying this solution, please post in the issues tab of the repository.
