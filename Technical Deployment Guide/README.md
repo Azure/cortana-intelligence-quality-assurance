@@ -234,9 +234,69 @@ This section will walk you through the steps to manually create the manufacturin
 	      SELECT evttime, conveyor as waypoint, device_id, resultw4 as label INTO [w4blob] FROM subqueryw4 WHERE conveyor = '5'  
     
   Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
+  
+            
+            
+## (optional) Set-up Azure SQL Data Warehouse sinks 				
+ For large scale applications that require scalable storage and processing massive volumes of data, the solution can use [Azure SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-what-is/), where data can be later processed and visualized using massively parallel processing architecture.  
+  
+### We first create a [SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/), a relational database service in the cloud based on  Microsoft SQL Server engine:
 
-            
-            
-	    
- 
+![create Azure SQL database](https://cloud.githubusercontent.com/assets/16708375/20218783/39817dac-a7f4-11e6-9cc4-0544f5fd7bc4.png)  
+
+<sub>
+Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/#create-an-azure-sql-database-logical-server) database  
+</sup>  
+    - Log into the [Azure Management Portal](https://ms.portal.azure.com), click __+(New)__ button, click databases and then select __SQL Database__.  
+        - Database name: provide a name for database - such as __manufacturesqldb__  
+        - Subscription: use your subscription  
+        - Resource group(select __Use existing__): Locate the resource group  you created for this project  
+        - Select source: Blank database  
+        - Under __Server__, click Configure required settings:  
+            - Server name: provide a name for server - such as __manufacturesqldbserver__. A green check mark indicates that you have provided a valid name  
+            - Server admin login: A green check mark indicates that you have provided a valid name.   
+            - Password: A green check mark indicates that you have provided a valid password.   
+            - Location: choose same location you used for other solution resources.  
+            - Create V12 server (Latest update): Yes  
+            - Check __Allow azure services to access server__  
+            Press __Select__ button at the blade buttom.  
+        - Leave __Want to use SQL elastic pool?__ unchanged ("__Not now__").  
+        - On the SQL Database blade, under __Pricing tier__, choose Basic to choose the least expensive pricing tier for your first database. You can always change the pricing tier later.   
+        Press __Select__ button at the blade buttom.   
+        - On the SQL Database blade, review your selections and then click Create to create the server and database. The values that you provided are validated and deployment starts.  
+          
+    - Create a new Azure SQL server-level firewall:  
+    Use the following steps in the Azure portal to create a server-level firewall rule that allows connections from an individual IP address (your client computer) or an entire IP address range to a SQL Database logical server.  
+        - Log into the [Azure Management Portal](https://ms.portal.azure.com), 
+        - In the left hand menu select *Resource groups*
+        - Locate the resource group  you created for this project and click on it displaying the resources associated with the group in the resource group blade.
+	- You should see the SQL server and the SQL database you just created.
+	- Click the SQL server, and then click "Firewall".
+	- Make sure the "Allow access to Azure services" is set to ON, and then press **+Add client IP" button at the top of the blade to have Azure create a rule for your client IP address. Optionally, to allow access to a range of IP addresses, click the IP address that was added to edit the firewall address.
+        - Click Save to create the server-level firewall rule.
+        - You should now be able to [access](https://azure.microsoft.com/en-us/documentation/articles/sql-database-connect-query-ssms/) the SQL server using a tool like [Microsoft SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx).
+  
+  
+### Now create a [QL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision/), a cloud-based, scale-out database capable of processing massive volumes of data, both relational and non-relational.          
+    - Log into the [Azure Management Portal](https://ms.portal.azure.com), and Click + New > Databases > SQL Data Warehouse.  
+    - In the SQL Data Warehouse blade, fill in the information needed as described below, starting with the **server** first:  
+      - Server: select the SQL server created for this solution.  
+      - Database name: The name that is used to reference the SQL Data Warehouse. It must be unique to the server.
+      - Performance: We recommend starting with 400 DWUs. You can move the slider to the left or right to adjust the performance of your data warehouse, or scale up or down after creation. To learn more about DWUs, see our documentation on scaling or our pricing page. 
+      - Subscription: Select the subscription that this SQL Data Warehouse will bill to.
+      - Resource group: select the reource group created for this solution.
+      - Select source: leave it **blank database**.
+      
+Create SQL database data tables using schema from csv tables
+use **SQL Server 2016 Import and Export Data** (you can install the SQL Server Import and Export Wizard by installing SQL Server Data Tools ([SSDT](https://msdn.microsoft.com/library/mt204009.aspx))).
+Data source: select **Flat File Source** as input and choose the waypoint**N**_training.csv file (**N** = 0..4).
+Destination: Select  **Microsoft OLE DB Provider for SQL server**
+Select **Use SQL Server Authetication**, and type admin user name and password.
+
+Add **SQL database** outputs for the ASA job:
+Output Alias: InputDataALS0[**N**]ASAsink (**N** = 0..4).
+Sink: **SQL database**
+Subscription: choose solution subscription
+Database: the database created for this solution
+Fill Server name, Username, Password and Table, and then click **Create** button
 
