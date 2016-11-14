@@ -1,4 +1,7 @@
-CREATE TABLE [dbo].[InputData_ALS03] (
+CREATE TABLE [dbo].[AllDataALS03] (
+[evttime] varchar(50),
+[device_id] varchar(50),
+[conveyor] varchar(50),
 [Col10] varchar(50),
 [Col100] varchar(50),
 [Col101] varchar(50),
@@ -199,6 +202,6 @@ CREATE TABLE [dbo].[InputData_ALS03] (
 [Col97] varchar(50),
 [Col98] varchar(50),
 [Col99] varchar(50),
-[device_id] varchar(50),
-[labels] varchar(50)
+[labels] varchar(50),
+[resultw4] varchar(50)
 )
