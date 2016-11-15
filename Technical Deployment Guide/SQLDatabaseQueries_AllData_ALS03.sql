@@ -203,5 +203,5 @@ CREATE TABLE [dbo].[AllDataALS03] (
 [Col98] varchar(50),
 [Col99] varchar(50),
 [labels] varchar(50),
-[resultw4] varchar(50)
+[resultw3] varchar(50)
 )
