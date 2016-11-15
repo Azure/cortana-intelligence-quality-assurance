@@ -250,67 +250,67 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
   
   	      
  Log into the [Azure Management Portal](https://ms.portal.azure.com), click __+(New)__ button, click databases and then select __SQL Database__.  
-    - Database name: provide a name for database - such as __manufacturesqldb__  
-    - Subscription: use your subscription  
-    - Resource group(select __Use existing__): Locate the resource group  you created for this project  
-    - Select source: Blank database  
-    - Under __Server__, click Configure required settings:  
-      - Server name: provide a name for server - such as __manufacturesqldbserver__. A green check mark indicates that you have provided a valid name  
-      - Server admin login: A green check mark indicates that you have provided a valid name.   
-      - Password: A green check mark indicates that you have provided a valid password.   
-      - Location: choose same location you used for other solution resources.  
-      - Create V12 server (Latest update): Yes  
-      - Check __Allow azure services to access server__  
-      - Press __Select__ button at the blade buttom.  
-      - Leave __Want to use SQL elastic pool?__ unchanged ("__Not now__").  
-      - On the SQL Database blade, under __Pricing tier__, choose Basic to choose the least expensive pricing tier for your first database. You can always change the pricing tier later.   
-        Press __Select__ button at the blade buttom.    
-      - On the SQL Database blade, review your selections and then click Create to create the server and database. The values that you provided are validated and deployment starts.  
-          
-    - Create a new Azure SQL server-level firewall:  
-    Use the following steps in the Azure portal to create a server-level firewall rule that allows connections from an individual IP address (your client computer) or an entire IP address range to a SQL Database logical server.  
-      - Log into the [Azure Management Portal](https://ms.portal.azure.com), 
-      - In the left hand menu select *Resource groups*
-      - Locate the resource group  you created for this project and click on it displaying the resources associated with the group in the resource group blade.
-      - You should see the SQL server and the SQL database you just created.
-      - Click the SQL server, and then click "Firewall".
-      - Make sure the "Allow access to Azure services" is set to ON, and then press **+Add client IP" button at the top of the blade to have Azure create a rule for your client IP address. Optionally, to allow access to a range of IP addresses, click the IP address that was added to edit the firewall address.
-      - Click Save to create the server-level firewall rule.
-      - You should now be able to [access](https://azure.microsoft.com/en-us/documentation/articles/sql-database-connect-query-ssms/) the SQL server using a tool like [Microsoft SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx).  
+	- Database name: provide a name for database - such as __manufacturesqldb__  
+	- Subscription: use your subscription  
+	- Resource group(select __Use existing__): Locate the resource group  you created for this project  
+	- Select source: Blank database  
+	- Under __Server__, click Configure required settings:  
+	  - Server name: provide a name for server - such as __manufacturesqldbserver__. A green check mark indicates that you have provided a valid name  
+	  - Server admin login: A green check mark indicates that you have provided a valid name.   
+	  - Password: A green check mark indicates that you have provided a valid password.   
+	  - Location: choose same location you used for other solution resources.  
+	  - Create V12 server (Latest update): Yes  
+	  - Check __Allow azure services to access server__  
+	  - Press __Select__ button at the blade buttom.  
+	  - Leave __Want to use SQL elastic pool?__ unchanged ("__Not now__").  
+	  - On the SQL Database blade, under __Pricing tier__, choose Basic to choose the least expensive pricing tier for your first database. You can always change the pricing tier later.   
+	 Press __Select__ button at the blade buttom.    
+	  - On the SQL Database blade, review your selections and then click Create to create the server and database. The values that you provided are validated and deployment starts.  
+  
+	- Create a new Azure SQL server-level firewall:  
+	Use the following steps in the Azure portal to create a server-level firewall rule that allows connections from an individual IP address (your client computer) or an entire IP address range to a SQL Database logical server.  
+	  - Log into the [Azure Management Portal](https://ms.portal.azure.com), 
+	  - In the left hand menu select *Resource groups*
+	  - Locate the resource group  you created for this project and click on it displaying the resources associated with the group in the resource group blade.
+	  - You should see the SQL server and the SQL database you just created.
+	  - Click the SQL server, and then click "Firewall".
+	  - Make sure the "Allow access to Azure services" is set to ON, and then press **+Add client IP" button at the top of the blade to have Azure create a rule for your client IP address. Optionally, to allow access to a range of IP addresses, click the IP address that was added to edit the firewall address.
+	  - Click Save to create the server-level firewall rule.
+	  - You should now be able to [access](https://azure.microsoft.com/en-us/documentation/articles/sql-database-connect-query-ssms/) the SQL server using a tool like [Microsoft SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx).  
    
    
-### Create a [QL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision/), a cloud-based, scale-out database capable of processing massive volumes of data, both relational and non-relational.          
-    - Log into the [Azure Management Portal](https://ms.portal.azure.com), and Click + New > Databases > SQL Data Warehouse.  
-    - In the SQL Data Warehouse blade, fill in the information needed as described below, starting with the **server** first:  
-      - Server: select the SQL server created for this solution.  
-      - Database name: The name that is used to reference the SQL Data Warehouse. It must be unique to the server.  
-      - Performance: We recommend starting with 400 DWUs. You can move the slider to the left or right to adjust the performance of your data warehouse, or scale up or down after creation. To learn more about DWUs, see our documentation on scaling or our pricing page.  
-      - Subscription: Select the subscription that this SQL Data Warehouse will bill to.  
-      - Resource group: select the reource group created for this solution.  
-      - Select source: leave it **blank database**.  
+### Create a [SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision/), a cloud-based, scale-out database capable of processing massive volumes of data, both relational and non-relational.          
+	- Log into the [Azure Management Portal](https://ms.portal.azure.com), and Click + New > Databases > SQL Data Warehouse.  
+	  - In the SQL Data Warehouse blade, fill in the information needed as described below, starting with the **server** first:  
+	  - Server: select the SQL server created for this solution.  
+	  - Database name: The name that is used to reference the SQL Data Warehouse. It must be unique to the server.  
+	  - Performance: We recommend starting with 400 DWUs. You can move the slider to the left or right to adjust the performance of your data warehouse, or scale up or down after creation. To learn more about DWUs, see our documentation on scaling or our pricing page.  
+	  - Subscription: Select the subscription that this SQL Data Warehouse will bill to.  
+	  - Resource group: select the reource group created for this solution.  
+	  - Select source: leave it **blank database**.  
       
   
 ### Create empty tables in database (using full data solution schema):  
-    - Create empty tables in the SQL DB that will store both the the features (measurement values) and the predictions. The label column in the input data was used for training and is ignored in the scoring experiment.            
-        - Use your favourite tool to connect to the database. A good option is [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx).  
-        - run the queries in the SQLDatabaseQueries_InputData_ALS0[**N**].sql (**N** = 0..4) files attached to this solution deployment.  
-        After you run the queries, you should have 5 tables AllDataALS0[**N**], (**N** = 0..4) in the database.  
-        - [OPTIONAL] In general, you can use **SQL Server 2016 Import and Export Data** to create SQL database data tables using schema from csv tables.  
-          -  you can install the SQL Server Import and Export Wizard by installing SQL Server Data Tools ([SSDT](https://msdn.microsoft.com/library/mt204009.aspx))  
-          use **SQL Server 2016 Import and Export Data** (you can install the SQL Server Import and Export Wizard by installing SQL Server Data Tools ([SSDT](https://msdn.microsoft.com/library/mt204009.aspx))).   
-          - If you have an sample of the data you wish to store in the database (for example obtained by running the solution and saving the full data in a blob storage account as described above), you can run **SQL Server 2016 Import and Export Data**:   
-            - Data source: select **Flat File Source** as input and choose the waypoint**N**_training.csv file (**N** = 0..4), then press **Next**  
-            - Destination: Select  **Microsoft OLE DB Provider for SQL server**  
-            - Select **Use SQL Server Authetication**, and type admin user name and password  
-            - Press **Edit Mappings** button  
-            - then press **Edit SQL...** button and copy and save the autogenared SQL query.  
-            - You can continue to upload the csv file to the database, or just use the autogenerated query to created and empty database table with the csv file schema.   
+	- Create empty tables in the SQL DB that will store both the the features (measurement values) and the predictions. The label column in the input data was used for training and is ignored in the scoring experiment.            
+	  - Use your favourite tool to connect to the database. A good option is [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx).  
+	  - run the queries in the SQLDatabaseQueries_InputData_ALS0[**N**].sql (**N** = 0..4) files attached to this solution deployment.  
+	  After you run the queries, you should have 5 tables AllDataALS0[**N**], (**N** = 0..4) in the database.  
+	  - [OPTIONAL] In general, you can use **SQL Server 2016 Import and Export Data** to create SQL database data tables using schema from csv tables.  
+	    -  you can install the SQL Server Import and Export Wizard by installing SQL Server Data Tools ([SSDT](https://msdn.microsoft.com/library/mt204009.aspx))  
+	    use **SQL Server 2016 Import and Export Data** (you can install the SQL Server Import and Export Wizard by installing SQL Server Data Tools ([SSDT](https://msdn.microsoft.com/library/mt204009.aspx))).   
+	    - If you have an sample of the data you wish to store in the database (for example obtained by running the solution and saving the full data in a blob storage account as described above), you can run **SQL Server 2016 Import and Export Data**:   
+		- Data source: select **Flat File Source** as input and choose the waypoint**N**_training.csv file (**N** = 0..4), then press **Next**  
+		- Destination: Select  **Microsoft OLE DB Provider for SQL server**  
+		- Select **Use SQL Server Authetication**, and type admin user name and password  
+		- Press **Edit Mappings** button  
+		- then press **Edit SQL...** button and copy and save the autogenared SQL query.  
+		- You can continue to upload the csv file to the database, or just use the autogenerated query to created and empty database table with the csv file schema.   
             
       
 ### Add **SQL database** outputs for the ASA job (similar to the steps preformed when adding PBI and blob storage output sinks):  
-    - Output Alias: dbsinkALS0[**N**] (**N** = 0..4).  
-    - Sink: **SQL database**  
-    - Subscription: choose solution subscription  
-    - Database: the database created for this solution  
-    - Fill Server name, Username, Password and Table, and then click **Create** button (choose AllDataALS0[**N**], (**N** = 0..4) or the table names you created in the SQL db before)  
+	- Output Alias: dbsinkALS0[**N**] (**N** = 0..4).  
+	- Sink: **SQL database**  
+	- Subscription: choose solution subscription  
+	- Database: the database created for this solution  
+	- Fill Server name, Username, Password and Table, and then click **Create** button (choose AllDataALS0[**N**], (**N** = 0..4) or the table names you created in the SQL db before)  
 
