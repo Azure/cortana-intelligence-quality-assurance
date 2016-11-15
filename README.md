@@ -7,7 +7,7 @@ The snapshot below shows the PowerBI dashboard that visualizes the manufacturing
 ![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
 
 ## Solution Architecture
-![Solution Diagram Picture](hhttps://cloud.githubusercontent.com/assets/16708375/20287777/95b6a66a-aa9c-11e6-8bae-c39dc543eceb.png)
+![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/20287777/95b6a66a-aa9c-11e6-8bae-c39dc543eceb.png)
 
 ## Getting Started
 
