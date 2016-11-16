@@ -1572,3 +1572,6 @@ SELECT evttime, conveyor as waypoint, device_id, resultw3 as label INTO [w3blob]
 SELECT evttime, conveyor as waypoint, device_id, resultw4 as label INTO [w4blob] FROM subqueryw4 WHERE conveyor = '5'
 SELECT * INTO [dbsinkALS00] FROM subqueryw0 WHERE conveyor = '1'
 SELECT * INTO [dbsinkALS01] FROM subqueryw1 WHERE conveyor = '2'
+SELECT * INTO [dbsinkALS02] FROM subqueryw2 WHERE conveyor = '3'
+SELECT * INTO [dbsinkALS03] FROM subqueryw3 WHERE conveyor = '4'
+SELECT * INTO [dbsinkALS04] FROM subqueryw4 WHERE conveyor = '5'
