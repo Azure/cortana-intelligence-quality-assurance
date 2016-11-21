@@ -76,7 +76,15 @@ This section will walk you through the steps to manually create the manufacturin
  - Leave both storage account and web service plan as *Create new* and provide names acceptable to the user interface.
  - Click *Web service plan pricing tier* and choose ***S1 Standard***, and click "Select" button.
  - Click *Create* and return to the *Resource groups* blade. 
-
+ - After publishing all machine learning experiments, they should be all visible in the web services tab of Azure Machine Learning [Studio](https://studio.azureml.net/):
+  
+ ![Published Web Services](https://cloud.githubusercontent.com/assets/16708375/20488955/cfc73996-b000-11e6-8b56-7f56461090a2.png)
+ 
+  <sub>
+  Web Services tab in Azure Machine Learning [Studio](https://studio.azureml.net/) 
+ </sup>
+  
+  
 ## Copy Machine Learning Experiments From Gallery
  - For each of the following experiments:
     - [Waypoint 0 Experiment](http://gallery.cortanaintelligence.com/Experiment/Prediction-Model-Mk-IIII-w-p-0-Predictive-Exp-1)
