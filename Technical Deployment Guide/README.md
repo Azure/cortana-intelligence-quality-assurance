@@ -75,15 +75,7 @@ This section will walk you through the steps to manually create the manufacturin
  - Ensure the subscription, resource group and location match previous selections.
  - Leave both storage account and web service plan as *Create new* and provide names acceptable to the user interface.
  - Click *Web service plan pricing tier* and choose ***S1 Standard***, and click "Select" button.
- - Click *Create* and return to the *Resource groups* blade. 
- - After publishing all machine learning experiments, they should be all visible in the web services tab of Azure Machine Learning [Studio](https://studio.azureml.net/):
-  
- ![Published Web Services](https://cloud.githubusercontent.com/assets/16708375/20488955/cfc73996-b000-11e6-8b56-7f56461090a2.png)
- 
-  <sub>
-  Web Services tab in Azure Machine Learning [Studio](https://studio.azureml.net/) 
- </sup>
-  
+ - Click *Create* and return to the *Resource groups* blade.  
   
 ## Copy Machine Learning Experiments From Gallery
  - For each of the following experiments:
@@ -97,7 +89,14 @@ This section will walk you through the steps to manually create the manufacturin
  - Select the region that matches previous selections and choose the worksapce ***manufacturemlws***, then click *Ok*
  - At the bottom of the page click ***Run***
  - Wnen completed, click ***Deploy Web Service*** using the selection ***Deploy Web Service [Classic]***
- 
+ - After publishing all machine learning experiments, they should be all visible in the web services tab of Azure Machine Learning [Studio](https://studio.azureml.net/):
+   
+  ![Published Web Services](https://cloud.githubusercontent.com/assets/16708375/20488955/cfc73996-b000-11e6-8b56-7f56461090a2.png)
+  
+   <sub>
+   Web Services tab in Azure Machine Learning [Studio](https://studio.azureml.net/)  
+  </sup>
+  
 ## Create Azure Stream Analytics (ASA) Job
  - Log into the [Azure Management Portal](https://ms.portal.azure.com) 
  - In the left hand menu select *Resource groups*
