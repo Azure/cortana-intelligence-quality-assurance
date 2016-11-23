@@ -273,8 +273,7 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
 	 Press __Select__ button at the blade buttom.    
 	  - On the SQL Database blade, review your selections and then click Create to create the server and database. The values that you provided are validated and deployment starts.  
 	  - Similar to DW deployment approach above, create a new Azure SQL server-level firewall using the Azure portal: create a server-level firewall rule that allows connections from an individual IP address (your client computer) or an entire IP address range to a SQL Database logical server.
-	  
-	  
+   
 ### After the SQL Data Warehouse is deployed, create empty tables in it (using full data solution schema):  
 	- Create empty tables in the SQL WH/DB that will store both the the features (ALS test measurement values) and the predictions. The label column in the input data was used for training and is ignored in the scoring experiment.            
 	- Use your favourite tool to connect to the database created above. A good option is [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx).  
