@@ -137,30 +137,31 @@ This section will walk you through the steps to manually create the manufacturin
 	- If, however, the ML points created before are not visible under current subscription:  
 		- Subscription: set to **Select from a different subscription**  
 		- Then go to web services tab of Azure Machine Learning [Studio](https://studio.azureml.net/) (see red arrows in image below):  
- 
+   
 ![Copy Published services credentials](https://cloud.githubusercontent.com/assets/16708375/20528296/927a035c-b0c3-11e6-98da-79276d8c710b.png)
 
  <sub>
  Published AML Services credentials
 </sup>
-
+  
 		- URL: click **REQUEST/RESPONSE** hyperlink and copy the **Request URI** for the **POST Method**, e.g:  
 			https://europewest.services.azureml.net/workspaces/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/services/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/execute?api-version=2.0&details=true  
 		- Key: Click the copy **APi key icon** to copy the API key and the **REQUEST/RESPONSE** hyperlink  
 		- Click **Create** button to complete.  
-		
- - Click *OUTPUTS*
-    - For each of the ml models, we will create a PowerBI dataset output. In the following steps, complete one for each value of [N] where [N]= 0..4 
-        - Select ASA *OUTPUTS* blade and click ***+ADD***
-            - OUTPUT ALIAS : w[N]pbi
-            - Sink: Power BI, then Click **Authorize Now** to access your Power BI data.
-            - WORKSPACE : My Workspace
-            - DATASET NAME : waypoint[N]
-            - TABLE NAME : waypoint[N]
-            - Click the check button to complete
-- Click *QUERY*
-    - Download the file StreamAnalyticsJob.txt from this repository. Copy and paste the content into the query window. 
-    - Click *SAVE*
+  
+ - Click *OUTPUTS*  
+    - For each of the ml models, we will create a PowerBI dataset output. In the following steps, complete one for each value of [N] where [N]= 0..4  
+        - Select ASA *OUTPUTS* blade and click ***+ADD***  
+            - OUTPUT ALIAS : w[N]pbi  
+            - Sink: Power BI, then Click **Authorize Now** to access your Power BI data.  
+            - WORKSPACE : My Workspace  
+            - DATASET NAME : waypoint[N]  
+            - TABLE NAME : waypoint[N]  
+            - Click the check button to complete  
+  
+- Click *QUERY*  
+    - Download the file StreamAnalyticsJob.txt from this repository. Copy and paste the content into the query window.  
+    - Click *SAVE*  
 - When all inputs, functions, outputs and the query have been entered, click *START* at the bottom of the page.   
   
   
