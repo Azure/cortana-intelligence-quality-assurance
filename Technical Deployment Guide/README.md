@@ -142,8 +142,8 @@ This section will walk you through the steps to manually create the manufacturin
 
 <sub>
 Published AML Services credentials
-</sup>
-  
+</sup>  
+		
 		- URL: click **REQUEST/RESPONSE** hyperlink and copy the **Request URI** for the **POST Method**, e.g:  
 			https://europewest.services.azureml.net/workspaces/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/services/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/execute?api-version=2.0&details=true  
 		- Key: Click the copy **APi key icon** to copy the API key and the **REQUEST/RESPONSE** hyperlink  
