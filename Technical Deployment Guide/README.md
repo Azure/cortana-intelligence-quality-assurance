@@ -151,14 +151,14 @@ Published AML Services credentials
   - Click **Create** button to complete.  
   
  - Click *OUTPUTS*  
-    - For each of the ml models, we will create a PowerBI dataset output. In the following steps, complete one for each value of [N] where [N]= 0..4  
-        - Select ASA *OUTPUTS* blade and click ***+ADD***  
-            - OUTPUT ALIAS : w[N]pbi  
-            - Sink: Power BI, then Click **Authorize Now** to access your Power BI data.  
-            - WORKSPACE : My Workspace  
-            - DATASET NAME : waypoint[N]  
-            - TABLE NAME : waypoint[N]  
-            - Click the check button to complete  
+   - For each of the ml models, we will create a PowerBI dataset output. In the following steps, complete one for each value of [N] where [N]= 0..4  
+	   - Select ASA *OUTPUTS* blade and click ***+ADD***  
+	     - OUTPUT ALIAS : w[N]pbi  
+	     - Sink: Power BI, then Click **Authorize Now** to access your Power BI data.  
+	     - WORKSPACE : My Workspace  
+	     - DATASET NAME : waypoint[N]  
+	     - TABLE NAME : waypoint[N]  
+	     - Click the check button to complete  
   
 - Click *QUERY*  
     - Download the file StreamAnalyticsJob.txt from this repository. Copy and paste the content into the query window.  
