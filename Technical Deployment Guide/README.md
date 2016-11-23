@@ -381,7 +381,7 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
   **NOTE**: in TSQL, **--** at the begining of a line comments that line. So each of the above lines can be easily commented by adding -- at the begining of the line.  
   Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
   
-### After the solution is deployed and is running, you can see live updates of the PBI dashboards, check the blob files, or connect to the DW and run queris to retrieve data. If you dot see the files in    
+### After the solution is deployed and is running, you can see live updates of the PBI dashboards, connect to the DW and run queris to retrieve data, or check the blob files. Queries like the ones below can be run within [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx):    
        
        
 	      SELECT TABLE_NAME FROM Manufacturesqldb.INFORMATION_SCHEMA.Tables WHERE TABLE_TYPE = 'BASE TABLE'
