@@ -143,7 +143,7 @@ This section will walk you through the steps to manually create the manufacturin
 <sub>
 Published AML Services credentials
 </sup>
-		
+.  
 		- URL: click **REQUEST/RESPONSE** hyperlink and copy the **Request URI** for the **POST Method**, e.g:  
 			https://europewest.services.azureml.net/workspaces/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/services/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/execute?api-version=2.0&details=true  
 		- Key: Click the copy **APi key icon** to copy the API key and the **REQUEST/RESPONSE** hyperlink  
@@ -218,33 +218,33 @@ Published AML Services credentials
 ## (optional) Set-up Azure SQL Data Warehouse sinks 				
  For large scale applications that require scalable storage and processing of massive volumes of data, the solution uses [Azure SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-what-is/), where data can be later processed and visualized using massively parallel processing architecture.  
    
-### Create a [SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision/), a cloud-based, scale-out database capable of processing massive volumes of data, both relational and non-relational.       
-	- Log into the [Azure Management Portal](https://ms.portal.azure.com), and Click + New > Databases > SQL Data Warehouse.  
-	  - In the SQL Data Warehouse blade, fill in the information needed as described below, starting with the **server** first:  
-	  - Server: click **Create a new server**  
-		- Server name: e.g. __manufacturesqldbserver02__ . A green check mark indicates that you have provided a valid name.    
-		- Server admin login:  A green check mark indicates that you have provided a valid name.  
-		- Password:  A green check mark indicates that you have provided a valid password.  
-		- Location: choose the same location as the other solution resources  
-	  - Database name (this will be a **SQL data warehouse** type of db): e.g. Manufacturesqldb.  
-	  - Subscription: Select the subscription that this SQL Data Warehouse will bill to.  
-	  - Resource group: select the reource group created for this solution.  
-	  - Select source: leave it **blank database**.  
-	  - Collation: remains SQL_Latin1_General_CP1_CI_AS  
-	  - Performance: We recommend starting with 400 DWUs. You can move the slider to the left or right to adjust the performance of your data warehouse, or scale up or down after creation. To learn more about DWUs, see our documentation on scaling or our pricing page.  
-	  - After you click **Create** button, you check deploymnet status, in the Azure portal, e.g. by looking at the solution resource group **Overview** blade, under **Deployments** section, we should see a clickable status saying initally **1 deploying, 3 succeeded**.  
-
-	- Create a new Azure SQL server-level firewall:  
-	Use the following steps in the Azure portal to create a server-level firewall rule that allows connections from an individual IP address (your client computer) or an entire IP address range to a SQL Database logical server.  
-		- Log into the [Azure Management Portal](https://ms.portal.azure.com), 
-		- In the left hand menu select *Resource groups*
-		- Locate the resource group  you created for this project and click on it displaying the resources associated with the group in the resource group blade.
-		- You should see the SQL server and the SQL database you just created.
-		- Click the SQL server, and then click "Firewall".
-		- Make sure the "Allow access to Azure services" is set to ON, and then press **+Add client IP" button at the top of the blade to have Azure create a rule for your client IP address. Optionally, to allow access to a range of IP addresses, click the IP address that was added to edit the firewall address.
-		- Click Save to create the server-level firewall rule.
-		- You should now be able to [access](https://azure.microsoft.com/en-us/documentation/articles/sql-database-connect-query-ssms/) the SQL server using a tool like [Microsoft SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx).  
-    
+### Create a [SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision/), a cloud-based, scale-out database capable of processing massive volumes of data, both relational and non-relational.  
+- Log into the [Azure Management Portal](https://ms.portal.azure.com), and Click + New > Databases > SQL Data Warehouse.  
+- In the SQL Data Warehouse blade, fill in the information needed as described below, starting with the **server** first:  
+- Server: click **Create a new server**  
+  - Server name: e.g. __manufacturesqldbserver02__ . A green check mark indicates that you have provided a valid name.    
+  - Server admin login:  A green check mark indicates that you have provided a valid name.  
+  - Password:  A green check mark indicates that you have provided a valid password.  
+  - Location: choose the same location as the other solution resources  
+  - Database name (this will be a **SQL data warehouse** type of db): e.g. Manufacturesqldb.  
+  - Subscription: Select the subscription that this SQL Data Warehouse will bill to.  
+  - Resource group: select the reource group created for this solution.  
+  - Select source: leave it **blank database**.  
+  - Collation: remains SQL_Latin1_General_CP1_CI_AS  
+  - Performance: We recommend starting with 400 DWUs. You can move the slider to the left or right to adjust the performance of your data warehouse, or scale up or down after creation. To learn more about DWUs, see our documentation on scaling or our pricing page.  
+  - After you click **Create** button, you check deploymnet status, in the Azure portal, e.g. by looking at the solution resource group **Overview** blade, under **Deployments** section, we should see a clickable status saying initally **1 deploying, 3 succeeded**.  
+  
+  - Create a new Azure SQL server-level firewall:  
+  Use the following steps in the Azure portal to create a server-level firewall rule that allows connections from an individual IP address (your client computer) or an entire IP address range to a SQL Database logical server.  
+	  - Log into the [Azure Management Portal](https://ms.portal.azure.com), 
+	  - In the left hand menu select *Resource groups*
+	  - Locate the resource group  you created for this project and click on it displaying the resources associated with the group in the resource group blade.
+	  - You should see the SQL server and the SQL database you just created.
+	  - Click the SQL server, and then click "Firewall".
+	  - Make sure the "Allow access to Azure services" is set to ON, and then press **+Add client IP" button at the top of the blade to have Azure create a rule for your client IP address. Optionally, to allow access to a range of IP addresses, click the IP address that was added to edit the firewall address.
+	  - Click Save to create the server-level firewall rule.
+	  - You should now be able to [access](https://azure.microsoft.com/en-us/documentation/articles/sql-database-connect-query-ssms/) the SQL server using a tool like [Microsoft SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx).  
+  
   
 #### As a less powerful DW alternative, data can be stored in a [SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/), a relational database service in the cloud based on Microsoft SQL Server engine:
 
@@ -256,11 +256,11 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
   
   	      
  Log into the [Azure Management Portal](https://ms.portal.azure.com), click __+(New)__ button, click databases and then select __SQL Database__.  
-	- Database name: provide a name for database - such as __manufacturesqldb__  
-	- Subscription: use your subscription  
-	- Resource group(select __Use existing__): Locate the resource group  you created for this project  
-	- Select source: Blank database  
-	- Under __Server__, click Configure required settings:  
+  - Database name: provide a name for database - such as __manufacturesqldb__  
+  - Subscription: use your subscription  
+  - Resource group(select __Use existing__): Locate the resource group  you created for this project  
+  - Select source: Blank database  
+  - Under __Server__, click Configure required settings:  
 	  - Server name: provide a name for server - such as __manufacturesqldbserver__. A green check mark indicates that you have provided a valid name  
 	  - Server admin login: A green check mark indicates that you have provided a valid name.   
 	  - Password: A green check mark indicates that you have provided a valid password.   
@@ -293,21 +293,21 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
   
   
 ### Connect the ASA to the SQL DW by adding **SQL database** outputs for the ASA job (similar to the steps preformed when adding PBI output sinks):  
-	- Output Alias: dbsinkALS0[**N**] (**N** = 0..4).  
-	- Sink: **SQL database**  
-	- Subscription: choose solution subscription  
-	- Database: choose the database created for this solution  
-	- Fill Server name, Username, Password
-	- Table: choose AllDataALS0[**N**], (**N** = 0..4) or the table names you created in the SQL db/wh before  
-	- Click **Create** button.  
+  - Output Alias: dbsinkALS0[**N**] (**N** = 0..4).  
+  - Sink: **SQL database**  
+  - Subscription: choose solution subscription  
+  - Database: choose the database created for this solution  
+  - Fill Server name, Username, Password
+  - Table: choose AllDataALS0[**N**], (**N** = 0..4) or the table names you created in the SQL db/wh before  
+  - Click **Create** button.  
   
-	- Extend the query of ASA Job created before to sent data to the DW sinks:  
-		- Log into the classic [Azure Managment Portal](https://manage.windowsazure.com) and select the ASA Job  created for this solution (you have to stop the ASA, if it is running, in order to add outputs as described below).  
-		- Append at the end of the query lines like:  
+  - Extend the query of ASA Job created before to sent data to the DW sinks:  
+ 	 - Log into the classic [Azure Managment Portal](https://manage.windowsazure.com) and select the ASA Job  created for this solution (you have to stop the ASA, if it is running, in order to add outputs as described below).  
+ 	 - Append at the end of the query lines like:  
   
        **SELECT * INTO [dbsinkALS00] FROM subqueryw0 WHERE conveyor = '1'**  
-       
-       For example, to store all 5 datasets in the DW, we add 5 more lines, so that the last 10 lines of the ASA query look like this:   
+   
+	For example, to store all 5 datasets in the DW, we add 5 more lines, so that the last 10 lines of the ASA query look like this:   
        
        
 	      SELECT evttime, conveyor as waypoint, device_id, resultw0 as label INTO [w0pbi] FROM subqueryw0 WHERE conveyor = '1'
@@ -320,7 +320,7 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
 	      SELECT * INTO [dbsinkALS02] FROM subqueryw2 WHERE conveyor = '3'
 	      SELECT * INTO [dbsinkALS03] FROM subqueryw3 WHERE conveyor = '4'
 	      SELECT * INTO [dbsinkALS04] FROM subqueryw4 WHERE conveyor = '5'
-  NOTE: in TSQL, **--** at the begining of a line comments that line. So each of the above lines can be easily commented by adding -- at the begining of the line.  
+  **NOTE**: in TSQL, **--** at the begining of a line comments that line. So each of the above lines can be easily commented by adding -- at the begining of the line.  
   Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
 	   
 	   
@@ -377,10 +377,10 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
 	      SELECT evttime, conveyor as waypoint, device_id, resultw3 as label INTO [w3blob] FROM subqueryw3 WHERE conveyor = '4'  
 	      SELECT evttime, conveyor as waypoint, device_id, resultw4 as label INTO [w4blob] FROM subqueryw4 WHERE conveyor = '5'  
     
-  NOTE: in TSQL, **--** at the begining of a line comments that line. So each of the above lines can be easily commented by adding -- at the begining of the line.  
+  **NOTE**: in TSQL, **--** at the begining of a line comments that line. So each of the above lines can be easily commented by adding -- at the begining of the line.  
   Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
   
-### After the solution is deployed and is running, you can see live updates of the PBI dashboards, check the blob files, or connect to the DW and run queris to retrieve data:   
+### After the solution is deployed and is running, you can see live updates of the PBI dashboards, check the blob files, or connect to the DW and run queris to retrieve data. If you dot see the files in    
        
        
 	      SELECT TABLE_NAME FROM Manufacturesqldb.INFORMATION_SCHEMA.Tables WHERE TABLE_TYPE = 'BASE TABLE'
@@ -400,4 +400,6 @@ evttime	device_id	conveyor	col106	...
 2016-11-23T09:13:28.2651491Z	device_135	1	0.00983559370077	...  
 2016-11-23T09:10:37.9897048Z	device_101	1	-0.0111869417915	...  
 
+
+  **NOTE**: These queries will work in older versions of [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx), even if the WS tables may not be visible. For best performance and experience (including being eble to see the tables in SSMS GUI, we recommed the latest SSMG version)
 
