@@ -7,7 +7,7 @@
 
 Solution status can be monitored using the solution components in [Azure Management Portal](https://ms.portal.azure.com). 
 
-![Solution Components in Azure portal](https://cloud.githubusercontent.com/assets/16708375/19970093/e0a6a49a-a1d2-11e6-8f29-d5974d92480c.png)
+![Solution Components in Azure portal](https://cloud.githubusercontent.com/assets/16708375/20677797/475ba1d2-b58c-11e6-92b3-525057beb649.png)
 
  <sub>
  Solution Components in Azure Management Portal
