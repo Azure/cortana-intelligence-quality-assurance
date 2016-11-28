@@ -20,7 +20,7 @@ We will focus on the solution end (Event Hub as the beginning and Blob Storage s
 
 We start with the ASA job stopped and empty containers (all blobs deleted) in solution blob storage account.
 
-![Empty Containers](https://cloud.githubusercontent.com/assets/16708375/19970112/f324153a-a1d2-11e6-8437-c79a12ceaa42.png)
+![Empty Containers](https://cloud.githubusercontent.com/assets/16708375/20677810/529789a8-b58c-11e6-9a4b-9f4ffd804927.png)
 
  <sub>
  Empty Containers (all blobs deleted) in solution blob storage account
