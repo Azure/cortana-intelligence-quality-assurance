@@ -4,10 +4,10 @@ In digital manufacturing, quality assurance across the assembly line is imperati
 
 ## Solution Dashboard
 The snapshot below shows an example PowerBI dashboard view that gives insights into the manufacturing assembly lines that are monitored.
-![Insights](https://cloud.githubusercontent.com/assets/9042064/20732304/23c67ee2-b65c-11e6-969a-0a8f81bf5963.PNG)
+![Insights](https://cloud.githubusercontent.com/assets/9042064/20733041/891bb5f2-b65f-11e6-8362-068b9ba92698.PNG)
 
 ## Solution Architecture
-![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/9042064/20733041/891bb5f2-b65f-11e6-8362-068b9ba92698.PNG)
+![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/20582452/2f4d4ff2-b1d9-11e6-97a4-105cb8150689.png)
 
 ## Getting Started
 
