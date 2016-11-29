@@ -8,7 +8,7 @@ The goal of the solution guide presented here is to predict failures in manufact
 The solution is implemented in the cloud, using the flexible on-line Microsoft Azure platform that decouples infrastructure components (data ingestion, storage, data movement, visualization) from analytics engine that supports modern DS languages like R and Python. The solution modeling component can thus be retrained as needed and be implemented using high performance Azure Machine Learning algorithms, or open source (R/Python) libraries, or from a third-party solution vendor.
 
 This tutorial will guide you through the process creating, from the ground up, a predictive manufacturing solution. Other related resources provided here:
- -  an extensive [solution description](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Technical%20Deployment%20Guide/SolutionDescription.md).
+ -  an extensive [solution description](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Technical%20Deployment%20Guide/SolutionDescription.md) that includes more details on the machine learning approach and related resources.
  -  [data flow](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Technical%20Deployment%20Guide/DataFlowReport.md) report demonstrating how post deployment monitoring can be used to visualize the timing and work-load of each key components of the solution.
  
 **For technical problems or questions about deploying this solution, please post in the issues tab of the repository.**
