@@ -64,3 +64,8 @@ We show here the upper part of the solution dashboard, visualizing results from 
 
 Each report is defined using quasi natural language (NLP) query (e.g. **How many device_id with label=1 in waypoint 0 in the last 30 seconds?**), typed in the **Ask a question about your data** text box in PBI dashboard. 
 
+6. Related Resources
+==========================================
+A "playbook" for approaching predictive maintenance problems, which can be considered to include use cases such as that discussed within this solution, is published [here](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance) and includes detail on how to [prepare data sources](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance#data-preparation), create features, and [set up a machine learning model](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance#modeling-techniques).
+
+There is also a modelling guide published in the format of a Jupyter notebook written in R [here](https://gallery.cortanaintelligence.com/Collection/Predictive-Maintenance-Modelling-Guide-1) and some details on how to think about evaluating predictive maintenance models [here](https://blogs.technet.microsoft.com/machinelearning/2016/04/19/evaluating-failure-prediction-models-for-predictive-maintenance/).
