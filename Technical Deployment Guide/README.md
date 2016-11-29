@@ -218,7 +218,7 @@ Published AML Services credentials
 				- Description: ALS*N* passes in last 30 seconds
 			- device_id with label=1 in waypoint *N* in the last 30 seconds
 				- Description: ALS*N* fails in last 30 seconds
-  
+  ![PBIASA Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
          
 ## (optional) Set-up Azure SQL Data Warehouse sinks 				
  For large scale OLAP applications that require scalable storage and processing of massive volumes of data via complex aggregation  queries, the solution uses [Azure SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-what-is/), where data can be later processed and visualized using massively parallel processing architecture.  
