@@ -33,7 +33,7 @@ This tutorial will guide you through the process creating, from the ground up, a
 
 This tutorial will require:
 
- - An Azure subscription, which will be used to deoploy the IoT suite project 
+ - An Azure subscription, which will be used to deoploy the project 
    (a [one-month free
    trial](https://azure.microsoft.com/en-us/pricing/free-trial/) is
    available for new users)
@@ -100,7 +100,7 @@ This section will walk you through the steps to manually create the manufacturin
 ## Create Azure Stream Analytics (ASA) Job
  - Log into the [Azure Management Portal](https://ms.portal.azure.com) 
  - In the left hand menu select *Resource groups*
- - Locate the resource group  you created for this project and click on it displaying the resources associated with the group in the resource group blade.
+ - Locate the resource group you created for this project and click on it displaying the resources associated with the group in the resource group blade.
  - At the top of the Resource Group blade click __+Add__.
  - In the *Search Everything* search box enter ***Stream Analytics job***
  - Choose ***Stream Analytics job*** from the results then click *Create*
@@ -161,13 +161,13 @@ Published AML Services credentials
 	     - Click the check button to complete  
   
 - Click *QUERY*  
-    - Download the file StreamAnalyticsJob.txt from this repository. Copy and paste the content into the query window.  
+    - Download the file StreamAnalyticsJob.txt from the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/resources) of this repository. Copy and paste the content into the query window.  
     - Click *SAVE*  
 - When all inputs, functions, outputs and the query have been entered, click *START* at the bottom of the page.   
   
   
 ## Download and configure the data generator  
- - Download the file ***ManufacturingGenerator.zip*** from this repository.  
+ - Download the file ***ManufacturingGenerator.zip*** from the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/resources) of this repository.  
  - Unzip this file to the local disk drive of a Windows Machine.  
  - Open the file **ManfuacturingGenerator.exe.config** and modify the following AppSettings  
     - EventHubName : ***manufactureeh*** (or whatever you have chosen for the event hub previously).  
