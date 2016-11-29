@@ -251,7 +251,7 @@ Published AML Services credentials
 	  - You should now be able to [access](https://azure.microsoft.com/en-us/documentation/articles/sql-database-connect-query-ssms/) the SQL server using a tool like [Microsoft SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx).  
   
   
-#### As a less powerful DW alternative, data can be stored in a [SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/), a relational database service in the cloud based on Microsoft SQL Server engine:
+#### As an OLTP alternative to SQL DW, if processing requirements are focused not on complex agggregations but on a large number of short on-line transactions, data can be stored in a [SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/), a relational database service in the cloud based on Microsoft SQL Server engine:
 
 ![create Azure SQL database](https://cloud.githubusercontent.com/assets/16708375/20218783/39817dac-a7f4-11e6-9cc4-0544f5fd7bc4.png)  
 
