@@ -332,7 +332,7 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
   Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
   
 Once data has been flowing into the data warehouse, [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/) can be used to build visualizations of the historical data (and a tool such as SQL Server Management Studio can be used to query and understand the data).
-An example visualization is below, and the Power BI Desktop file that was used to create this is included in the resources folder of this repository.
+An example visualization is below, and the [Power BI Desktop file](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/resources/ManuQualityAssurance.pbix) that was used to create this is included in the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/resources/) of this repository.
 ![PBI](https://cloud.githubusercontent.com/assets/9042064/20733041/891bb5f2-b65f-11e6-8362-068b9ba92698.PNG)
 	   
 	   
