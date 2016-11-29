@@ -1,3 +1,5 @@
+Please check back - material to be added to this folder of the respository soon.
+
 # Cortana Intelligence Suite Solution Template
 # Predictive Analytics for Quality Assurance Process in Manufacturing
 
