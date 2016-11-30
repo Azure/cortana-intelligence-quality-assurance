@@ -30,7 +30,7 @@ This tutorial will guide you through the process creating, from the ground up, a
  - Event ingestion is performed using an [Azure Event Hub](https://azure.microsoft.com/en-us/documentation/articles/event-hubs-overview/) which receives simulated records  of ALS test measurements sent using an [Azure WebJob](https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/).
  - Event processing is performed using an [Azure Stream Analytics](https://azure.microsoft.com/en-us/services/stream-analytics/) job which passes events to the appropriate [Azure Machine Learning](https://azure.microsoft.com/en-us/services/machine-learning/) endpoint and 
  pushes the results to [PowerBI](https://powerbi.microsoft.com/) datasets.  
- 
+   
  Batch Layer:  
  - For large scale applications, solution scales out easily for complex processing and detailed visualizations of historical data by using Azure [SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision/), or [SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/).  
  - Azure [Blob Storage](https://azure.microsoft.com/en-gb/documentation/articles/storage-blob-storage-tiers/#quick-start) sinks are used for storage.  
