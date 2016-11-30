@@ -42,7 +42,7 @@ Solution demo uses [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) datase
 
 
 4. ML implementation:
-================
+=====================
 The predictive analytics part of the solution is implemented using [Azure ML studio](https://studio.azureml.net/). The training experiments use a two class linear [SVM](https://msdn.microsoft.com/en-us/library/azure/dn905835.aspx) classifier, fine tuned by optimizing the AUC (area under the ROC curve) metric using the Azure ML Studio ["Tune Model Hyperparameters"](https://msdn.microsoft.com/en-us/library/azure/dn905810.aspx) module.
 
 
@@ -53,8 +53,13 @@ Figure 3
 Azure ML studio Training Experiment for ALS/waypoint 0
 </sup>
 
-The corresponding predictive experiments for all ALS are [published](http://gallery.cortanaintelligence.com/Experiment/Prediction-Model-Mk-IIII-w-p-0-Predictive-Exp-1) with this solution.
-
+The corresponding predictive experiments for all ALS are [published](http://gallery.cortanaintelligence.com/Experiment/Prediction-Model-Mk-IIII-w-p-0-Predictive-Exp-1) with this solution.  
+  
+When adapting this solution to other datasets, the ML section can be expanded as needed:  
+	- More preprocessing [Azure ML studio](https://studio.azureml.net/) modules for [feature engineering](https://msdn.microsoft.com/en-us/library/azure/dn905834.aspx) and [selection](https://msdn.microsoft.com/en-us/library/azure/dn905912.aspx) can be added.  
+	- Different machine learning [algorithms](https://msdn.microsoft.com/en-us/library/azure/dn905812.aspx) for Classification or Regression can be added and compared.  
+	- Furthermore, the best classifier performance can be further tweaked after training by [choosing the appropriate ROC operating point](https://blogs.msdn.microsoft.com/andreasderuiter/2015/02/09/using-roc-plots-and-the-auc-measure-in-azure-ml/) that gives the desired sensitivity-specificity trade-off driven by the cost of false positives and false negative in each uses case.   
+  
 5. Solution PBI dashboard (visualization):
 ==========================================
 ![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
