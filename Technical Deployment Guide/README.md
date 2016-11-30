@@ -191,6 +191,7 @@ Published AML Services credentials
 	- Copy the content of the **CONNECTION STRING - PRIMARY KEY** (Warning: the string, *not* the plain *PRIMARY KEY*)  
  - Double click the file **ManfuacturingGenerator.exe** to start data generation. This will open a console and show messages as data are streamed from the local computer into the event hub **manufactureeh**.  
     ***NOTE:*** The following PowerBI Dashboards will only be dynamically updated when this generator is running. 
+    ***NOTE:*** Data generator can also be run in the cloud, using an Azure [Virtual Machine](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-hero-tutorial). For some of the snapshots we show here, a Windows Server 2008 R2 SP1 [Virtual Machine](https://azure.microsoft.com/en-us/marketplace/virtual-machines/) was used with minimal A0 Basic (1 Core, 0.75 GB 1 Data disks, 1x300 Max IOPS) configuration.
 
 
 ## Configure a Power BI dashboard
