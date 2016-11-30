@@ -316,7 +316,6 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
   - Fill Server name, Username, Password
   - Table: choose AllDataALS0[**N**], (**N** = 0..4) or the table names you created in the SQL db/wh before  
   - Click **Create** button.  
-  
   - Extend the query of ASA Job created before to sent data to the DW sinks:  
  	 - Log into the classic [Azure Managment Portal](https://manage.windowsazure.com) and select the ASA Job  created for this solution (you have to stop the ASA, if it is running, in order to add outputs as described below).  
  	 - Append at the end of the query lines like:  
@@ -335,9 +334,14 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
 	      SELECT * INTO [dbsinkALS01] FROM subqueryw1 WHERE conveyor = '2'
 	      SELECT * INTO [dbsinkALS02] FROM subqueryw2 WHERE conveyor = '3'
 	      SELECT * INTO [dbsinkALS03] FROM subqueryw3 WHERE conveyor = '4'
-	      SELECT * INTO [dbsinkALS04] FROM subqueryw4 WHERE conveyor = '5'
+	      SELECT * INTO [dbsinkALS04] FROM subqueryw4 WHERE conveyor = '5'  
+  
+	
+  
+  
   **NOTE**: Each of the above TSQL lines can be commented if needed by adding **--** at the begining of the line.  
-  Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
+  
+  - Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
   
 Once data has been flowing into the data warehouse, [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/) can be used to build visualizations of the historical data (and a tool such as SQL Server Management Studio can be used to query and understand the data).
 An example visualization is below, and the [Power BI Desktop file](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/resources/ManuQualityAssurance.pbix) that was used to create this is included in the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/resources/) of this repository.
