@@ -22,12 +22,18 @@ This tutorial will guide you through the process creating, from the ground up, a
  Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing
 </sup>
 
-
+  
+ Solution [Lambda](http://social.technet.microsoft.com/wiki/contents/articles/33626.lambda-architecture-implementation-using-microsoft-azure.aspx) architecture uses the hot (upper) path for real time processing and cold (lower) path for distributed processing that can handle complex queries on very large quantities of historical data.  
+   
+ Speed Layer:  
  - Predictions are made for a individual products as they travel down a production line passing through 5 different waypoints. 
  - Event ingestion is performed using an [Azure Event Hub](https://azure.microsoft.com/en-us/documentation/articles/event-hubs-overview/) which receives simulated records  of ALS test measurements sent using an [Azure WebJob](https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-jobs/).
  - Event processing is performed using an [Azure Stream Analytics](https://azure.microsoft.com/en-us/services/stream-analytics/) job which passes events to the appropriate [Azure Machine Learning](https://azure.microsoft.com/en-us/services/machine-learning/) endpoint and 
  pushes the results to [PowerBI](https://powerbi.microsoft.com/) datasets.  
- - (optional, data processsing "cold path") Azure [Blob Storage](https://azure.microsoft.com/en-gb/documentation/articles/storage-blob-storage-tiers/#quick-start) sinks are used for storage and for off-line post-processing. 
+ 
+ Batch Layer:  
+ - For large scale applications, solution scales out easily for complex processing and detailed visualizations of historical data by using Azure [SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision/), or [SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/).  
+ - Azure [Blob Storage](https://azure.microsoft.com/en-gb/documentation/articles/storage-blob-storage-tiers/#quick-start) sinks are used for storage.  
  
 
 3. Deployment Steps:
@@ -302,7 +308,7 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
   
   
 ### Connect the ASA to the SQL DW by adding **SQL database** outputs for the ASA job (similar to the steps preformed when adding PBI output sinks):  
-  - Output Alias: dbsinkALS0[**N**] (**N** = 0..4).  
+  - Output Alias: dbsinkALS0**N** (**N** = 0..4).  
   - Sink: **SQL database**  
   - Subscription: choose solution subscription  
   - Database: choose the database created for this solution  
@@ -329,7 +335,7 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
 	      SELECT * INTO [dbsinkALS02] FROM subqueryw2 WHERE conveyor = '3'
 	      SELECT * INTO [dbsinkALS03] FROM subqueryw3 WHERE conveyor = '4'
 	      SELECT * INTO [dbsinkALS04] FROM subqueryw4 WHERE conveyor = '5'
-  **NOTE**: in TSQL, **--** at the begining of a line comments that line. So each of the above lines can be easily commented by adding -- at the begining of the line.  
+  **NOTE**: Each of the above TSQL lines can be commented if needed by adding **--** at the begining of the line.  
   Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
   
 Once data has been flowing into the data warehouse, [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/) can be used to build visualizations of the historical data (and a tool such as SQL Server Management Studio can be used to query and understand the data).
@@ -390,7 +396,7 @@ An example visualization is below, and the [Power BI Desktop file](https://githu
 	      SELECT evttime, conveyor as waypoint, device_id, resultw3 as label INTO [w3blob] FROM subqueryw3 WHERE conveyor = '4'  
 	      SELECT evttime, conveyor as waypoint, device_id, resultw4 as label INTO [w4blob] FROM subqueryw4 WHERE conveyor = '5'  
     
-  **NOTE**: in TSQL, **--** at the begining of a line comments that line. So each of the above lines can be easily commented by adding -- at the begining of the line.  
+  **NOTE**: Each of the above TSQL lines can be commented if needed by adding **--** at the begining of the line.    
   Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
   
 ### After the solution is deployed and is running, you can see live updates of the PBI dashboards, connect to the DW and run queris to retrieve data, or check the blob files. Queries like the ones below can be run within [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx):    
@@ -414,5 +420,5 @@ evttime	device_id	conveyor	col106	...
 2016-11-23T09:10:37.9897048Z	device_101	1	-0.0111869417915	...  
 
 
-  **NOTE**: These queries will work in older versions of [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx), even if the WS tables may not be visible. For best performance and experience (including being eble to see the tables in SSMS GUI, we recommed the latest [SSMG version](https://msdn.microsoft.com/en-us/library/mt238290.aspx)).
+  **NOTE**: These queries will work in older versions of [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx), even if the WS tables may not be visible. For best performance and experience (including being able to see the tables in SSMS GUI, we recommed the latest [SSMG version](https://msdn.microsoft.com/en-us/library/mt238290.aspx)).
 
