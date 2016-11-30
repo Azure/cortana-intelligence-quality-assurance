@@ -58,7 +58,9 @@ The corresponding predictive experiments for all ALS are [published](http://gall
 When adapting this solution to other datasets, the ML section can be expanded as needed:  
 	- More preprocessing [Azure ML studio](https://studio.azureml.net/) modules for [feature engineering](https://msdn.microsoft.com/en-us/library/azure/dn905834.aspx) and [selection](https://msdn.microsoft.com/en-us/library/azure/dn905912.aspx) can be added.  
 	- Different machine learning [algorithms](https://msdn.microsoft.com/en-us/library/azure/dn905812.aspx) for Classification or Regression can be added and compared.  
-	- Furthermore, the best classifier performance can be further tweaked after training by [choosing the appropriate ROC operating point](https://blogs.msdn.microsoft.com/andreasderuiter/2015/02/09/using-roc-plots-and-the-auc-measure-in-azure-ml/) that gives the desired sensitivity-specificity trade-off driven by the cost of false positives and false negative in each uses case.   
+	- Furthermore, the best classifier performance can be further tweaked after training by [choosing the appropriate ROC operating point](https://blogs.msdn.microsoft.com/andreasderuiter/2015/02/09/using-roc-plots-and-the-auc-measure-in-azure-ml/) that gives the desired sensitivity-specificity trade-off driven by the cost of false positives and false negative in each uses case.  
+	
+See also the related resources at the bottom of this page for more details on how to approach the data science and machine learning component of this solution for your own data.
   
 5. Solution PBI dashboard (visualization):
 ==========================================
