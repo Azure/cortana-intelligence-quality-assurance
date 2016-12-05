@@ -61,7 +61,7 @@ To achieve this, all names used in this guide that contain string **manufacture*
  - manufact***ureehns*** in the guide below should actually be spelled manufact***xs01ehns***  
  - manufact***ureeh*** should actually be spelled manufact***xs01eh***  
   
-While in general the users can choose to follow this naming scheme or use their own naming, we note the functions of the Azure Stream Analytics (ASA) Job MUST be named waypoint**N** (i.e. waypoint0), where N = 0..4  matches the number from the ml endpoint. Changing the ASA function names is certainly possible, but it requires name changing for the ML services as weell, which is beyond the scope of this project.  
+While in general the users can choose to follow this naming scheme or use their own naming, we note the functions of the Azure Stream Analytics (ASA) Job MUST be named waypoint**N** (i.e. waypoint0), where N = 0..4  matches the number from the ml endpoint. Changing the ASA function names is certainly possible, but it requires name changing for the ML services as well, which is beyond the scope of this project.  
 
 
 # Manual Steps
