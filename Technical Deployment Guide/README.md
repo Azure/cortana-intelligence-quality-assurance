@@ -49,6 +49,20 @@ This tutorial will require:
    available for new users)
  - An [Azure Machine Learning Studio](https://studio.azureml.net/) account.
  - A Windows Desktop or as Windows based [Azure Virtual Machine](https://azure.microsoft.com/en-us/services/virtual-machines/) to run a data generation tool.    
+ 
+### Naming Convention  
+
+This deployment guide walks the readers through the creation of each of the Cortana Intelligence Suite services in the solution architecture defined in Section 2. As there are usually many interdependent components in a solution, [Azure Resource Manager]{https://azure.microsoft.com/en-gb/features/resource-manager/} enables you to group all Azure services in one solution into a resource group. Each component in the resource group is called a resource. We want to use a common name for the different services we are creating. However, several services, such as Azure Storage, require a unique name for the storage account across a region and hence this format should provide the user with a unique identifier. To address this, the remainder of this document will use the assumption that the base service name we refer to as **manufacture** is actually spelled:  
+ manufact[UI][N]  
+  
+Where [UI] is the user's initials and N is a random integer that you choose. Characters must be entered in in lowercase.  
+
+So for example, Steven X. Smith might use a base service name of manufactxs01, and all services names below should follow the same namig pattern:  
+ - ***manufactureehns*** should actually be spelled ***manufactxs01ehns***  
+ - ***manufactureeh*** should actually be spelled ***manufactxs01eh***  
+  
+While in general the users can choose to follow this naming scheme or use their own naming, we note the functions of the Azure Stream Analytics (ASA) Job MUST be named waypoint**N** (i.e. waypoint0), where N = 0..4  matches the number from the ml endpoint. Changing the names is certainly possible, but it requires name changing for the ML services as weell, which is beyond the scope of this project.  
+
 
 # Manual Steps
 This section will walk you through the steps to manually create the manufacturing solution in your Azure subscription.
@@ -279,8 +293,7 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
 	  - Server name: provide a name for server - such as __manufacturesqldbserver__. A green check mark indicates that you have provided a valid name  
 	  - Server admin login: A green check mark indicates that you have provided a valid name.   
 	  - Password: A green check mark indicates that you have provided a valid password.   
-	  - Location: choose same location you used for other solution resources.  
-	  - Create V12 server (Latest update): Yes  
+	  - Location: choose same location you used for other solution resources. 
 	  - Check __Allow azure services to access server__  
 	  - Press __Select__ button at the blade buttom.  
 	  - Leave __Want to use SQL elastic pool?__ unchanged ("__Not now__").  
@@ -295,29 +308,30 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
   - Use your favourite tool to connect to the database created above. A good option is [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx).
   - Run the queries in the SQLDatabaseQueries_InputData_ALS0[**N**].sql (**N** = 0..4) files attached to this solution deployment.
   After you run the queries, you should have 5 tables AllDataALS0[**N**], (**N** = 0..4) in the database.
-  - [OPTIONAL] In general, you can use **SQL Server 2016 Import and Export Data** to create SQL database data tables using schema from sample csv files.  
-            - you can install the SQL Server Import and Export Wizard by installing SQL Server Data Tools ([SSDT](https://msdn.microsoft.com/library/mt204009.aspx))  
-            Use **SQL Server 2016 Import and Export Data** (you can install the SQL Server Import and Export Wizard by installing SQL Server Data Tools ([SSDT](https://msdn.microsoft.com/library/mt204009.aspx))).
-            - If you have a sample of the data you wish to store in the database (for example obtained by running the solution and saving the full data in a blob storage account as described above), you can run **SQL Server 2016 Import and Export Data**:
+  - [OPTIONAL] In general, you can use **SQL Server 2016 Import and Export Data** tool to create SQL database data tables using schema from sample csv files.  
+            - Use **SQL Server 2016 Import and Export Data** (you can install the SQL Server Import and Export Wizard by installing SQL Server Data Tools ([SSDT](https://msdn.microsoft.com/library/mt204009.aspx))).
+            - Use the traing data sample (in the solution **resources** directory), you can run **SQL Server 2016 Import and Export Data**:
             	- Data source: select **Flat File Source** as input and choose the waypoint**N**_training.csv file (**N** = 0..4), then press **Next**  
             	- Destination: Select  **Microsoft OLE DB Provider for SQL server**  
             	- Select **Use SQL Server Authetication**, and type admin user name and password  
             	- Press **Edit Mappings** button  
             	- Press **Edit SQL...** button and copy and save the autogenared SQL query.  
-            	- You can continue to upload the csv file to the database, or just use the autogenerated query to created and empty database table with the csv file schema.  
+            	- You can continue to upload the csv file to the database, or just use the autogenerated SQL query to create an empty database table with the csv file schema.  
             	NOTE: The automatically generated SQL queries will generally use non-specific varchar data type for all fields in the created tables. For data fields that require non-generic types, the SQL query autogenerated above should be edited to specify the desired type for each field.
   
   
 ### Connect the ASA to the SQL DW by adding **SQL database** outputs for the ASA job (similar to the steps preformed when adding PBI output sinks):  
-  - Output Alias: dbsinkALS0**N** (**N** = 0..4).  
-  - Sink: **SQL database**  
-  - Subscription: choose solution subscription  
-  - Database: choose the database created for this solution  
-  - Fill Server name, Username, Password
-  - Table: choose AllDataALS0[**N**], (**N** = 0..4) or the table names you created in the SQL db/wh before  
-  - Click **Create** button.  
+  - Log into the [Azure Management Portal](https://ms.portal.azure.com) and select the Stream Analytics Job created for this solution (you have to stop the the ASA, if it is running, in order to add outputs as described below).  
+  - Click *OUTPUTS* and then click ***+ADD***  
+    - Output Alias: dbsinkALS0**N** (**N** = 0..4).  
+    - Sink: **SQL database**  
+    - Subscription: choose solution subscription  
+    - Database: choose the database created for this solution  
+    - Fill Server name, Username, Password
+    - Table: choose AllDataALS0[**N**], (**N** = 0..4) or the table names you created in the SQL db/wh before  
+    - Click **Create** button.  
   - Extend the query of ASA Job created before to sent data to the DW sinks:  
- 	 - Log into the classic [Azure Managment Portal](https://manage.windowsazure.com) and select the ASA Job  created for this solution (you have to stop the ASA, if it is running, in order to add outputs as described below).  
+ 	 - Log into the classic [Azure Managment Portal](https://manage.windowsazure.com) and select the ASA Job  created for this solution (you have to stop the ASA, if it is running, in order to add outputs as described below).   
  	 - Append at the end of the query lines like:  
   
        **SELECT * INTO [dbsinkALS00] FROM subqueryw0 WHERE conveyor = '1'**  
@@ -351,30 +365,30 @@ An example visualization is below, and the [Power BI Desktop file](https://githu
 
 ## (optional) Set-up Azure Blob Storage sinks 				
  For any solution output, we can also create a blob storage sink, where data shown in PBI dashboard is also saved in text format (csv file).  
-  - For any (or all) solution output, first create  containers in the solution blob storage account:
-    - Log into the [Azure Management Portal](https://ms.portal.azure.com) 
-    - In the left hand menu select *Resource groups*
-    - Locate the resource group you created for this project and click on it to display the resources associated with the solution resource group.
-    - Click on the storage account of the solution resource group, then click **Containers**, and then **+Container** to add containers named outputsink0[N] (e.g. from outputsink00 to outputsink04). Set **Access type** property to **private**.
-
- Then, go to the solution Azure Stream Analytics (ASA) Job created before and connect the AML outputs to blob storage sinks created above:
-  - Log into the [Azure Management Portal](https://ms.portal.azure.com) and select Stream Analytics Job was created for this solution (you have to stop the the ASA, if it is running, in order to add outputs as described below).
-  - Click *OUTPUTS*
-    - For each of the ml models, we will create a blob dataset output. In the following steps, complete one for each value of [N] where [N]= 0->4 (you can use a new web browser tab to see the storage account stting in [Azure Management Portal](https://ms.portal.azure.com))
-      - On the ASA *OUTPUTS* page click ***+ADD***.
-        - OUTPUT ALIAS : w[N]blob (e.g. w0blob)
-        - Sink: Blob storage
-        - Subscription: Provide Storage account settings manually
-        - Storage Account: paste name of Storage Account assigned to this solution resource group (use portal, click storage account and then click Access keys, copy **Storage account name**)
-        - Storage Account Key: paste key info of Storage Account assigned to this solution resource group (use portal, click storage account and then click Access keys, copy **key1**)
-        - Container: use container name created above (e.g. outputsink01).
-        - Path Prefix Pattern: manufacturingtemplateoutput0[N]/{date}/{time}, N = 0..4 (e.g. manufacturingtemplateoutput00/{date}/{time} to manufacturingtemplateoutput04/{date}/{time})
-        - Date format: your choice (e.g. MM-DD-YYYY)
-        - Time format: HH
-        - Event Serialization Format: csv
-        - Delimiter: comma 
-        - Encoding: UTF8
-        - Click **Create** button to complete	        
+  - For any (or all) solution output, first create  containers in the solution blob storage account:  
+    - Log into the [Azure Management Portal](https://ms.portal.azure.com)   
+    - In the left hand menu select *Resource groups*  
+    - Locate the resource group you created for this project and click on it to display the resources associated with the solution resource group.  
+    - Click on the storage account of the solution resource group, then click **Containers**, and then **+Container** to add containers named outputsink0[N] (e.g. from outputsink00 to outputsink04). Set **Access type** property to **private**.  
+  
+ Then, go to the solution Azure Stream Analytics (ASA) Job created before and connect the AML outputs to blob storage sinks created above:  
+  - Log into the [Azure Management Portal](https://ms.portal.azure.com) and select Stream Analytics Job was created for this solution (you have to stop the the ASA, if it is running, in order to add outputs as described below).  
+  - Click *OUTPUTS*  
+    - For each of the ml models, we will create a blob dataset output. In the following steps, complete one for each value of [N] where [N]= 0->4 (you can use a new web browser tab to see the storage account stting in [Azure Management Portal](https://ms.portal.azure.com))  
+      - On the ASA *OUTPUTS* page click ***+ADD***.  
+        - OUTPUT ALIAS : w[N]blob (e.g. w0blob)  
+        - Sink: Blob storage  
+        - Subscription: Provide Storage account settings manually  
+        - Storage Account: paste name of Storage Account assigned to this solution resource group (use portal, click storage account and then click Access keys, copy **Storage account name**)  
+        - Storage Account Key: paste key info of Storage Account assigned to this solution resource group (use portal, click storage account and then click Access keys, copy **key1**)  
+        - Container: use container name created above (e.g. outputsink01).  
+        - Path Prefix Pattern: manufacturingtemplateoutput0[N]/{date}/{time}, N = 0..4 (e.g. manufacturingtemplateoutput00/{date}/{time} to manufacturingtemplateoutput04/{date}/{time})  
+        - Date format: your choice (e.g. MM-DD-YYYY)  
+        - Time format: HH  
+        - Event Serialization Format: csv  
+        - Delimiter: comma   
+        - Encoding: UTF8  
+        - Click **Create** button to complete	         
 	      
  Extend the query of ASA Job created before to sent data to the blob sinks:
   - Log into the classic [Azure Managment Portal](https://manage.windowsazure.com) and select the ASA Job  created for this solution (you have to stop the ASA, if it is running, in order to add outputs as described below).  
