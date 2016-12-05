@@ -55,7 +55,7 @@ This tutorial will require:
 This deployment guide walks the readers through the creation of each of the Cortana Intelligence Suite services in the solution architecture defined in Section 2. As there are usually many interdependent components in a solution, [Azure Resource Manager](https://azure.microsoft.com/en-gb/features/resource-manager/) enables you to group all Azure services in one solution into a resource group. Each component in the resource group is called a resource. We want to use a common name for the different services we are creating. However, several services, such as Azure Storage, require a unique name for the storage account across a region and hence a naming convention is needed that should provide the user with a unique identifier. To address this, we suggest employing a base service name based on solution scope (manufacturing) and user's specific details like name and/or a custom numeric ID:  
  **manufact[UI][N]**  
   
-where [UI] is the user's initials and N is a random integer that you choose and characters must be entered in in lowercase.  
+where [UI] is the user's initials, N is a random integer that you choose and characters must be entered in in lowercase.  
   
 To achieve this, all names used in this guide that contain string **manufacture** should be actually spelled as manufact[UI][N]. So for example, user Steven **X. Smith** might use a base service name of manufact**xs01**, and all services names below should follow the same naming pattern:  
  - manufact***ureehns*** in the guide below should actually be spelled manufact***xs01ehns***  
