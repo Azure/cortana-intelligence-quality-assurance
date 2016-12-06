@@ -244,7 +244,7 @@ Published AML Services credentials
 ![PBIASA Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
 
          
-## (optional) Set-up Azure SQL Data Warehouse sinks 				
+## Set-up Azure SQL Data Warehouse sinks 				
  For large scale OLAP applications that require scalable storage and processing of massive volumes of data via complex aggregation  queries, the solution uses [Azure SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-what-is/), where data can be later processed and visualized using massively parallel processing architecture.  
    
 ### Create a [SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision/), a cloud-based, scale-out database capable of processing massive volumes of data, both relational and non-relational.  
