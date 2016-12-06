@@ -7,7 +7,7 @@ The snapshot below shows an example PowerBI dashboard that gives insights into t
 ![Insights](https://cloud.githubusercontent.com/assets/9042064/20733041/891bb5f2-b65f-11e6-8362-068b9ba92698.PNG)
 
 ## Solution Architecture
-![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/20582452/2f4d4ff2-b1d9-11e6-97a4-105cb8150689.png)
+![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/20932195/acb87330-bbcb-11e6-8a89-27d8b6e17bdf.png)
 
 ## Getting Started
 
