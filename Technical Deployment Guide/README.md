@@ -416,6 +416,7 @@ An example visualization is below, and the [Power BI Desktop file](https://githu
 	      SELECT evttime, conveyor as waypoint, device_id, resultw4 as label INTO [w4blob] FROM subqueryw4 WHERE conveyor = '5'  
     
   **NOTE**: Each of the above TSQL lines can be commented if needed by adding **--** at the begining of the line.    
+  
   Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
   
 ### After the solution is deployed and is running, you can see live updates of the PBI dashboards, connect to the DW and run queris to retrieve data, or check the blob files. Queries like the ones below can be run within [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx):    
