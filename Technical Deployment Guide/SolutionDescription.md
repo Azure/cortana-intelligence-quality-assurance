@@ -30,7 +30,7 @@ Each ALS measurements set was chosen by random sampling original SECOM feature c
 
 3. ML implementation:
 =====================
-The predictive analytics part of the solution is implemented using [Azure ML studio](https://studio.azureml.net/). The training experiments use a two class linear [SVM](https://msdn.microsoft.com/en-us/library/azure/dn905835.aspx) classifier, fine tuned by optimizing the AUC (area under the ROC curve) metric using the Azure ML Studio ["Tune Model Hyperparameters"](https://msdn.microsoft.com/en-us/library/azure/dn905810.aspx) module.
+The predictive analytics part of the solution is implemented using [Azure ML studio](https://studio.azureml.net/). The [training experiments](https://gallery.cortanaintelligence.com/Experiment/Training-Model-ALS01-1) use a two class linear [SVM](https://msdn.microsoft.com/en-us/library/azure/dn905835.aspx) classifier, fine tuned by optimizing the AUC (area under the ROC curve) metric using the Azure ML Studio ["Tune Model Hyperparameters"](https://msdn.microsoft.com/en-us/library/azure/dn905810.aspx) module.
 
 
 ![Azure ML studio Training Experiment for ALS/waypoint 0](https://cloud.githubusercontent.com/assets/16708375/20055465/198cec34-a4d9-11e6-95b0-93bee2269005.png)
