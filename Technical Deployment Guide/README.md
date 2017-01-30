@@ -151,7 +151,7 @@ This section will walk you through the steps to manually create the manufacturin
  - Click *FUNCTIONS*  
 	 - Click ***+ADD*** at blade top.  
    - For each of the machine learning experiments we created  
-	 - Enter the name waypoint**N** where N matches the number from the ml endpoint, for example (w.p. 0), N = 0..4  
+	 - Enter the name waypoint**N** where N matches the number from the ml endpoint, for example waypoint0 for Prediction-Model-Mk-IIII-w-p-0-Predictive-Exp-1, or waypoint4 for Prediction-Model-Mk-IIII-w-p-4-Predictive-Exp-1.    
 	 - Function Type: remains **Azure ML**  
 	 - If you can access the ml points from the same subscription as in following instructions set:  
 		 - Subscription: remains **Select from the same subscription**  
