@@ -174,7 +174,7 @@ Published AML Services credentials
   - Key: Click the copy **APi key icon** to copy the API key and the **REQUEST/RESPONSE** hyperlink  
   - Click **Create** button to complete.
   
-THe final list of ASA functions show the increasing number of features as we move along ALS line, where for example ALS1 model (waypoint1) uses features (total 102) from both ALS1 (52) and ALS0 (52), bur not from later ALS-s like ALS2, or ALS4.
+THe final list of ASA functions show the increasing number of features as we move along ALS line, where for example ALS1 model (waypoint1) uses features (total 102) from both ALS1 (50) and ALS0 (52), bur not from later ALS-s like ALS2, or ALS4.
  
 ![ASA Functions](https://cloud.githubusercontent.com/assets/16708375/22430020/9c92bd4e-e704-11e6-9dcd-98756bc0865c.png)
 
