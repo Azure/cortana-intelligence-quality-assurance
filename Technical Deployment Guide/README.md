@@ -172,7 +172,16 @@ Published AML Services credentials
   - URL: click **REQUEST/RESPONSE** hyperlink and copy the **Request URI** for the **POST Method**, e.g:  
     https://europewest.services.azureml.net/workspaces/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/services/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/execute?api-version=2.0&details=true  
   - Key: Click the copy **APi key icon** to copy the API key and the **REQUEST/RESPONSE** hyperlink  
-  - Click **Create** button to complete.  
+  - Click **Create** button to complete.
+  
+THe final list of ASA functions show the increasing number of features as we move along ALS line, where for example ALS1 model (waypoint1) uses features from both ALS1 and ALS0, bur not from later ALS-s like ALS2, or ALS4.
+ 
+![ASA Functions](https://cloud.githubusercontent.com/assets/16708375/22430020/9c92bd4e-e704-11e6-9dcd-98756bc0865c.png)
+
+<sub>
+ASA functions properties show the increasing number of features as we move along ALS line.
+</sup>
+  
   
  - Click *OUTPUTS*  
    - For each of the ml models, we will create a PowerBI dataset output. In the following steps, complete one for each value of [N] where [N]= 0..4  
