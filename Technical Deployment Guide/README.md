@@ -87,6 +87,9 @@ This section will walk you through the steps to manually create the manufacturin
  - Return back to *Resource groups* and choose the resource group for this solution.
  - Click on ***manufactureehns***, then on the subsequent blade, choose "Overview", and click __+Event Hub__
  - Enter ***manufactureeh*** as the name, move partition count to 4 and click *Create*
+ - Return back to *Resource groups* and choose the resource group for this solution.
+ - Click on ***manufactureehns***, then on the subsequent blade, choose "Shared access policies", and click  __+Add__
+ - Enter any appropriate name (e.g. ***myASAPolicy***), then select ***Manage***, ***Send*** and ***Listen***, and then click *Create*  
 
 ## Create Machine Learning Workspace
  - Log into the [Azure Management Portal](https://ms.portal.azure.com) 
@@ -142,7 +145,7 @@ This section will walk you through the steps to manually create the manufacturin
         - SUBSCRIPTION: Use event hub from current subscription
         - Service bus namespace: ***manufactureehns*** (or whatever you have chosen for the __Event Hub**s**__ namespace previously)
         - Event hub name: ***manufactureeh*** (or whatever you have chosen for the event hub previously)
-        - Event hub policy name: leave unchanged
+        - Event hub policy name: leave unchanged, or choose the policy name (e.g. ***myASAPolicy***) created above in the "Shared access policies" for the solution Event Hub.
         - Event hub consumer group: leave empty
         - Event serialization format : remains JSON
         - Encoding: remains UTF-8
@@ -174,7 +177,7 @@ Published AML Services credentials
   - Key: Click the copy **APi key icon** to copy the API key and the **REQUEST/RESPONSE** hyperlink  
   - Click **Create** button to complete.
   
-THe final list of ASA functions show the increasing number of features as we move along ALS line, where for example ALS1 model (waypoint1) uses features (total 102) from both ALS1 (50) and ALS0 (52), bur not from later ALS-s like ALS2, or ALS4.
+The final list of ASA functions show the increasing number of features as we move along ALS line, where for example ALS1 model (waypoint1) uses features (total 102) from both ALS1 (50) and ALS0 (52), bur not from later ALS-s like ALS2, or ALS4.
  
 ![ASA Functions](https://cloud.githubusercontent.com/assets/16708375/22430020/9c92bd4e-e704-11e6-9dcd-98756bc0865c.png)
 
