@@ -1,6 +1,6 @@
 # [Quality Assurance for Manufacturing](https://go.microsoft.com/fwlink/?linkid=831187)
 
-This document is focusing on the post deployment instructions for the automated deployment through [Cortana Intelligence Solutions](https://gallery.cortanaintelligence.com/solutions). The source code of the solution as well as manual deployment instructions can be found [here](https://github.com/Azure/cortana-intelligence-energy-demand-forecasting/tree/master/Manual%20Deployment%20Guide).
+This document is focusing on the post deployment instructions for the automated deployment through [Cortana Intelligence Solutions](https://gallery.cortanaintelligence.com/solutions). The source code of the solution as well as manual deployment instructions can be found [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide).
 
 # Architecture
 The architecture diagram shows various Azure services that are deployed by [Quality Assurance for Manufacturing Solution](https://cloud.githubusercontent.com/assets/16708375/20932195/acb87330-bbcb-11e6-8a89-27d8b6e17bdf.png) using [Cortana Intelligence Solutions](https://gallery.cortanaintelligence.com/solutions), and how they are connected to each other in the end to end solution.
@@ -21,8 +21,6 @@ All the resources listed above besides Power BI are already deployed in your sub
 
 # Post Deployment Instructions
 Once the solution is deployed to the subscription, you can see the services deployed by clicking the resource group name on the final deployment screen in the CIS.
-
-![CIS resource group link](Figures/CIS resource group.png)
 
 This will show all the resources under this resource groups on [Azure management portal](https://portal.azure.com/).
 
@@ -52,7 +50,7 @@ Power BI dashboard can be used to visualize the real-time failure predictions. T
 
 ### Visualize Energy Data from Database
 
-The essential goal of this part is to get the demand forecast of each region and visualize it. Power BI can directly connect to an Azure SQL database as its data source, where the prediction results are stored.
+The essential goal of this part is to get the failure predictions and visualize it. Power BI can directly connect to an Azure SQL DW as its data source, where the prediction results are stored.
 
 > Note:  1) In this step, the prerequisite is to download and install the free software [Power BI desktop](https://powerbi.microsoft.com/desktop). 2) We recommend you start this process 2-3 hours after you deploy the solution so that you have more data points to visualize.
 
@@ -63,7 +61,7 @@ The essential goal of this part is to get the demand forecast of each region and
 2.	Update the data source of the Power BI file
   -  Make sure you have installed the latest version of [Power BI desktop](https://powerbi.microsoft.com/desktop).
 
-  -	In this GitHub repository, you can download the **'EnergyDemandForecastSolution.pbix'** file under the folder **'Power BI'** and then open it. **Note:** If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
+  -	In this GitHub repository, you can download the **'https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Automated%20Deployment%20Guide/ManuQualityAssurance.pbix'** file under the folder **'Power BI'** and then open it. **Note:** If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
 
   - On the top of the file, click **‘Edit Queries’** drop down menu. Then choose **'Data Source Settings'**.
   ![](Figures/PowerBI-7.png)
