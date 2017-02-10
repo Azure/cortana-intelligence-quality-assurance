@@ -78,7 +78,7 @@ The essential goal of this part is to get the failure predictions and visualize 
 
       - Click **"Publish"** on the top panel. Choose **'My Workspace'** and few seconds later a window appears displaying "Publishing succeeded".
 
-      - Click the link on the screen to open it in a browser. On the left panel, go to the **Dataset** section, right click the dataset *'EnergyDemandForecastSolution'*, choose **Dataset Settings**. In the pop out window, click **Enter credentials** and enter your database credentials by following the instructions. To find detailed instructions, please see [Publish from Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/461278-publish-from-power-bi-desktop).
+      - Click the link on the screen to open it in a browser. On the left panel, go to the **Dataset** section, right click the appropriate dataset, choose **Dataset Settings**. In the pop out window, click **Enter credentials** and enter your database credentials by following the instructions. To find detailed instructions, please see [Publish from Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/461278-publish-from-power-bi-desktop).
 
       - Now you can see new items showing under 'Reports' and 'Datasets'. To create a new dashboard: click the **'+'** sign next to the
         **Dashboards** section on the left pane. Enter the name "Energy Demand Forecasting Demo" for this new dashboard.
@@ -98,13 +98,13 @@ The essential goal of this part is to visualize the real-time energy consumption
 
   - Navigate to [Azure management portal](https://portal.azure.com) and login with your username and password. On the left tab click ***Resource groups*** and search for the solution you just deployed. The name of the resource group is the same as the name you choose for the solution.
 
-  - Click your resource group and locate the stream analytics job. The name of the job should be: YourSolutionName+"saJob" (i.e. energydemosaJob). Click the Stream Analytics job and then click **'Outputs'** from the panel on the right.
+  - Click your resource group and locate the stream analytics job. The name of the job should be: YourSolutionName+"saJob". Click the Stream Analytics job and then click **'Outputs'** from the panel on the right.
 
     ![Add Power BI output on ASA 1](Figures/PowerBI-1.png)
 
   - On the new window, click **'+Add'** on the top, and then it will show a window asking for information of the output. Under **'Sink'**, choose **'Power BI'**, then click **'Authorize'**. In the pop out window, log in with your Power BI account.
 
-  - Once you successfully authorize your Power BI account, fill in other information as follows. Set the **Output Alias** as **'outputPBI'**. Set your **'Dataset Name'** and **'Table Name'** as **'EnergyForecastStreamData'**. Click **'Create'** once you finish.
+  - Once you successfully authorize your Power BI account, fill in other information as follows. Set the **Output Alias** as **'outputPBI'**. Set your **'Dataset Name'** and **'Table Name'**. Click **'Create'** once you finish.
 
   - Now you have added the Power BI output, you can click ![Start](Figures/PowerBI-2.png) at the top of the page to start the Stream Analytics job. You will get a confirmation message (e.g. 'Streaming Job started successfully').
 
