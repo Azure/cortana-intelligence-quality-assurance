@@ -61,7 +61,7 @@ The essential goal of this part is to get the failure predictions and visualize 
 2.	Update the data source of the Power BI file
   -  Make sure you have installed the latest version of [Power BI desktop](https://powerbi.microsoft.com/desktop).
 
-  -	In this GitHub repository, you can download the **'https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Automated%20Deployment%20Guide/ManuQualityAssurance.pbix'** file under the folder **'Power BI'** and then open it. **Note:** If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
+  -	In this GitHub repository, you can download the **'ManuQualityAssurance.pbix'** file under the folder **'Automated Deployment Guide'** and then open it. **Note:** If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
 
   - On the top of the file, click **‘Edit Queries’** drop down menu. Then choose **'Data Source Settings'**.
   ![](Figures/PowerBI-7.png)
