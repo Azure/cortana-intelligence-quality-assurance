@@ -48,7 +48,7 @@ After successful deployment, the entire solution is automatically started on clo
 Power BI dashboard can be used to visualize the real-time failure predictions. The following instructions will guide you to build a dashboard to visualize data from database and from real-time data stream.
 
 
-### Visualize Energy Data from Database
+### Visualize Data from Database
 
 The essential goal of this part is to get the failure predictions and visualize it. Power BI can directly connect to an Azure SQL DW as its data source, where the prediction results are stored.
 
@@ -83,12 +83,12 @@ The essential goal of this part is to get the failure predictions and visualize 
       - Now you can see new items showing under 'Reports' and 'Datasets'. To create a new dashboard: click the **'+'** sign next to the
         **Dashboards** section on the left pane. Enter the name "Energy Demand Forecasting Demo" for this new dashboard.
 
-      - Once you open the report, click   ![Pin](Figures/PowerBI-4.png) to pin all the
+      - Once you open the report, click   ![Pin](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png) to pin all the
 		visualizations to your dashboard. To find detailed instructions, see [Pin a tile to a Power BI dashboard from a report](https://support.powerbi.com/knowledgebase/articles/430323-pin-a-tile-to-a-power-bi-dashboard-from-a-report). Here is an example of the dashboard.
 
-      ![Dashboard Example](Figures/PowerBI-11.png)
+      ![Dashboard Example](https://cloud.githubusercontent.com/assets/9042064/20732304/23c67ee2-b65c-11e6-969a-0a8f81bf5963.PNG)
 
-### Visualize Energy Data From Real-time Data Stream
+### Visualize Data From Real-time Data Stream
 
 The essential goal of this part is to visualize the real-time energy consumption data. Power BI can connect to a real-time data stream through Azure Stream Analytics.
 
