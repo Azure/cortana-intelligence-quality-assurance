@@ -118,17 +118,17 @@ The essential goal of this part is to visualize the real-time energy consumption
     right side of the screen.
 
 3. Now you can directly create a visualization on Power BI online. We will use this example to show you how to create the "Demand by Timestamp" tile:
-	-	Click dataset **EnergyForecastStreamData** on the left panel Datasets section.
+	-	Click dataset on the left panel Datasets section.
 
 	-	Click **"Line Chart"** icon.![Line Chart](Figures/PowerBI-3.png)
 
-	-	Click EnergyForecastStreamData in **Fields** panel.
+	-	Click relevant field you want to visualize in **Fields** panel.
 
-	-	Click **“time”** and make sure it shows under "Axis". Click **“demand”** and make sure it shows under "Values".
+	-	Click **“time”** and make sure it shows under "Axis". Click the variable you want to visualize and make sure it shows under "Values".
 
-	-	Click **'Save'** on the top and name the report as “EnergyStreamDataReport”. The report named “EnergyStreamDataReport” will be shown in Reports section in the Navigator pane on left.
+	-	Click **'Save'** on the top and give any name to the report. The report will then be shown in Reports section in the Navigator pane on left.
 
-	-	Click **“Pin Visual”**![](Figures/PowerBI-4.png) icon on top right corner of this line chart, a "Pin to Dashboard" window may show up for you to choose a dashboard. Please select "EnergyStreamDataReport", then click "Pin".
+	-	Click **“Pin Visual”**![](Figures/PowerBI-4.png) icon on top right corner of this line chart, a "Pin to Dashboard" window may show up for you to choose a dashboard. Please select the relevant report, then click "Pin".
 
 
 ## **Customization**
