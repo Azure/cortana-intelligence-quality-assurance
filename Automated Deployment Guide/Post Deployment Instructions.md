@@ -100,8 +100,6 @@ The essential goal of this part is to visualize the real-time energy consumption
 
   - Click your resource group and locate the stream analytics job. The name of the job should be: YourSolutionName+"saJob". Click the Stream Analytics job and then click **'Outputs'** from the panel on the right.
 
-    ![Add Power BI output on ASA 1](Figures/PowerBI-1.png)
-
   - On the new window, click **'+Add'** on the top, and then it will show a window asking for information of the output. Under **'Sink'**, choose **'Power BI'**, then click **'Authorize'**. In the pop out window, log in with your Power BI account.
 
   - Once you successfully authorize your Power BI account, fill in other information as follows. Set the **Output Alias** as **'outputPBI'**. Set your **'Dataset Name'** and **'Table Name'**. Click **'Create'** once you finish.
