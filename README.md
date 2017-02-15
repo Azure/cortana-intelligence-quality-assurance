@@ -32,7 +32,7 @@ For more information on how to tailor Cortana Intelligence to your needs [connec
 
 ## Technical Audiences
 
-See the [*Technical Deployment Guide*](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Technical%20Deployment%20Guide) folder for a full set of instructions on how to put together and deploy a Quality Assurance solution using the Cortana Intelligence Suite. For technical problems or questions about deploying this solution, please post in the issues tab of the repository.
+See the [*Manual Deployment Guide*](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide) folder for a full set of instructions on how to put together and deploy a Quality Assurance solution using the Cortana Intelligence Suite. For technical problems or questions about deploying this solution, please post in the issues tab of the repository.
 
 ## Related Resources
 A playbook for approaching predictive maintenance problems, which can be considered to include use cases such as that discussed within this solution, is published [here](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance) and includes detail on how to [prepare data sources](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance#data-preparation), create features, and [set up a machine learning model](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance#modeling-techniques).
