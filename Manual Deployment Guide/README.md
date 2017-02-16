@@ -452,7 +452,7 @@ evttime	device_id	conveyor	col106	...
 2016-11-23T09:10:37.9897048Z	device_101	1	-0.0111869417915	...  
 
 
-  **NOTE**: These queries will work in older versions of [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx), even if the WS tables may not be visible. For best performance and experience (including being able to see the tables in SSMS GUI, we recommed the latest [SSMG version](https://msdn.microsoft.com/en-us/library/mt238290.aspx)).
+  **NOTE**: These queries will work in older versions of [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx), even if the WS tables may not be visible. For best performance and experience (including being able to see the tables in SSMS GUI, we recommed the latest [SSMS version](https://msdn.microsoft.com/en-us/library/mt238290.aspx)).
 
 
 
