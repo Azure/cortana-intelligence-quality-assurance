@@ -83,7 +83,7 @@ The essential goal of this part is to get the failure predictions and visualize 
       - Now you can see new items showing under 'Reports' and 'Datasets'. To create a new dashboard: click the **'+'** sign next to the
         **Dashboards** section on the left pane. Enter the name "Energy Demand Forecasting Demo" for this new dashboard.
 
-      - Once you open the report, click   ![Pin](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png) to pin all the
+      - Once you open the report, click   ![Pin](hhttps://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Automated%20Deployment%20Guide/Figures/PowerBI-4.png) to pin all the
 		visualizations to your dashboard. To find detailed instructions, see [Pin a tile to a Power BI dashboard from a report](https://support.powerbi.com/knowledgebase/articles/430323-pin-a-tile-to-a-power-bi-dashboard-from-a-report). Here is an example of the dashboard.
 
       ![Dashboard Example](https://cloud.githubusercontent.com/assets/9042064/20732304/23c67ee2-b65c-11e6-969a-0a8f81bf5963.PNG)
