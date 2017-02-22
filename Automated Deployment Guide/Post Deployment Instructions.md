@@ -50,7 +50,7 @@ Power BI dashboard can be used to visualize the real-time failure predictions. T
 
 ### Visualize Data from Database
 
-The essential goal of this part is to get the failure predictions and visualize it. Power BI can directly connect to an Azure SQL DW as its data source, where the prediction results are stored.
+The essential goal of this part is to get the failure predictions and visualize it. Power BI can directly connect to an Azure SQL DW as its data source, where the prediction results are stored. Note that this is mainly for visualizing historical predictions rather than acting upon predictions in real time. For real-time visualizations on the predicted failures as they pass through the assembly line, further instructions are given below on visualizing streaming datasets.
 
 > Note:  1) In this step, the prerequisite is to download and install the free software [Power BI desktop](https://powerbi.microsoft.com/desktop). 2) We recommend you start this process 2-3 hours after you deploy the solution so that you have more data points to visualize.
 
@@ -90,7 +90,7 @@ The essential goal of this part is to get the failure predictions and visualize 
 
 ### Visualize Data From Real-time Data Stream
 
-The essential goal of this part is to visualize the real-time energy consumption data. Power BI can connect to a real-time data stream through Azure Stream Analytics.
+The essential goal of this part is to visualize the predictions in real time as the devices pass through the manufacturing assembly lines. Power BI can connect to a real-time data stream through Azure Stream Analytics.
 
 > Note: A [Power BI online](http://www.powerbi.com/) account is required to perform the following steps. If you don't have an account, you can [create one here](https://powerbi.microsoft.com/pricing).
 
