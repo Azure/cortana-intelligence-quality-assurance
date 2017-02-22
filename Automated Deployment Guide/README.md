@@ -4,7 +4,7 @@ This folder contains the post-deployment instructions for the deployable Quality
 
 To start a new solution deployment, visit the gallery page [here](https://go.microsoft.com/fwlink/?linkid=831187).
 
-<Guide type="PostDeploymentGuidance" url="https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Technical%20Deployment%20Guide/SolutionDescription.md"/>
+<Guide type="PostDeploymentGuidance" url="https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Automated%20Deployment%20Guide/Post%20Deployment%20Instructions.md"/>
 
 ## <a name="Summary"></a>Summary
 <Guide type="Summary">
