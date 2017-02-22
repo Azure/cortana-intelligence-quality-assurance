@@ -12,7 +12,7 @@ The architecture diagram shows various Azure services that are deployed by [Qual
 
 2.	This synthetic data feeds into the **Azure Event Hubs** as data points/events, that will be consumed in the rest of the solution flow and stored in **Azure SQL Data Warehouse**.
 
-3.	There are 2 **Azure Stream Analytics** jobs used in this pattern to provide near real-time analytics on the input stream from the **Azure Event Hub**. Both jobs filter through the input data and pass the data points along to a **Azure Machine Learning** endpoint sending the results to a **Power BI Dashboard**.
+3.	There is 1 **Azure Stream Analytics** job used in this pattern to provide near real-time analytics on the input stream from the **Azure Event Hub** and store the results in long term storage. Both jobs filter through the input data and pass the data points along to a **Azure Machine Learning** endpoint sending the results to a **Power BI Dashboard**.
 
 4.	Finally, **Power BI** is used for results visualization.
 </Guide>
