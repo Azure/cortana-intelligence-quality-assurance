@@ -116,7 +116,7 @@ There are 5 waypoints which are the different stations in the assembly line with
     - When neccesary, log in to your Machine Learning Studio account
  - Select the region that matches previous selections and choose the worksapce ***manufacturemlws***, then click *Ok*
  - At the bottom of the page click ***Run***
- - Wnen completed, click ***Deploy Web Service*** using the selection ***Deploy Web Service [Classic]***
+ - When completed, click ***Deploy Web Service*** using the selection ***Deploy Web Service [Classic]***
  - After publishing all machine learning experiments, they should be all visible in the web services tab of Azure Machine Learning [Studio](https://studio.azureml.net/):
    
   ![Published Web Services](https://cloud.githubusercontent.com/assets/16708375/20488955/cfc73996-b000-11e6-8b56-7f56461090a2.png)
