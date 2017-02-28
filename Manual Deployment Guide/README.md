@@ -188,7 +188,7 @@ ASA functions properties show the increasing number of features as we move along
   
   
  - Click *OUTPUTS*  
-   - For each of the ml models, we will create a PowerBI dataset output. In the following steps, complete one for each value of [N] where [N]= 0..4  
+   - For each of the ml models, we will create a PowerBI dataset output. In the following steps, complete one for each value of [N] where [N]= 0,1,2,3,4  
 	   - Select ASA *OUTPUTS* blade and click ***+ADD***  
 	     - OUTPUT ALIAS : w[N]pbi  
 	     - Sink: Power BI, then Click **Authorize Now** to access your Power BI data.  
