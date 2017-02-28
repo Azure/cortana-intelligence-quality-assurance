@@ -200,11 +200,11 @@ ASA functions properties show the increasing number of features as we move along
 - Click *QUERY*  
     - Download the file StreamAnalyticsJob.txt from the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide/resources) of this repository. Copy and paste the content into the query window.  
     - Click *SAVE*  
-- When all inputs, functions, outputs and the query have been entered, click *START* at the bottom of the page.   
+- When all inputs, functions, outputs and the query have been entered, click *START* at the top of the Overview page.   
   
   
 ## Download and configure the data generator  
- - Download the file ***ManufacturingGenerator.zip*** from the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Technical%20Deployment%20Guide/resources) of this repository.  
+ - Download the file ***ManufacturingGenerator.zip*** from the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide/resources) of this repository.  
  - Unzip this file to the local disk drive of a Windows Machine.  
  - Open the file **ManfuacturingGenerator.exe.config** and modify the following AppSettings  
     - EventHubName : ***manufactureeh*** (or whatever you have chosen for the event hub previously).  
