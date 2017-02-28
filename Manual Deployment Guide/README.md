@@ -195,7 +195,7 @@ ASA functions properties show the increasing number of features as we move along
 	     - WORKSPACE : My Workspace  
 	     - DATASET NAME : waypoint[N]  
 	     - TABLE NAME : waypoint[N]  
-	     - Click the check button to complete  
+	     - Click the **Create** button to complete  
   
 - Click *QUERY*  
     - Download the file StreamAnalyticsJob.txt from the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Technical%20Deployment%20Guide/resources) of this repository. Copy and paste the content into the query window.  
