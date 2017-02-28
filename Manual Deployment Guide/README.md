@@ -139,7 +139,7 @@ There are 5 waypoints which are the different stations in the assembly line with
  - Select the ***manufactureasa*** resource to open the Stream Analytics job to modify the job settings.  
    
  - Click *INPUTS*  
-    - At the bottom of the *INPUTS* page click ***+ADD***
+    - At the top of the *INPUTS* page click ***+ADD***
         - INPUT ALIAS : InputHub
         - Source Type : Data Stream
         - Source : Event hub
