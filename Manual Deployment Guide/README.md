@@ -178,7 +178,7 @@ Published AML Services credentials
   - Key: Click the copy **APi key icon** to copy the API key and the **REQUEST/RESPONSE** hyperlink  
   - Click **Create** button to complete.
   
-The final list of ASA functions show the increasing number of features as we move along ALS line, where for example ALS1 model (waypoint1) uses features (total 102) from both ALS1 (50) and ALS0 (52), bur not from later ALS-s like ALS2, or ALS4.
+The final list of ASA functions show the increasing number of features as we move along ALS line, where for example ALS1 model (waypoint1) uses features (total 102) from both ALS1 (50) and ALS0 (52), but not from later ALS-s like ALS2, or ALS4.
  
 ![ASA Functions](https://cloud.githubusercontent.com/assets/16708375/22430020/9c92bd4e-e704-11e6-9dcd-98756bc0865c.png)
 
@@ -198,7 +198,7 @@ ASA functions properties show the increasing number of features as we move along
 	     - Click the **Create** button to complete  
   
 - Click *QUERY*  
-    - Download the file StreamAnalyticsJob.txt from the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Technical%20Deployment%20Guide/resources) of this repository. Copy and paste the content into the query window.  
+    - Download the file StreamAnalyticsJob.txt from the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide/resources) of this repository. Copy and paste the content into the query window.  
     - Click *SAVE*  
 - When all inputs, functions, outputs and the query have been entered, click *START* at the bottom of the page.   
   
