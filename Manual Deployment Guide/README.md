@@ -163,7 +163,7 @@ There are 5 waypoints which are the different stations in the assembly line with
 	 - Choose an ml endpont (for example Prediction Model Mk IIII (w.p. 0) [Predictive Exp.])  
 		 - Click the check button to complete.  
 	 - If, however, the ML points created before are not visible under current subscription:  
-		 - Subscription: set to **Select from a different subscription**  
+		 - Subscription: set to **Import from a different subscription**  
 		 - Then go to web services tab of Azure Machine Learning [Studio](https://studio.azureml.net/) (see red arrows in image below):  
  
 ![Copy Published services credentials](https://cloud.githubusercontent.com/assets/16708375/20528296/927a035c-b0c3-11e6-98da-79276d8c710b.png)
