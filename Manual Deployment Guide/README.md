@@ -57,8 +57,8 @@ This deployment guide walks the readers through the creation of each of the Cort
   
 where [UI] is the user's initials, N is a random integer that you choose and characters must be entered in in lowercase.  
   
-To achieve this, all names used in this guide that contain string **manufacture** should be actually spelled as manufact[UI][N]. So for example, user Steven **X. Smith** might use a base service name of manufact**xs01**, and all services names below should follow the same naming pattern:  
- - manufact***ureehns*** in the guide below should actually be spelled manufact***xs01ehns***  
+To achieve this, all names used in this guide that contain string **manufacture** should be actually spelled as manufact[UI][N]. So for example, user Steven **X. Smith** might use a base service name of manufact**xs01**, and all services names below should follow the same naming pattern. For example, in the section "Create an Azure Event Hub" below:  
+ - manufact***ureehns*** should actually be spelled manufact***xs01ehns***  
  - manufact***ureeh*** should actually be spelled manufact***xs01eh***  
   
 While in general the users can choose to follow this naming scheme or use their own naming, we note the functions of the Azure Stream Analytics (ASA) Job MUST be named waypoint**N** (i.e. waypoint0), where N = 0..4  matches the number from the ml endpoint. Changing the ASA function names is certainly possible, but it requires name changing for the ML services as well, which is beyond the scope of this project.  
