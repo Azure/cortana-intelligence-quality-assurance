@@ -105,6 +105,7 @@ This section will walk you through the steps to manually create the manufacturin
  - Click *Create* and return to the *Resource groups* blade.  
   
 ## Copy Machine Learning Experiments From Gallery
+There are 5 waypoints which are the different stations in the assembly line with a predictive model developed for each one corresponding to the experiments below.  
  - For each of the following experiments:
     - [Waypoint 0 Experiment](http://gallery.cortanaintelligence.com/Experiment/Prediction-Model-Mk-IIII-w-p-0-Predictive-Exp-1)
     - [Waypoint 1 Experiment](http://gallery.cortanaintelligence.com/Experiment/Prediction-Model-Mk-IIII-w-p-1-Predictive-Exp-1)
