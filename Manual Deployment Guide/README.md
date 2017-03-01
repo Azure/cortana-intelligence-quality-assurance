@@ -262,19 +262,19 @@ ASA functions properties show the increasing number of features as we move along
    
 ### Create a [SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-get-started-provision/), a cloud-based, scale-out database capable of processing massive volumes of data, both relational and non-relational.  
 - Log into the [Azure Management Portal](https://ms.portal.azure.com), and Click + New > Databases > SQL Data Warehouse.  
-- In the SQL Data Warehouse blade, fill in the information needed as described below, starting with the **server** first:  
+- In the SQL Data Warehouse blade, fill in the information needed as described below, starting with the **Server** first:  
 - Server: click **Create a new server**  
   - Server name: e.g. __manufacturesqldbserver02__ . A green check mark indicates that you have provided a valid name.    
   - Server admin login:  A green check mark indicates that you have provided a valid name.  
   - Password:  A green check mark indicates that you have provided a valid password.  
   - Location: choose the same location as the other solution resources  
-  - Database name (this will be a **SQL data warehouse** type of db): e.g. Manufacturesqldb.  
-  - Subscription: Select the subscription that this SQL Data Warehouse will bill to.  
-  - Resource group: select the reource group created for this solution.  
-  - Select source: leave it **blank database**.  
-  - Collation: remains SQL_Latin1_General_CP1_CI_AS  
-  - Performance: We recommend starting with 400 DWUs. You can move the slider to the left or right to adjust the performance of your data warehouse, or scale up or down after creation. To learn more about DWUs, see our documentation on scaling or our pricing page.  
-  - After you click **Create** button, you check deploymnet status, in the Azure portal, e.g. by looking at the solution resource group **Overview** blade, under **Deployments** section, we should see a clickable status saying initally **1 deploying, 3 succeeded**.  
+ - Database name (this will be a **SQL data warehouse** type of db): e.g. Manufacturesqldb.  
+ - Subscription: Select the subscription that this SQL Data Warehouse will bill to.  
+ - Resource group: select the reource group created for this solution.  
+ - Select source: leave it **blank database**.  
+ - Collation: remains SQL_Latin1_General_CP1_CI_AS  
+ - Performance: We recommend starting with 400 DWUs. You can move the slider to the left or right to adjust the performance of your data warehouse, or scale up or down after creation. To learn more about DWUs, see our documentation on scaling or our pricing page.  
+After you click **Create** button, you check deploymnet status, in the Azure portal, e.g. by looking at the solution resource group **Overview** blade, under **Deployments** section, we should see a clickable status saying initally **1 deploying, 3 succeeded**.  
   
   - Create a new Azure SQL server-level firewall:  
   Use the following steps in the Azure portal to create a server-level firewall rule that allows connections from an individual IP address (your client computer) or an entire IP address range to a SQL Database logical server.  
