@@ -5,7 +5,7 @@
 Manufacturing data is characterized (see Figure 1) by Assembly Line Steps (ALS):
 
 -   Main target is the list of failures collected at a later or final ALS (e.g at 5-th ALS).
--   These can be subset using SME to extract the failures likely related to manufacturing processes performed at an earlier ALS (e.g. 3rd ALS), even if the device **passed the existing QA test** at that earlier stage.
+-   These can be subset using an expert to extract the failures likely related to manufacturing processes performed at an earlier ALS (e.g. 3rd ALS), even if the device **passed the existing QA test** at that earlier stage.
 -   Build a training dataset by pairing each ALS specific subset of failures with measures collected at its corresponding step and earlier (e.g. ALS 1, 2, and 3).
 -   Use the above described datasets to train/build machine learning (**ML**) models that will predict early (i.e. **at step 3**) failures that would happen in step 5.
 
