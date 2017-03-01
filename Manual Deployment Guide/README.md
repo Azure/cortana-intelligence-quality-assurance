@@ -277,7 +277,7 @@ ASA functions properties show the increasing number of features as we move along
 
 After you click **Create** button, you check deploymnet status, in the Azure portal, e.g. by looking at the solution resource group **Overview** blade, under **Deployments** section, we should see a clickable status saying initally **1 deploying, 3 succeeded**.  
   
-  - Create a new Azure SQL server-level firewall:  
+### Create a new Azure SQL server-level firewall:  
   Use the following steps in the Azure portal to create a server-level firewall rule that allows connections from an individual IP address (your client computer) or an entire IP address range to a SQL Database logical server.  
 	  - Log into the [Azure Management Portal](https://ms.portal.azure.com), 
 	  - In the left hand menu select *Resource groups*
