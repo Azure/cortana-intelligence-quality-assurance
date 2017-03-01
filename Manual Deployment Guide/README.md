@@ -284,7 +284,7 @@ After you click **Create** button, you check deploymnet status, in the Azure por
   - Locate the resource group  you created for this project and click on it displaying the resources associated with the group in the  resource group blade.
   - You should see the SQL server and the SQL database you just created.
   - Click the SQL server, and then click "Firewall".
-  - Make sure the "Allow access to Azure services" is set to ON, and then press **+Add client IP" button at the top of the blade to have Azure create a rule for your client IP address. Optionally, to allow access to a range of IP addresses, click the IP address that was added to edit the firewall address.
+  - Make sure the "Allow access to Azure services" is set to ON, and then press **+Add client IP** button at the top of the blade to have Azure create a rule for your client IP address. Optionally, to allow access to a range of IP addresses, click the IP address that was added to edit the firewall address.
   - Click Save to create the server-level firewall rule.
   - You should now be able to [access](https://azure.microsoft.com/en-us/documentation/articles/sql-database-connect-query-ssms/) the SQL server using a tool like [Microsoft SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx).  
   
