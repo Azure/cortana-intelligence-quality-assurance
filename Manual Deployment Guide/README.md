@@ -386,17 +386,17 @@ You can find your database and server name on the page when you finish your depl
 
 2. Update the data source of the Power BI file
 
-Make sure you have installed the latest version of [Power BI desktop](https://powerbi.microsoft.com/desktop). 
+ - Make sure you have installed the latest version of [Power BI desktop](https://powerbi.microsoft.com/desktop). 
 
-In this GitHub repository, you can download the **'ManuQualityAssurance.pbix'** file under the folder **'Automated Deployment Guide'** and then open it. **Note:** If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
+ - In this GitHub repository, you can download the **'ManuQualityAssurance.pbix'** file under the folder **'Automated Deployment Guide'** and then open it. **Note:** If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
 
-On the top of the file, click **‘Edit Queries’** drop down menu. Then choose **'Data Source Settings'**.  ![](Figures/PowerBI-7.png)
+ - On the top of the file, click **‘Edit Queries’** drop down menu. Then choose **'Data Source Settings'**.  ![](Figures/PowerBI-7.png)
 
-In the pop out window, click **'Change Source'**, then replace the **"Server"** and **"Database"** with your own server and database names and click **"OK"**. For server name, make sure you specify the port 1433 in the end of your server string  (**YourSolutionName.database.windows.net, 1433**). After you finish editing, close the 'Data Source Settings' window.
+ - In the pop out window, click **'Change Source'**, then replace the **"Server"** and **"Database"** with your own server and database names and click **"OK"**. For server name, make sure you specify the port 1433 in the end of your server string  (**YourSolutionName.database.windows.net, 1433**). After you finish editing, close the 'Data Source Settings' window.
 
-On the top of the screen, you will see a message. Click **'Apply Changes'**. A new window will pop out and ask for database credentials. Click **'Database'** on the left of the window, enter your SQL credentials. For ***'Select which level to apply these settings to'***, choose the second one with database name. Then click ***'Connect'***.
+ - On the top of the screen, you will see a message. Click **'Apply Changes'**. A new window will pop out and ask for database credentials. Click **'Database'** on the left of the window, enter your SQL credentials. For ***'Select which level to apply these settings to'***, choose the second one with database name. Then click ***'Connect'***.
 
-Now the dashboard is updated to connect to your database. In the backend, model is scheduled to be refreshed every 1 hour. You can click **'Refresh'** button on the top to get the latest visualization as time moving forward.
+ - Now the dashboard is updated to connect to your database. In the backend, model is scheduled to be refreshed every 1 hour. You can click **'Refresh'** button on the top to get the latest visualization as time moving forward.
 
 3. (Optional) Publish the dashboard to [Power BI online](http://www.powerbi.com/).    
 Note that this step needs a Power BI account (or Office 365 account).      
