@@ -372,11 +372,37 @@ Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/
   - Finally, start the  ASA (log into the [Azure Management Portal](https://ms.portal.azure.com), select the solution ASA Job, select **Overview**, then click **Start** button, choose **Now** for the **Job output start time***, and then click **Start** button) and the data generator.     
   
 Once data has been flowing into the data warehouse, [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/) can be used to build visualizations of the historical data (and a tool such as SQL Server Management Studio can be used to query and understand the data).
+
+## **Visualization**
+Power BI dashboard can be used to visualize the real-time failure predictions. The following instructions will guide you to build a dashboard to visualize data from database and from real-time data stream.
+
+### Visualize Data from Database
+The essential goal of this part is to get the failure predictions and visualize it. Power BI can directly connect to an Azure SQL DW as its data source, where the prediction results are stored. Note that this is mainly for visualizing historical predictions rather than acting upon predictions in real time. For real-time visualizations on the predicted failures as they pass through the assembly line, further instructions are given below on visualizing streaming datasets.
+
+> Note:  1) In this step, the prerequisite is to download and install the free software [Power BI desktop](https://powerbi.microsoft.com/desktop). 2) We recommend you start this process 2-3 hours after you deploy the solution so that you have more data points to visualize.
+
+1.  Get the database credentials.    
+You can find your database and server name on the page when you finish your deployment. The SQL username and password will be the ones you choose in the beginning of the deployment.
+
+2. Update the data source of the Power BI file  
+
+	-  Make sure you have installed the latest version of [Power BI desktop](https://powerbi.microsoft.com/desktop).  
+	- In this GitHub repository, you can download the **'ManuQualityAssurance.pbix'** file under the folder **'Automated Deployment Guide'** and then open it. **Note:** If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.  
+	- On the top of the file, click **‘Edit Queries’** drop down menu. Then choose **'Data Source Settings'**.  ![](Figures/PowerBI-7.png)  
+	- In the pop out window, click **'Change Source'**, then replace the **"Server"** and **"Database"** with your own server and database names and click **"OK"**. For server name, make sure you specify the port 1433 in the end of your server string  (**YourSolutionName.database.windows.net, 1433**). After you finish editing, close the 'Data Source Settings' window.  
+	- On the top of the screen, you will see a message. Click **'Apply Changes'**. A new window will pop out and ask for database credentials. Click **'Database'** on the left of the window, enter your SQL credentials. For ***'Select which level to apply these settings to'***, choose the second one with database name. Then click ***'Connect'***.  
+	- Now the dashboard is updated to connect to your database. In the backend, model is scheduled to be refreshed every 1 hour. You can click **'Refresh'** button on the top to get the latest visualization as time moving forward.
+
+3. (Optional) Publish the dashboard to [Power BI online](http://www.powerbi.com/).    
+Note that this step needs a Power BI account (or Office 365 account).      
+	- Click **"Publish"** on the top panel. Choose **'My Workspace'** and few seconds later a window appears displaying "Publishing succeeded".      
+	- Click the link on the screen to open it in a browser. On the left panel, go to the **Dataset** section, right click the appropriate dataset, choose **Dataset Settings**. In the pop out window, click **Enter credentials** and enter your database credentials by following the instructions. To find detailed instructions, please see [Publish from Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/461278-publish-from-power-bi-desktop).      
+	- Now you can see new items showing under 'Reports' and 'Datasets'. To create a new dashboard: click the **'+'** sign next to the **Dashboards** section on the left pane. Enter the name "Energy Demand Forecasting Demo" for this new dashboard.      
+	- Once you open the report, click   ![Pin](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Automated%20Deployment%20Guide/Figures/PowerBI-4.png?raw=true) to pin all the  visualizations to your dashboard. To find detailed instructions, see [Pin a tile to a Power BI dashboard from a report](https://support.powerbi.com/knowledgebase/articles/430323-pin-a-tile-to-a-power-bi-dashboard-from-a-report). 
+
 An example visualization is below, and the [Power BI Desktop file](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Technical%20Deployment%20Guide/resources/ManuQualityAssurance.pbix) that was used to create this is included in the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Technical%20Deployment%20Guide/resources/) of this repository.
 ![PBI](https://cloud.githubusercontent.com/assets/9042064/20733041/891bb5f2-b65f-11e6-8362-068b9ba92698.PNG)
 	   
-	   
-
 ## (optional) Set-up Azure Blob Storage sinks 				
  For any solution output, we can also create a blob storage sink, where data shown in PBI dashboard is also saved in text format (csv file).  
   - For any (or all) solution output, first create  containers in the solution blob storage account:  
