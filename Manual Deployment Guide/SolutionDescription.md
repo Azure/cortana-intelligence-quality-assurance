@@ -34,10 +34,10 @@ The predictive analytics part of the solution is implemented using [Azure ML stu
 
 ![Azure ML studio Training Experiment for ALS/waypoint 0](https://cloud.githubusercontent.com/assets/16708375/20055465/198cec34-a4d9-11e6-95b0-93bee2269005.png)
 
-<sub>
+
 Figure 2
 Azure ML studio Training Experiment for ALS/waypoint 0
-</sup>
+
 
 The corresponding predictive experiments for all ALS are [published](http://gallery.cortanaintelligence.com/Experiment/Prediction-Model-Mk-IIII-w-p-0-Predictive-Exp-1) with this solution.  
   
@@ -52,9 +52,9 @@ See also the related resources at the bottom of this page for more details on ho
 ==========================================
 ![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
 
-<sub>
+
 Figure 3. Real-time Dashboard
-<sub>
+
 
 In figure above we show the upper part of the solution dashboard, visualizing results from the first 3 ALS/waypoints (ALS 0, ALS 1, and ALS 2) of a simulated assembly line. We implemented 5 ALS in total in this solution, but the user can add as many ALS as needed, and show their results in the dashboard accordingly. For each ALS, we show a global device counter (the gauge on the left), and the number (upper) and ids (lower) of the failed (middle column) and passed (i.e. not-failed, in right column) devices in the last 30 seconds. Each report is updated dinamically every 5 second as new ALS measurements come in. 
 
@@ -62,9 +62,9 @@ Each tile is defined using quasi natural language (NLP) query (e.g. **How many d
 
 ![PBI](https://cloud.githubusercontent.com/assets/9042064/20732304/23c67ee2-b65c-11e6-969a-0a8f81bf5963.PNG)
 
-<sub>
+
 Figure 4. Insights Dashboard
-<sub>
+
 
 In figure above we show an example dashboard that is built on top of the SQL Data Warehouse that collects all the information about the devices over time as well as the predictions that are made at each assembly line step.
 
