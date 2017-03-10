@@ -10,7 +10,7 @@ Key components of the solution are driven by manufacturing data that is characte
 -   Train/build machine learning (**ML**) models using the above described datasets. These models will predict early (i.e. **at step 3**) failures that would happen in step 5.
 -   Build a cascade of models, each covering failures specific to an individual ALS.  
 
-![Solution Concept](https://cloud.githubusercontent.com/assets/16708375/23796433/cd72ded8-0592-11e7-8fff-92118afb0bf9.png)  
+![Solution Concept](https://cloud.githubusercontent.com/assets/16708375/23796630/dbd17132-0593-11e7-8576-ee2262b94c84.png)  
 
 Figure 1. Design of the ML modules in the CIS solution template for Predictive Analytics for Manufacturing. An Original Equipment Manufacturer (OEM), shown in the upper right block, uses two contract manufacturers (CM) shown on the left.  
 - [ ] CM blocks indicate assembly lines from contract manufacturers, characterized by a sequence of Assembly Line Steps (ALS) shown by blue modules that ends with a functional test unit (green modules). Each device goes through and is tested at the exit of each individual ALS. Some devices, even after passing individual ALS tests, still turn out to be failures (see green modules and associated results table, with true labels in black) at the final functional test, or after they are sent to OEM. 
