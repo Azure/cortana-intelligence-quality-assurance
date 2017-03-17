@@ -15,7 +15,7 @@ This tutorial will guide you through the process creating, from the ground up, a
 
 Solution architecture description:
 =================================
-![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/20932195/acb87330-bbcb-11e6-8a89-27d8b6e17bdf.png)
+![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/24055289/5e69ddca-0b37-11e7-953e-b2e0d7758cb4.png)
 
 <sub>Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing</sub>
 
