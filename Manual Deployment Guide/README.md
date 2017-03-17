@@ -252,7 +252,7 @@ The final list of ASA functions show the increasing number of features as we mov
 			- device_id with label=1 in waypoint *N* in the last 30 seconds
 				- Description: ALS*N* fails in last 30 seconds
 
-![PBIASA Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
+![PBIASA Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)  
 <sub>Real-time/hot path dashboard</sub>
          
          
