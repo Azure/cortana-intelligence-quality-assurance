@@ -11,7 +11,7 @@ Solution status can be monitored using the solution components in [Azure Managem
 
  <sub>
  Solution Components in Azure Management Portal
- </sup>
+ </sub>
 
 
 We will focus on the solution end (Event Hub as the beginning and Blob Storage sinks at the end), and present 3 test scenarios explaining the solution data flow, and how the ASA job uses the buffering capabilities to process messages received in the past.
@@ -24,7 +24,7 @@ We start with the ASA job stopped and empty containers (all blobs deleted) in so
 
  <sub>
  Empty Containers (all blobs deleted) in solution blob storage account
- </sup>
+ </sub>
  
  
 Next actions were performed:
