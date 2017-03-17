@@ -1,6 +1,6 @@
 # Quality Assurance for Manufacturing - Technical Deployment Guide  
 
-1. Introduction
+Introduction
 ===============
 
 The goal of the solution guide presented here is to predict failures in manufacturing pipelines (assembly lines), recognizing that manufacturing data is characterized by Assembly Line Steps (ALS). The idea is to leverage test systems already in place and failures data, specifically looking at returns and functional failures at the end of assembly line. By combining these with domain knowledge and root cause analysis within a modular design that encapsulates main processing steps, we provide a generic advanced analytics solution that uses machine learning to predict failures before they happen. Early prediction of future failures allows for less expensive repairs or even discarding, which are usually more cost efficient than going through recall and warranty cost.
@@ -13,15 +13,13 @@ This tutorial will guide you through the process creating, from the ground up, a
  
 **For technical problems or questions about deploying this solution, please post in the issues tab of the repository.**
 
-2. Solution architecture description:
-=====================================
- 
+Solution architecture description:
+=================================
 ![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/20932195/acb87330-bbcb-11e6-8a89-27d8b6e17bdf.png)
 
- <sub>
- Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing
+<sub>
+Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing
 </sup>
-
   
 Solution [Lambda](http://social.technet.microsoft.com/wiki/contents/articles/33626.lambda-architecture-implementation-using-microsoft-azure.aspx) architecture uses the hot (upper) path for real time processing and cold (lower) path for distributed processing that can handle complex queries on very large quantities of historical data.  
    
@@ -36,7 +34,7 @@ Batch Layer:
  - Azure [Blob Storage](https://azure.microsoft.com/en-gb/documentation/articles/storage-blob-storage-tiers/#quick-start) sinks are used for storage.  
  
 
-3. Deployment Steps:
+Deployment Steps:
 ====================
 
 ### Prerequisites
@@ -57,11 +55,11 @@ This deployment guide walks the readers through the creation of each of the Cort
   
 where [UI] is the user's initials, N is a random integer that you choose and characters must be entered in in lowercase.  
   
-To achieve this, all names used in this guide that contain string **manufacture** should be actually spelled as manufact[UI][N]. So for example, user Steven **X. Smith** might use a base service name of manufact**xs01**, and all services names below should follow the same naming pattern. For example, in the section "Create an Azure Event Hub" below:  
- - manufact***ureehns*** should actually be spelled manufact***xs01ehns***  
+To achieve this, all names used in this guide that contain string **manufacture** should be actually spelled as manufact[UI][N]. So for example, user Steven **X. Smith** might use a base service name of manufact**xs01**, and all services names below should follow the same naming pattern. For example, in the section "Create an Azure Event Hub" below: 
+ - manufact***ureehns*** should actually be spelled manufact***xs01ehns*** 
  - manufact***ureeh*** should actually be spelled manufact***xs01eh***  
   
-While in general the users can choose to follow this naming scheme or use their own naming, in the section "Create Azure Stream Analytics (ASA) Job", we note the functions of the Azure Stream Analytics (ASA) Job MUST be named waypoint**N** (i.e. waypoint0), where N = 0..4  matches the number from the ml endpoint. Changing the ASA function names is certainly possible, but it requires name changing for the ML services as well, which is beyond the scope of this project.  
+While in general the users can choose to follow this naming scheme or use their own naming, in the section "Create Azure Stream Analytics (ASA) Job", we note the functions of the Azure Stream Analytics (ASA) Job MUST be named waypoint**N** (i.e. waypoint0), where N = 0..4  matches the number from the ml endpoint. Changing the ASA function names is certainly possible, but it requires name changing for the ML services as well, which is beyond the scope of this project. 
 
 
 # Manual Steps
@@ -245,13 +243,13 @@ ASA functions properties show the increasing number of features as we move along
 			- Enter the description provided with the query
 			- Click __Pin Visual__ in the upper right hand corner
 		- Queries (where *N* is the dataset you are working with)
-			- How many device_id with label=1 in waypoint *N* in the last 30 seconds 
-				- Description: No of ALS*N* fails in last 30 Seconds   
-			- How many device_id with label=-1 in waypoint *N* in the last 30 seconds 
+			- How many device_id with label=1 in waypoint*N* in the last 30 seconds 
+				- Description: No of ALS*N* fails in last 30 Seconds  
+			- How many device_id with label=-1 in waypoint*N* in thelast 30 seconds 
 				- Description: No of ALS*N* passes in last 30 Seconds 
-			- device_id with label=-1 in waypoint *N* in the last 30 seconds
+			- device_id with label=-1 in waypoint *N* in the last 30 seconds
 				- Description: ALS*N* passes in last 30 seconds
-			- device_id with label=1 in waypoint *N* in the last 30 seconds
+			- device_id with label=1 in waypoint *N* in the last 30 seconds
 				- Description: ALS*N* fails in last 30 seconds
 
 ![PBIASA Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
@@ -379,31 +377,31 @@ Power BI dashboard can be used to visualize the real-time failure predictions. T
 ### Visualize Data from Database
 The essential goal of this part is to get the failure predictions and visualize it. Power BI can directly connect to an Azure SQL DW as its data source, where the prediction results are stored. Note that this is mainly for visualizing historical predictions rather than acting upon predictions in real time. For real-time visualizations on the predicted failures as they pass through the assembly line, further instructions are given below on visualizing streaming datasets.
 
-> Note:  1) In this step, the prerequisite is to download and install the free software [Power BI desktop](https://powerbi.microsoft.com/desktop). 2) We recommend you start this process 2-3 hours after you deploy the solution so that you have more data points to visualize.
+> Note: 1) In this step, the prerequisite is to download and install the free software [Power BI desktop](https://powerbi.microsoft.com/desktop). 2) We recommend you start this process 2-3 hours after you deploy the solution so that you have more data points to visualize.
 
-1.  Get the database credentials.    
+1. Get the database credentials. 
 You can find your database and server name on the page when you finish your deployment. The SQL username and password will be the ones you choose in the beginning of the deployment.
 
-2. Update the data source of the Power BI file
+2. Update the data source of the Power BI file
 
- - Make sure you have installed the latest version of [Power BI desktop](https://powerbi.microsoft.com/desktop). 
+- Make sure you have installed the latest version of [Power BI desktop](https://powerbi.microsoft.com/desktop). 
  
- - In this GitHub repository, you can download the **'ManuQualityAssurance.pbix'** file under the folder **'Automated Deployment Guide'** and then open it. **Note:** If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
+- In this GitHub repository, you can download the **'ManuQualityAssurance.pbix'** file under the folder **'Automated Deployment Guide'** and then open it. **Note:** If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
  
- - On the top of the file, click **‘Edit Queries’** drop down menu. Then choose **'Data Source Settings'**.  
+- On the top of the file, click **‘Edit Queries’** drop down menu. Then choose **'Data Source Settings'**. 
  
- - In the pop out window, click **'Change Source'**, then replace the **"Server"** and **"Database"** with your own server and database names and click **"OK"**. For server name, make sure you specify the port 1433 in the end of your server string  (**YourSolutionName.database.windows.net, 1433**). After you finish editing, close the 'Data Source Settings' window.
+- In the pop out window, click **'Change Source'**, then replace the **"Server"** and **"Database"** with your own server and database names and click **"OK"**. For server name, make sure you specify the port 1433 in the end of your server string (**YourSolutionName.database.windows.net, 1433**). After you finish editing, close the 'Data Source Settings' window.
  
- - On the top of the screen, you will see a message. Click **'Apply Changes'**. A new window will pop out and ask for database credentials. Click **'Database'** on the left of the window, enter your SQL credentials. For ***'Select which level to apply these settings to'***, choose the second one with database name. Then click ***'Connect'***.
+- On the top of the screen, you will see a message. Click **'Apply Changes'**. A new window will pop out and ask for database credentials. Click **'Database'** on the left of the window, enter your SQL credentials. For ***'Select which level to apply these settings to'***, choose the second one with database name. Then click ***'Connect'***.
  
- - Now the dashboard is updated to connect to your database. In the backend, model is scheduled to be refreshed every 1 hour. You can click **'Refresh'** button on the top to get the latest visualization as time moving forward.
+- Now the dashboard is updated to connect to your database. In the backend, model is scheduled to be refreshed every 1 hour. You can click **'Refresh'** button on the top to get the latest visualization as time moving forward.
 
-3. (Optional) Publish the dashboard to [Power BI online](http://www.powerbi.com/).    
-Note that this step needs a Power BI account (or Office 365 account).      
-	- Click **"Publish"** on the top panel. Choose **'My Workspace'** and few seconds later a window appears displaying "Publishing succeeded".      
-	- Click the link on the screen to open it in a browser. On the left panel, go to the **Dataset** section, right click the appropriate dataset, choose **Dataset Settings**. In the pop out window, click **Enter credentials** and enter your database credentials by following the instructions. To find detailed instructions, please see [Publish from Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/461278-publish-from-power-bi-desktop).      
-	- Now you can see new items showing under 'Reports' and 'Datasets'. To create a new dashboard: click the **'+'** sign next to the **Dashboards** section on the left pane. Enter the name "Energy Demand Forecasting Demo" for this new dashboard.      
-	- Once you open the report, click   ![Pin](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Automated%20Deployment%20Guide/Figures/PowerBI-4.png?raw=true) to pin all the  visualizations to your dashboard. To find detailed instructions, see [Pin a tile to a Power BI dashboard from a report](https://support.powerbi.com/knowledgebase/articles/430323-pin-a-tile-to-a-power-bi-dashboard-from-a-report). 
+3. (Optional) Publish the dashboard to [Power BI online](http://www.powerbi.com/). 
+Note that this step needs a Power BI account (or Office 365 account).
+	- Click **"Publish"** on the top panel. Choose **'My Workspace'** and few seconds later a window appears displaying "Publishing succeeded". 
+	- Click the link on the screen to open it in a browser. On the left panel, go to the **Dataset** section, right click the appropriate dataset, choose **Dataset Settings**. In the pop out window, click **Enter credentials** and enter your database credentials by following the instructions. To find detailed instructions, please see [Publish from Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/461278-publish-from-power-bi-desktop).
+	- Now you can see new items showing under 'Reports' and 'Datasets'. To create a new dashboard: click the **'+'** sign next to the **Dashboards** section on the left pane. Enter the name "Energy Demand Forecasting Demo" for this new dashboard. 
+	- Once you open the report, click ![Pin](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Automated%20Deployment%20Guide/Figures/PowerBI-4.png?raw=true) to pin all the visualizations to your dashboard. To find detailed instructions, see [Pin a tile to a Power BI dashboard from a report](https://support.powerbi.com/knowledgebase/articles/430323-pin-a-tile-to-a-power-bi-dashboard-from-a-report). 
 
 An example visualization is below, and the [Power BI Desktop file](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Technical%20Deployment%20Guide/resources/ManuQualityAssurance.pbix) that was used to create this is included in the [resources folder](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Technical%20Deployment%20Guide/resources/) of this repository.
 ![PBI](https://cloud.githubusercontent.com/assets/9042064/20733041/891bb5f2-b65f-11e6-8362-068b9ba92698.PNG)
