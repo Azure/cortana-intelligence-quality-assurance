@@ -253,7 +253,8 @@ The final list of ASA functions show the increasing number of features as we mov
 				- Description: ALS*N* fails in last 30 seconds
 
 ![PBIASA Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
-
+<sub>Real-time/hot path dashboard</sub>
+         
          
 ## Set-up Azure SQL Data Warehouse sinks 				
  For large scale OLAP applications that require scalable storage and processing of massive volumes of data via complex aggregation  queries, the solution uses [Azure SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-what-is/), where data can be later processed and visualized using massively parallel processing architecture.  
