@@ -119,9 +119,9 @@ There are 5 waypoints which are the different stations in the assembly line with
    
   ![Published Web Services](https://cloud.githubusercontent.com/assets/16708375/20488955/cfc73996-b000-11e6-8b56-7f56461090a2.png)
   
-   <sub>
+   
    Web Services tab in Azure Machine Learning [Studio](https://studio.azureml.net/)  
-  </sup>
+
   
 ## Create Azure Stream Analytics (ASA) Job
  - Log into the [Azure Management Portal](https://ms.portal.azure.com) 
@@ -166,9 +166,9 @@ There are 5 waypoints which are the different stations in the assembly line with
  
 ![Copy Published services credentials](https://cloud.githubusercontent.com/assets/16708375/20528296/927a035c-b0c3-11e6-98da-79276d8c710b.png)
 
-<sub>
+
 Published AML Services credentials
-</sup>
+
    
 
   - URL: click **REQUEST/RESPONSE** hyperlink and copy the **Request URI** for the **POST Method**, e.g:  
@@ -180,9 +180,9 @@ The final list of ASA functions show the increasing number of features as we mov
  
 ![ASA Functions](https://cloud.githubusercontent.com/assets/16708375/22430020/9c92bd4e-e704-11e6-9dcd-98756bc0865c.png)
 
-<sub>
+
 ASA functions properties show the increasing number of features as we move along ALS line.
-</sup>
+
   
   
  - Click *OUTPUTS*  
@@ -291,9 +291,9 @@ After you click **Create** button, you check deploymnet status, in the Azure por
 
 ![create Azure SQL database](https://cloud.githubusercontent.com/assets/16708375/20218783/39817dac-a7f4-11e6-9cc4-0544f5fd7bc4.png)  
 
-<sub>
+
 Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/#create-an-azure-sql-database-logical-server) database  
-</sup>  
+ 
   
   	      
  Log into the [Azure Management Portal](https://ms.portal.azure.com), click __+(New)__ button, click databases and then select __SQL Database__.  
