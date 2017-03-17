@@ -1,6 +1,6 @@
 # Predictive Analytics for Quality Assurance Processes in Manufacturing
 
-1. Approach
+Approach
 ===============
 Key components of the solution are driven by manufacturing data that is characterized (see Figure 1) by Assembly Line Steps (ALS):
 
@@ -20,14 +20,14 @@ Figure 1. Design of the ML modules in the CIS solution template for Predictive A
 
 Prediction is done before the failures happen, at an early ALS when correcting or even scrapping the device is much cheaper than dealing with a failure at a later or final stage.
 
-2. Data Sources:
+Data Sources:
 ================
 Solution demo uses [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) dataset ([UCI ML Data repository](http://archive.ics.uci.edu/ml/datasets.html)), upsampled using an algorithm similar to [SMOTE](http://jair.org/media/953/live-953-2037-jair.pdf).  
   
 Each ALS measurements set was chosen by random sampling original SECOM feature columns. Data simulator sends a data point for each ALS every 5 seconds. Each ALS dataset also contains all features from previous ALS. Predictions are made for individual devices as they travel down a production line passing through 5 different ALS’s (waypoints). 
 
 
-3. ML implementation:
+ML implementation:
 =====================
 The predictive analytics part of the solution is implemented using [Azure ML studio](https://studio.azureml.net/). The [training experiments](https://gallery.cortanaintelligence.com/Experiment/Training-Model-ALS01-1) use a two class linear [SVM](https://msdn.microsoft.com/en-us/library/azure/dn905835.aspx) classifier, fine tuned by optimizing the AUC (area under the ROC curve) metric using the Azure ML Studio ["Tune Model Hyperparameters"](https://msdn.microsoft.com/en-us/library/azure/dn905810.aspx) module.
 
@@ -48,7 +48,7 @@ When adapting this solution to other datasets, the ML section can be expanded as
 	
 See also the related resources at the bottom of this page for more details on how to approach the data science and machine learning component of this solution for your own data.
   
-4. Solution PBI dashboard (visualization):
+Solution PBI dashboard (visualization):
 ==========================================
 ![Solution Dashboard](https://cloud.githubusercontent.com/assets/16708375/19904139/5cacc6e8-a069-11e6-830c-d42c3a94e678.png)
 
@@ -68,7 +68,7 @@ Figure 4. Insights Dashboard
 
 In figure above we show an example dashboard that is built on top of the SQL Data Warehouse that collects all the information about the devices over time as well as the predictions that are made at each assembly line step.
 
-5. Related Resources
+Related Resources
 ==========================================
 A playbook for approaching predictive maintenance problems, which can be considered to include use cases such as that discussed within this solution, is published [here](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance) and includes detail on how to [prepare data sources](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance#data-preparation), create features, and [set up a machine learning model](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance#modeling-techniques).
 
