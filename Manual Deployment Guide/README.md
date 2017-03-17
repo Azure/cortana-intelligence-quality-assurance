@@ -17,9 +17,9 @@ Solution architecture description:
 =================================
 ![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/20932195/acb87330-bbcb-11e6-8a89-27d8b6e17bdf.png)
 
-<sub>
 Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing
-</sup>
+
+
   
 Solution [Lambda](http://social.technet.microsoft.com/wiki/contents/articles/33626.lambda-architecture-implementation-using-microsoft-azure.aspx) architecture uses the hot (upper) path for real time processing and cold (lower) path for distributed processing that can handle complex queries on very large quantities of historical data.  
    
