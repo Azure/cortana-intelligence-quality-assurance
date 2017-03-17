@@ -17,7 +17,7 @@ Solution architecture description:
 =================================
 ![Solution Diagram Picture](https://cloud.githubusercontent.com/assets/16708375/20932195/acb87330-bbcb-11e6-8a89-27d8b6e17bdf.png)
 
-Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing
+<sub>Solution design for Predictive Analytics for Quality Assurance Process in Manufacturing</sub>
 
 
   
@@ -120,7 +120,7 @@ There are 5 waypoints which are the different stations in the assembly line with
   ![Published Web Services](https://cloud.githubusercontent.com/assets/16708375/20488955/cfc73996-b000-11e6-8b56-7f56461090a2.png)
   
    
-   Web Services tab in Azure Machine Learning [Studio](https://studio.azureml.net/)  
+   <sub>Web Services tab in Azure Machine Learning [Studio](https://studio.azureml.net/)  </sub>
 
   
 ## Create Azure Stream Analytics (ASA) Job
@@ -167,7 +167,7 @@ There are 5 waypoints which are the different stations in the assembly line with
 ![Copy Published services credentials](https://cloud.githubusercontent.com/assets/16708375/20528296/927a035c-b0c3-11e6-98da-79276d8c710b.png)
 
 
-Published AML Services credentials
+<sub>Published AML Services credentials</sub>
 
    
 
@@ -181,7 +181,7 @@ The final list of ASA functions show the increasing number of features as we mov
 ![ASA Functions](https://cloud.githubusercontent.com/assets/16708375/22430020/9c92bd4e-e704-11e6-9dcd-98756bc0865c.png)
 
 
-ASA functions properties show the increasing number of features as we move along ALS line.
+<sub>ASA functions properties show the increasing number of features as we move along ALS line.</sub>
 
   
   
@@ -290,7 +290,7 @@ After you click **Create** button, you check deploymnet status, in the Azure por
 #### As an OLTP alternative to SQL DW, if processing requirements are focused not on complex aggregations but on a large number of short on-line transactions, data can be stored in a [SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-technical-overview/), a relational database service in the cloud based on Microsoft SQL Server engine:
 
 ![create Azure SQL database](https://cloud.githubusercontent.com/assets/16708375/20218783/39817dac-a7f4-11e6-9cc4-0544f5fd7bc4.png)  
-
+<sub>[Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/#create-an-azure-sql-database-logical-server) database creation in Azure Portal</sub>
 
 Create the [Azure SQL](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/#create-an-azure-sql-database-logical-server) database  
  
