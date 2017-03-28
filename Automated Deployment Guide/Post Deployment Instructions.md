@@ -47,6 +47,8 @@ After successful deployment, the entire solution is automatically started on clo
 ## **Visualization**
 Power BI dashboard can be used to visualize the real-time failure predictions. The following instructions will guide you to build a dashboard to visualize data from database and from real-time data stream.
 
+Note that you need to follow instructions for visualizing data from real-time data stream in order to get data flowing into the data warehouse. This is because the Stream Analytics job which you will start from the instructions below will flow data both to the data warehouse as well as Power BI.
+
 ### Visualize Data From Real-time Data Stream
 
 The essential goal of this part is to visualize the predictions in real time as the devices pass through the manufacturing assembly lines. Power BI can connect to a real-time data stream through Azure Stream Analytics.
