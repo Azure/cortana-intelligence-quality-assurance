@@ -61,11 +61,9 @@ The essential goal of this part is to visualize the predictions in real time as 
 
   - Click your resource group and locate the stream analytics job. The name of the job should be: YourSolutionName+"saJob". Click the Stream Analytics job and then click **'Outputs'** from the panel on the right.
 
-  - On the new window, click **'+Add'** on the top, and then it will show a window asking for information of the output. Under **'Sink'**, choose **'Power BI'**, then click **'Authorize'**. In the pop out window, log in with your Power BI account.
+  - On the new window, click **'w0pbi'** output, and then click on the **'Renew authorization'** button. In the pop out window, log in with your Power BI account. Click save and repeat this step for each of the PBI outputs (w1pbi, w2pbi, w3pbi, w4pbi).
 
-  - Once you successfully authorize your Power BI account, fill in other information as follows. Set the **Output Alias** as **'outputPBI'**. Set your **'Dataset Name'** and **'Table Name'**. Click **'Create'** once you finish.
-
-  - Now you have added the Power BI output, you can click ![Start](Figures/PowerBI-2.png) at the top of the page to start the Stream Analytics job. You will get a confirmation message (e.g. 'Streaming Job started successfully').
+  - Now you have added the Power BI outputs, you can click ![Start](Figures/PowerBI-2.png) at the top of the page to start the Stream Analytics job. You will get a confirmation message (e.g. 'Streaming Job started successfully').
 
   - For other details, you can refer to the instructions in [Azure Stream Analytics & Power BI: A real-time analytics dashboard for real-time visibility of streaming data](https://azure.microsoft.com/en-us/documentation/articles/stream-analytics-power-bi-dashboard/).
 
