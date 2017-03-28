@@ -67,7 +67,7 @@ The essential goal of this part is to visualize the predictions in real time as 
 
   - For other details, you can refer to the instructions in [Azure Stream Analytics & Power BI: A real-time analytics dashboard for real-time visibility of streaming data](https://azure.microsoft.com/en-us/documentation/articles/stream-analytics-power-bi-dashboard/).
 
-2. Follw instructions for creating the live stream visualizations [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide#configure-a-power-bi-dashboard).
+2. Follow instructions for creating the live stream visualizations [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide#configure-a-power-bi-dashboard).
 
 
 ### Visualize Data from Database
