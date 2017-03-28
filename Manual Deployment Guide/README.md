@@ -391,7 +391,7 @@ You can find your database and server name on the page when you finish your depl
  
 - On the top of the file, click **‘Edit Queries’** drop down menu. Then choose **'Data Source Settings'**. 
  
-- In the pop out window, click **'Change Source'**, then replace the **"Server"** and **"Database"** with your own server and database names and click **"OK"**. For server name, make sure you specify the port 1433 in the end of your server string (**YourSolutionName.database.windows.net, 1433**). After you finish editing, close the 'Data Source Settings' window.
+- In the pop out window, click **'Change Source'**, then replace the **"Server"** and **"Database"** with your own server and database names and click **"OK"** for each of the two data sources (these are different views of the same underlying data source). For server name, make sure you specify the port 1433 in the end of your server string (**YourSolutionName.database.windows.net, 1433**). After you finish editing, close the 'Data Source Settings' window.
  
 - On the top of the screen, you will see a message. Click **'Apply Changes'**. A new window will pop out and ask for database credentials. Click **'Database'** on the left of the window, enter your SQL credentials. For ***'Select which level to apply these settings to'***, choose the second one with database name. Then click ***'Connect'***.
  
