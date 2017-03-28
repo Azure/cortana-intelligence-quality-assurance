@@ -102,7 +102,7 @@ The essential goal of this part is to get the failure predictions and visualize 
 2.	Update the data source of the Power BI file
   -  Make sure you have installed the latest version of [Power BI desktop](https://powerbi.microsoft.com/desktop).
 
-  -	In this GitHub repository, you can download the **'ManuQualityAssurance.pbix'** file under the folder **'Automated Deployment Guide'** and then open it. **Note:** You can't right click and download the Power BI Desktop file directly from github online. Rather click on it and then use the "Download" button on the right hand side of the git page (or clone the repository). If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
+  -	In this GitHub repository, you can download the **'ManuQualityAssurance.pbix'** file under the subfolder **'resources'** within the folder **'Manual Deployment Guide'** and then open it. **Note:** You can't right click and download the Power BI Desktop file directly from github online. Rather click on it and then use the "Download" button on the right hand side of the git page (or clone the repository). If you see an error massage, please make sure you have installed the latest version of Power BI Desktop.
 
   - On the top of the file, click **‘Edit Queries’** drop down menu. Then choose **'Data Source Settings'**.
   ![](Figures/PowerBI-7.png)
