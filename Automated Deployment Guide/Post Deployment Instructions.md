@@ -67,25 +67,8 @@ The essential goal of this part is to visualize the predictions in real time as 
 
   - For other details, you can refer to the instructions in [Azure Stream Analytics & Power BI: A real-time analytics dashboard for real-time visibility of streaming data](https://azure.microsoft.com/en-us/documentation/articles/stream-analytics-power-bi-dashboard/).
 
-2. Login on [Power BI online](http://www.powerbi.com)
+2. Follw instructions for creating the live stream visualizations [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide#configure-a-power-bi-dashboard).
 
-    -   On the left panel Datasets section in My Workspace, you should be able to see a new dataset showing on the left panel of Power BI. This is the streaming data you pushed from Azure Stream Analytics in the previous step.
-
-    -   Make sure the ***Visualizations*** pane is open and is shown on the
-    right side of the screen.
-
-3. Now you can directly create a visualization on Power BI online. We will use this example to show you how to create the "Demand by Timestamp" tile:
-	-	Click dataset on the left panel Datasets section.
-
-	-	Click **"Line Chart"** icon.![Line Chart](Figures/PowerBI-3.png)
-
-	-	Click relevant field you want to visualize in **Fields** panel.
-
-	-	Click **“time”** and make sure it shows under "Axis". Click the variable you want to visualize and make sure it shows under "Values".
-
-	-	Click **'Save'** on the top and give any name to the report. The report will then be shown in Reports section in the Navigator pane on left.
-
-	-	Click **“Pin Visual”**![](Figures/PowerBI-4.png) icon on top right corner of this line chart, a "Pin to Dashboard" window may show up for you to choose a dashboard. Please select the relevant report, then click "Pin".
 
 ### Visualize Data from Database
 
