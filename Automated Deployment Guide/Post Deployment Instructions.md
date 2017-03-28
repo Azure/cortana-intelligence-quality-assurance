@@ -97,7 +97,7 @@ The essential goal of this part is to get the failure predictions and visualize 
 
 1.  Get the database credentials.
 
-    You can find your database and server name on the page when you finish your deployment. The SQL username and password will be the ones you choose in the beginning of the deployment.
+    You can find a link to the SQL Server on the page when you finish your deployment. Click on the link to the SQL Server and then click on the database to find the server name. The SQL username and password will be the ones you choose in the beginning of the deployment. You will need to note all four pieces of information: SQL Server name, database name, username, and password.
 
 2.	Update the data source of the Power BI file
   -  Make sure you have installed the latest version of [Power BI desktop](https://powerbi.microsoft.com/desktop).
