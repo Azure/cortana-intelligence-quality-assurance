@@ -24,7 +24,9 @@ Once the solution is deployed to the subscription, you can see the services depl
 
 This will show all the resources under this resource groups on [Azure management portal](https://portal.azure.com/).
 
-After successful deployment, the entire solution is automatically started on cloud. You can monitor the progress from the following resources. **Note that you need to follow instructions for visualizing data from real-time data stream in order to get data flowing into the data warehouse. This is because the Stream Analytics job which you will start from the instructions below will flow data both to the data warehouse as well as Power BI.**
+After successful deployment, the entire solution is automatically started on cloud. You can monitor the progress from the following resources. 
+
+**Note that you need to follow instructions for visualizing data from real-time data stream in order to get data flowing into the data warehouse. This is because the Stream Analytics job which you will start from the instructions below will flow data both to the data warehouse as well as Power BI.**
 
 ## **Monitor progress**
 
