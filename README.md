@@ -15,7 +15,7 @@ As an example, an **assembly line scenario** for a computer mother board manufac
 ![Jabil Showcase Assembly Line](https://cloud.githubusercontent.com/assets/16708375/19811557/90a87280-9d3a-11e6-8f2b-f573c3b02eca.png)
 
  <sub>
-Figure 2 [Jabil Showcase](http://www.jabil.com/blog/microsoft-and-jabil-collaborate-to-create-predictive-analytics-quality-assurance-platform/) 
+[Jabil Showcase](http://www.jabil.com/blog/microsoft-and-jabil-collaborate-to-create-predictive-analytics-quality-assurance-platform/) 
 </sub>
 
 OEMs which use contract manufacturers (such as Microsoft and Jabil) can minimize post sale service and warranty costs using **ML** to build models that use shop floor data to predict, before shipping, returns and repairs that may happen months or years after device is shipped. This enables predicting **future failures** while the device is still in the **early manufacturing line stages** or is already assembled but is **not yet shipped**, so that fixing or even discarding it may be cheaper than going through recall and warranty costs.
