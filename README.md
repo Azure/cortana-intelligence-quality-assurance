@@ -13,6 +13,8 @@ The snapshot below shows an example PowerBI dashboard that gives insights into t
 As an example, an **assembly line scenario** for a computer mother board manufacturer is given in Figure 2 characterized by Assembly Line Steps (ALS). In this scenerio, at Assembly Line Step 3 (ALS3), the solder paste is applied on the empty board, and then a test is performed to check that the paste droplets are correct size and that they are at the center or each pad. Boards that pass this already in place test, move to next assembly line step and eventually the electronic circuits are placed on the board and then connected to the board pads by melting the solder droplets in an oven. At the end of ALS5, a final electronic functional check is done before the board is shipped to client OEM PC manufacturer. Some of the failures discovered at ALS5 are due to defective solder paste application performed at ALS3, even if the board passed the regular ALS3 test. We can use **Machine Learning (ML)** to predict solder related failures right after the solder paste is applied in ALS3, but before the expensive electronic components like microprocessors and other integrated circuits are added to the board at ALS5. Rewashing a board with a functional defect that passed the regular Quality Asssurance (QA) test at ALS1 may cost cents, while scrapping a defective board at ALS5 after the processor and all other components are applied may cost hundreds of dollars. 
 
 ![Jabil Showcase Assembly Line](https://cloud.githubusercontent.com/assets/16708375/19811557/90a87280-9d3a-11e6-8f2b-f573c3b02eca.png)
+
+
 [Jabil Showcase](https://www.jabil.com/blog/microsoft-and-jabil-collaborate-to-create-predictive-analytics-quality-assurance-platform)
 
 
