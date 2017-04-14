@@ -10,6 +10,7 @@ To start a new solution deployment, visit the gallery page [here](https://go.mic
 <Guide type="Summary">
 The goal of quality assurance is to maintain a high quality of service or product and is imperative to many businesses either in the delivery or production process of goods or services. By avoiding problems early in the process of delivering or producing goods or services, businesses can provide more value to their customers.
 
+
 For example, in digital manufacturing, quality assurance across the assembly line is imperative. Identifying errors, slowdowns and potential failures before they occur rather than after they are detected can help companies be more proactive and improve productivity. The goal of the solution guide presented here is to predict failures in manufacturing pipelines (assembly lines). This is done by leveraging test systems already in place and failure data, specifically looking at returns and functional failures at the end of assembly line. By combining these with domain knowledge and root cause analysis within a modular design that encapsulates main processing steps, we provide a generic advanced analytics solution that uses machine learning to predict failures before they happen. Early prediction of future failures allows for less expensive repairs or even discarding, which are usually more cost efficient than going through recall and warranty cost.
 
 The solution pattern uses several Azure services:
