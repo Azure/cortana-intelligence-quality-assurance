@@ -1,4 +1,4 @@
-# Quality Assurance for Manufacturing - Technical Deployment Guide  
+# Quality Assurance - Technical Deployment Guide  
 
 Introduction
 ===============
