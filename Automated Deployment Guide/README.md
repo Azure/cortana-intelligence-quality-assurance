@@ -1,6 +1,6 @@
-# [Quality Assurance for Manufacturing Solution](https://go.microsoft.com/fwlink/?linkid=831187)
+# [Quality Assurance Solution](https://go.microsoft.com/fwlink/?linkid=831187)
 
-This folder contains the post-deployment instructions for the deployable Quality Assurance for Manufacturing solution in the Cortana Intelligence Gallery. 
+This folder contains the post-deployment instructions for the deployable Quality Assurance solution in the Cortana Intelligence Gallery. 
 
 To start a new solution deployment, visit the gallery page [here](https://go.microsoft.com/fwlink/?linkid=831187).
 
