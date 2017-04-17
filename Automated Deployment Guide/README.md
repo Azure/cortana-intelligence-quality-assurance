@@ -4,7 +4,7 @@ This folder contains the post-deployment instructions for the deployable Quality
 
 To start a new solution deployment, visit the gallery page [here](https://go.microsoft.com/fwlink/?linkid=831187).
 
-<Guide type="PostDeploymentGuidance" url="https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Automated%20Deployment%20Guide/Post%20Deployment%20Instructions.md"/>
+<Guide type="PostDeploymentGuidance" url="https://github.com/Azure/cortana-intelligence-quality-assurance/blob/master/Automated%20Deployment%20Guide/Post%20Deployment%20Instructions.md"/>
 
 ## <a name="Summary"></a>Summary
 <Guide type="Summary">
@@ -26,7 +26,7 @@ The solution pattern uses several Azure services:
 
 #### Estimated Provisioning Time: <Guide type="EstimatedTime">30 Minutes</Guide>
 <Guide type="Description">
-The Cortana Intelligence Suite provides advanced analytics tools through Microsoft Azure — data ingestion, data storage, data processing and advanced analytics components — all of the essential elements for building a Quality Assurance for Manufacturing solution.
+Cortana Intelligence provides advanced analytics tools through Microsoft Azure — data ingestion, data storage, data processing and advanced analytics components — all of the essential elements for building a Quality Assurance for Manufacturing solution.
 
 The solution is implemented in the cloud, using the flexible on-line Microsoft Azure platform that decouples infrastructure components (data ingestion, storage, data movement, visualization) from analytics engine that supports modern DS languages like R and Python. The solution modeling component can thus be retrained as needed and be implemented using high performance Azure Machine Learning algorithms, or open source (R/Python) libraries, or from a third-party solution vendor.
 
