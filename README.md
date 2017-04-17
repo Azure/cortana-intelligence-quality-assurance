@@ -26,17 +26,17 @@ This solution uses [SECOM](https://archive.ics.uci.edu/ml/datasets/SECOM) datase
 
 ## Getting Started
 
-This solution package contains materials to help both technical and business audiences understand our Quality Assurance solution for manufacturing built on the [Cortana Intelligence Suite](https://www.microsoft.com/en-us/server-cloud/cortana-intelligence-suite/Overview.aspx).
+This solution package contains materials to help both technical and business audiences understand our Quality Assurance solution for manufacturing built on [Cortana Intelligence](https://www.microsoft.com/en-us/server-cloud/cortana-intelligence-suite/Overview.aspx).
 
 ## Business Audiences
 
-In this repository you will find a folder labeled [*Solution Overview for Business Audiences*](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Solution%20Overview%20for%20Business%20Audiences) which contains a  presentation covering this solution and benefits of using the Cortana Intelligence Suite
+In this repository you will find a folder labeled [*Solution Overview for Business Audiences*](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/blob/master/Solution%20Overview%20for%20Business%20Audiences) which contains a  presentation covering this solution and benefits of using Cortana Intelligence
 
 For more information on how to tailor Cortana Intelligence to your needs [connect with one of our partners](http://aka.ms/CISFindPartner).
 
 ## Technical Audiences
 
-See the [*Manual Deployment Guide*](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide) folder for a full set of instructions on how to put together and deploy a Quality Assurance solution using the Cortana Intelligence Suite. For technical problems or questions about deploying this solution, please post in the issues tab of the repository.
+See the [*Manual Deployment Guide*](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide) folder for a full set of instructions on how to put together and deploy a Quality Assurance solution using Cortana Intelligence. For technical problems or questions about deploying this solution, please post in the issues tab of the repository.
 
 ## Related Resources
 A playbook for approaching predictive maintenance problems, which can be considered to include use cases such as that discussed within this solution, is published [here](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance) and includes detail on how to [prepare data sources](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance#data-preparation), create features, and [set up a machine learning model](https://docs.microsoft.com/en-us/azure/machine-learning/cortana-analytics-playbook-predictive-maintenance#modeling-techniques).
