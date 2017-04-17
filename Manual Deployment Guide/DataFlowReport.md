@@ -1,9 +1,7 @@
-# Cortana Intelligence Suite Solution Template
-# Predictive Analytics for Quality Assurance Process in Manufacturing
+# Cortana Intelligence Solution Template for Quality Assurance
 
 
 ## Solution Post-Deployment monitoring
-======================================
 
 Solution status can be monitored using the solution components in [Azure Management Portal](https://ms.portal.azure.com). 
 
