@@ -1,6 +1,13 @@
-# [Quality Assurance for Manufacturing](https://go.microsoft.com/fwlink/?linkid=831187)
+# [Quality Assurance for Manufacturing](https://gallery.cortanaintelligence.com/solution/6e93bf826a284d62b76a548f537d1c91)
 
-This document is focusing on the post deployment instructions for the automated deployment through [Cortana Intelligence Solutions](https://gallery.cortanaintelligence.com/solutions). The source code of the solution as well as manual deployment instructions can be found [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide).
+This document is focused on the post deployment instructions for the [automated deployment](https://gallery.cortanaintelligence.com/solution/6e93bf826a284d62b76a548f537d1c91) through the Cortana Intelligence Gallery. The source code of the solution as well as manual deployment instructions can be found [here](https://github.com/Azure/cortana-intelligence-quality-assurance-manufacturing/tree/master/Manual%20Deployment%20Guide).
+
+### Quick links
+[Monitor Progress](https://github.com/Azure/cortana-intelligence-quality-assurance/blob/master/Automated%20Deployment%20Guide/Post%20Deployment%20Instructions.md#monitor-progress) - see how you can monitor the resources that have been deployed to your subscription.
+
+[Visualization Steps](https://github.com/Azure/cortana-intelligence-quality-assurance/blob/master/Automated%20Deployment%20Guide/Post%20Deployment%20Instructions.md#visualization) - instructions to connect up a Power BI dashboard to your deployment that visualized the results.
+
+[Customization](https://github.com/Azure/cortana-intelligence-quality-assurance/blob/master/Automated%20Deployment%20Guide/Post%20Deployment%20Instructions.md#customization) - guidance on how to think about customizing this solution with your own data.
 
 # Architecture
 The architecture diagram shows various Azure services that are deployed by [Quality Assurance for Manufacturing Solution](https://cloud.githubusercontent.com/assets/16708375/20932195/acb87330-bbcb-11e6-8a89-27d8b6e17bdf.png) using [Cortana Intelligence Solutions](https://gallery.cortanaintelligence.com/solutions), and how they are connected to each other in the end to end solution.
@@ -109,3 +116,6 @@ The essential goal of this part is to get the failure predictions and visualize 
 		visualizations to your dashboard. To find detailed instructions, see [Pin a tile to a Power BI dashboard from a report](https://support.powerbi.com/knowledgebase/articles/430323-pin-a-tile-to-a-power-bi-dashboard-from-a-report). Here is an example of the dashboard.
 
       ![Dashboard Example](https://cloud.githubusercontent.com/assets/9042064/20732304/23c67ee2-b65c-11e6-969a-0a8f81bf5963.PNG)
+
+## **Customization**
+For solution customization, you can refer to the manual deployment guide offered [here](https://github.com/Azure/cortana-intelligence-quality-assurance/tree/master/Manual%20Deployment%20Guide) to gain an inside view of how the solution is built, the function of each component and access to all the source codes used in the demo solution. You can customize the components accordingly to satisfy the business needs of your organization. Or you can [connect with one of our partners](https://appsource.microsoft.com/en-us/product/cortana-intelligence/microsoft-cortana-intelligence.quality-assurance-for-manufacturing-preview?flightCodes=quality-assurance-hidekey) for more information on how to tailor Cortana Intelligence to your needs.
