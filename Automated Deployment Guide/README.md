@@ -1,8 +1,8 @@
-# [Quality Assurance Solution](https://go.microsoft.com/fwlink/?linkid=831187)
+# [Quality Assurance Solution](https://gallery.cortanaintelligence.com/solution/52ae278b2397486d85111307dfe680e4)
 
 This folder contains the post-deployment instructions for the deployable Quality Assurance solution in the Cortana Intelligence Gallery. 
 
-To start a new solution deployment, visit the gallery page [here](https://go.microsoft.com/fwlink/?linkid=831187).
+To start a new solution deployment, visit the gallery page [here](https://gallery.cortanaintelligence.com/solution/52ae278b2397486d85111307dfe680e4).
 
 <Guide type="PostDeploymentGuidance" url="https://github.com/Azure/cortana-intelligence-quality-assurance/blob/master/Automated%20Deployment%20Guide/Post%20Deployment%20Instructions.md"/>
 
