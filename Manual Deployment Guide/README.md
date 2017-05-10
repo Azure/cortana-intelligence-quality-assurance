@@ -245,7 +245,7 @@ The final list of ASA functions show the increasing number of features as we mov
 		- Queries (where *N* is the dataset you are working with)
 			- How many device_id with label=1 in waypoint*N* in the last 30 seconds 
 				- Description: No of ALS*N* fails in last 30 Seconds  
-			- How many device_id with label=-1 in waypoint*N* in thelast 30 seconds 
+			- How many device_id with label=-1 in waypoint*N* in the last 30 seconds 
 				- Description: No of ALS*N* passes in last 30 Seconds 
 			- device_id with label=-1 in waypoint *N* in the last 30 seconds
 				- Description: ALS*N* passes in last 30 seconds
