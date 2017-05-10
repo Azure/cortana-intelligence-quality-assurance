@@ -241,6 +241,7 @@ The final list of ASA functions show the increasing number of features as we mov
 			- Expand the __Visualizations__ blade and click on format (shaped like a paint roller)
 			- Turn on __Title__
 			- Enter the description provided with the query
+			- Turn off __Category Lablel__
 			- Click __Pin Visual__ in the upper right hand corner
 		- Queries (where *N* is the dataset you are working with)
 			- How many device_id with label=1 in waypoint*N* in the last 30 seconds 
