@@ -58,9 +58,9 @@ Data flow visualization (Incoming Bytes/second detail)
 
 Monitoring data flow.
 - [ ] Simulated Data Generator was started about 10 minutes before the ASA job 
-- [ ] When the ASA starts (start time was set to "Now"), it looks for messages in Event hub buffer that are received after it strats, and ignores previous messages. 
+- [ ] When the ASA starts (start time was set to "Now"), it looks for messages in Event hub buffer that are received after it starts, and ignores previous messages. 
 - [ ] After Simulated Data Generator is stopped, no more data enters or leaves the event hub.
-- [ ] Content of blob sinks (shown below) shows the device messages moving along the assembly line starting at and after the ASA job starting time. As the ASA starts, we see an initial spike in outgoing messages, corresponding to data already in the Event Hub buffer that is being processed almost instantaneously (e.g. *device_119*). After the Hub buffer is emptied, the devices are processed every 5 seconds, as they enter the asembly line (e.g. *device_239*).
+- [ ] Content of blob sinks (shown below) shows the device messages moving along the assembly line starting at and after the ASA job starting time. As the ASA starts, we see an initial spike in outgoing messages, corresponding to data already in the Event Hub buffer that is being processed almost instantaneously (e.g. *device_119*). After the Hub buffer is emptied, the devices are processed every 5 seconds, as they enter the assembly line (e.g. *device_239*).
 
 Blob storage sinks content (.csv files) has this header:
 
@@ -140,7 +140,7 @@ Monitoring data flow.
 - [ ] Simulated Data Generator was started about 20 minutes before the ASA job 
 - [ ] When the ASA begins, it looks at all messages in the event hub buffer, since its **start time** property is set (12:50:00) 8 mintes before the data generator started. 
 - [ ] After Simulated Data Generator is stopped, no more data enters or leaves the event hub.
-- [ ] Content of blob sinks (shown below) capture the initial snapshot of the devices moving along the assembly line. As the ASA starts, we see an initial spike in outgoing messages, corresponding to data being processed almost instantaneously from the Event Hub buffer (e.g. *device_0*). After the Hub buffer is emptied, the devices are processed every 5 seconds, as they enter the asembly line (e.g. *device_330*). 
+- [ ] Content of blob sinks (shown below) capture the initial snapshot of the devices moving along the assembly line. As the ASA starts, we see an initial spike in outgoing messages, corresponding to data being processed almost instantaneously from the Event Hub buffer (e.g. *device_0*). After the Hub buffer is emptied, the devices are processed every 5 seconds, as they enter the assembly line (e.g. *device_330*). 
 
 In contrast to scenario one, we now have predictions for all devices (0 to 331 for ALS0, 0 to 3328 for ALS4). 
 
@@ -207,7 +207,7 @@ Blob storage sinks content (.csv files) has this header:
 
 ###Test Scenario 3 (most common)
 
-ASA job runs continuously, storage containers have processed data from the past, separated in folders by date and hour, and simulated data is ingested  every time the simulator is started, one full set of ALS measures every 5 seconds, which are scored by calling the corresponding Azure ML model, as they come, and then stored in blob sinks. Records in different blob sinks, which correspond to different ALS are separated by about 5 seconds in time, similar to last recors in scenarios 1 and 2 presented above. 
+ASA job runs continuously, storage containers have processed data from the past, separated in folders by date and hour, and simulated data is ingested  every time the simulator is started, one full set of ALS measures every 5 seconds, which are scored by calling the corresponding Azure ML model, as they come, and then stored in blob sinks. Records in different blob sinks, which correspond to different ALS are separated by about 5 seconds in time, similar to last records in scenarios 1 and 2 presented above. 
   
    
   

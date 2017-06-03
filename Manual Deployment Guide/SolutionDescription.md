@@ -1,4 +1,4 @@
-# Predictive Analytics for Quality Assurance Processes in Manufacturing
+﻿# Predictive Analytics for Quality Assurance Processes in Manufacturing
 
 Approach
 ===============
@@ -56,7 +56,7 @@ Solution PBI dashboard (visualization):
 Figure 3. Real-time Dashboard
 
 
-In figure above we show the upper part of the solution dashboard, visualizing results from the first 3 ALS/waypoints (ALS 0, ALS 1, and ALS 2) of a simulated assembly line. We implemented 5 ALS in total in this solution, but the user can add as many ALS as needed, and show their results in the dashboard accordingly. For each ALS, we show a global device counter (the gauge on the left), and the number (upper) and ids (lower) of the failed (middle column) and passed (i.e. not-failed, in right column) devices in the last 30 seconds. Each report is updated dinamically every 5 second as new ALS measurements come in. 
+In figure above we show the upper part of the solution dashboard, visualizing results from the first 3 ALS/waypoints (ALS 0, ALS 1, and ALS 2) of a simulated assembly line. We implemented 5 ALS in total in this solution, but the user can add as many ALS as needed, and show their results in the dashboard accordingly. For each ALS, we show a global device counter (the gauge on the left), and the number (upper) and ids (lower) of the failed (middle column) and passed (i.e. not-failed, in right column) devices in the last 30 seconds. Each report is updated dynamically every 5 second as new ALS measurements come in. 
 
 Each tile is defined using quasi natural language (NLP) query (e.g. **How many device_id with label=1 in waypoint 0 in the last 30 seconds?**), typed in the **Ask a question about your data** text box in PBI dashboard. 
 
